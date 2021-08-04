@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
 
-    // 무야호
+    // 무야호12222
     // 전연지
     @Override
     protected void onCreate(Bundle savedInstanceState) {
