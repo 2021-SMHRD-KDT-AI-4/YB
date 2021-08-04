@@ -1,0 +1,2 @@
+rootProject.name = "FindYourDog"
+include ':app'
