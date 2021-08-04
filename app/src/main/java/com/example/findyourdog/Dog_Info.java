@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Dog_Info extends AppCompatActivity {
-
+    //
     private ImageView img_menu, img_profile;
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_dog_print, btn_profile_ok;
     private TextView tv_appname, tv_profile, tv_info_add, tv_info_color, tv_info_name;
