@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dog_Nose_print_Search_list_Fail">
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="발견했어요"
+        android:textColor="#000000"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="비문등록"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="찾아주세요"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="84dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="찾아줄게요"
+        android:textColor="#FB9F82"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="입양하기"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/btn_4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <TextView
+        android:id="@+id/tv_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="찾아줄개"
+        android:textColor="#0B0B0B"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_search_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="168dp"
+        android:text="비문 조회 결과"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:gravity="center"
+        android:text="아쉽게도 아직 찾지 못했어요\n다시 조회해주세요.."
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_search_fail" />
+
+    <Button
+        android:id="@+id/tv_n_retry"
+        android:layout_width="157dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="84dp"
+        android:backgroundTint="#C6C6C6"
+        android:text="다시 조회하기"
+        android:textColor="#070707"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_fail" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

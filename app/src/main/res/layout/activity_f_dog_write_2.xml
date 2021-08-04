@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".L_Dog_List">
+
+    <ImageView
+        android:id="@+id/img_menu"
+        android:layout_width="48dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu" />
+
+    <Button
+        android:id="@+id/btn_1"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="발견했어요"
+        android:textColor="#FB9F82"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_4"
+        android:layout_width="84dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="찾아줄게요"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_2"
+        android:layout_width="84dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="찾아주세요"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_5"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="입양하기"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/btn_4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <Button
+        android:id="@+id/btn_3"
+        android:layout_width="78dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="5dp"
+        android:background="#00ff0000"
+        android:backgroundTint="#FFFFFF"
+        android:text="비문등록"
+        android:textColor="#0B0B0B"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/btn_2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+    <TextView
+        android:id="@+id/tv_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="찾아줄개"
+        android:textColor="#0B0B0B"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="유실견정보"
+        android:textColor="#0B0B0B"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_3" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="는 필수항목입니다."
+        android:textColor="#0C0C0C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_feature" />
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="516dp"
+        android:backgroundTint="#C6C6C6"
+        android:text="등록하기"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edt_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toEndOf="@+id/tv_type"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+
+    <TextView
+        android:id="@+id/tv_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="28dp"
+        android:text="출생연도"
+        android:textColor="#090909"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sex" />
+
+    <TextView
+        android:id="@+id/tv_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="색"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_star3"
+        app:layout_constraintTop_toBottomOf="@+id/tv_birth" />
+
+    <TextView
+        android:id="@+id/tv_star3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_birth" />
+
+    <TextView
+        android:id="@+id/tv_star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+
+    <TextView
+        android:id="@+id/tv_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="품종"
+        android:textColor="#0C0C0C"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_star1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+
+    <TextView
+        android:id="@+id/tv_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:text="무게(kg)"
+        android:textColor="#090909"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_color" />
+
+    <TextView
+        android:id="@+id/tv_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="성별"
+        android:textColor="#040303"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_star2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+    <TextView
+        android:id="@+id/tv_star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="23dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_type" />
+
+    <EditText
+        android:id="@+id/edt_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toEndOf="@+id/tv_birth"
+        app:layout_constraintTop_toBottomOf="@+id/edt_sex" />
+
+    <EditText
+        android:id="@+id/edt_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toEndOf="@+id/tv_color"
+        app:layout_constraintTop_toBottomOf="@+id/edt_birth" />
+
+    <TextView
+        android:id="@+id/tv_feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="특징"
+        android:textColor="#070707"
+        android:textSize="17sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_star4"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kg" />
+
+    <TextView
+        android:id="@+id/tv_star4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="30dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_kg" />
+
+    <EditText
+        android:id="@+id/edt_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toEndOf="@+id/tv_sex"
+        app:layout_constraintTop_toBottomOf="@+id/edt_type" />
+
+    <EditText
+        android:id="@+id/edt_feature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toEndOf="@+id/tv_feature"
+        app:layout_constraintTop_toBottomOf="@+id/edt_kg" />
+
+    <EditText
+        android:id="@+id/edt_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toEndOf="@+id/tv_kg"
+        app:layout_constraintTop_toBottomOf="@+id/edt_color" />
+
+    <TextView
+        android:id="@+id/tv_star5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_text"
+        app:layout_constraintHorizontal_bias="0.986"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_feature" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Side_bar_login">
+
+  <ImageView
+      android:id="@+id/img_menu"
+      android:layout_width="48dp"
+      android:layout_height="40dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/menu" />
+
+  <TextView
+      android:id="@+id/tv_appname"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="찾아줄개"
+      android:textColor="#0B0B0B"
+      android:textSize="26sp"
+      android:textStyle="bold"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"/>
+
+  <TextView
+      android:id="@+id/side_logout"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="60dp"
+      android:text="로그아웃"
+      android:textColor="#020202"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
+
+  <TextView
+      android:id="@+id/side_join2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="15dp"
+      android:text="회원가입"
+      android:textColor="#020202"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_6" />
+
+  <TextView
+      android:id="@+id/side_mypage2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="15dp"
+      android:text="My page"
+      android:textColor="#020202"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_7" />
+
+  <TextView
+      android:id="@+id/side_info2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="15dp"
+      android:text="보호소 정보"
+      android:textColor="#020202"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_8" />
+
+  <TextView
+      android:id="@+id/side_Q2"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:layout_marginTop="15dp"
+      android:text="자주하는 질문"
+      android:textColor="#020202"
+      android:textSize="24sp"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_9" />
+
+  <TextView
+      android:id="@+id/side_6"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:text="───────────────"
+      android:textColor="#000000"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_logout" />
+
+  <TextView
+      android:id="@+id/side_7"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:text="───────────────"
+      android:textColor="#000000"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_join2" />
+
+  <TextView
+      android:id="@+id/side_8"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:text="───────────────"
+      android:textColor="#000000"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_mypage2" />
+
+  <TextView
+      android:id="@+id/side_9"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:text="───────────────"
+      android:textColor="#070707"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_info2" />
+
+  <TextView
+      android:id="@+id/side_10"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="32dp"
+      android:text="───────────────"
+      android:textColor="#000000"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/side_Q2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
