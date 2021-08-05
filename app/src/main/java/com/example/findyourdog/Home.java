@@ -31,7 +31,7 @@ public class Home extends AppCompatActivity {
         bottom = findViewById(R.id.bottom);
 
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame, l_dog_list_copy).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame, f_dog_list_copy).commit();
         bottom.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
