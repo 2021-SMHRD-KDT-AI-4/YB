@@ -2,8 +2,10 @@ package com.example.findyourdog;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -23,9 +25,11 @@ public class Sidebar extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivitySidebarBinding binding;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String id = PreferenceManager.getString(getApplicationContext(),"id");
 
         binding = ActivitySidebarBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -51,14 +55,43 @@ public class Sidebar extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         View headView = navigationView.getHeaderView(0);
+        Button btn_nav_login = headView.findViewById(R.id.btn_nav_login);
+        Button btn_nav_logout = headView.findViewById(R.id.btn_nav_logout);
+
         ImageView img = headView.findViewById(R.id.imageView);
-        img.setOnClickListener(new View.OnClickListener() {
+        Log.v("info",id.toString());
+        if(id.equals("데이터가 없습니다")) {
+            img.setImageResource(R.drawable.one);
+            btn_nav_logout.setEnabled(false);
+        }
+        else if(id.length() > 0){
+            img.setImageResource(R.drawable.three);
+            btn_nav_login.setEnabled(false);
+        }
+
+
+        btn_nav_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
+                Intent intent = new Intent(getApplicationContext(),Login.class);
                 startActivity(intent);
             }
         });
+        btn_nav_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PreferenceManager.remove(getApplicationContext(),"id");
+                Intent intent = new Intent(getApplicationContext(),Sidebar.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
+
     }
 
 

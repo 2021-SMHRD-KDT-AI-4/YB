@@ -100,11 +100,6 @@ public class Login extends AppCompatActivity {
                     if (id.equals(edt_login_id.getText().toString())){
 
                         PreferenceManager.setString(getApplicationContext(),"id",dto.getId());
-                        PreferenceManager.setString(getApplicationContext(),"pw",dto.getPw());
-                        PreferenceManager.setString(getApplicationContext(),"name",dto.getName());
-                        PreferenceManager.setInt(getApplicationContext(),"membercode",dto.getMembercode());
-                        PreferenceManager.setInt(getApplicationContext(),"tel",dto.getTel());
-                        PreferenceManager.setString(getApplicationContext(),"address",dto.getAddress());
 
                         Intent intent = new Intent(getApplicationContext(),Sidebar.class);
                         startActivity(intent);

@@ -10,8 +10,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:usesCleartextTraffic="true"
-        android:theme="@style/Theme.FindYourDog">
+        android:theme="@style/Theme.FindYourDog"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Home">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity
             android:name=".Sidebar"
             android:label="@string/title_activity_sidebar"
@@ -22,12 +30,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity2">
+        <activity android:name=".MainActivity2"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Login" />
+        <activity android:name=".Join" />
+        <activity android:name=".F_Dog_Write_1"/>
 
-        </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Login"/>
-        <activity android:name=".Join"/>
+
 
     </application>
 
