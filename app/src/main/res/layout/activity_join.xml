@@ -91,7 +91,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_tel1" />
 
     <EditText
-        android:id="@+id/tv_id2"
+        android:id="@+id/edt_join_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
@@ -102,7 +102,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_join" />
 
     <EditText
-        android:id="@+id/tv_name2"
+        android:id="@+id/edt_join_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -110,10 +110,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pw2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_pw" />
 
     <EditText
-        android:id="@+id/tv_tel2"
+        android:id="@+id/edt_join_tel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -121,10 +121,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_name2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_name" />
 
     <EditText
-        android:id="@+id/tv_add2"
+        android:id="@+id/edt_join_addr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -132,10 +132,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tel2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_tel" />
 
     <EditText
-        android:id="@+id/tv_pw2"
+        android:id="@+id/edt_join_pw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
@@ -143,7 +143,7 @@
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_id2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_id" />
 
     <TextView
         android:id="@+id/tv_join"
@@ -158,7 +158,7 @@
         app:layout_constraintTop_toBottomOf="@+id/app_name1" />
 
     <Button
-        android:id="@+id/btn_check"
+        android:id="@+id/btn_id_check"
         android:layout_width="106dp"
         android:layout_height="35dp"
         android:layout_marginTop="3dp"
@@ -167,21 +167,42 @@
         android:text="ID중복체크"
         android:textColor="#0E0E0E"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/tv_pw2"
+        app:layout_constraintBottom_toTopOf="@+id/edt_join_pw"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_id2"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_id"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btn_join"
         android:layout_width="141dp"
         android:layout_height="47dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="112dp"
         android:backgroundTint="#FB9F82"
         android:text="회원가입"
         android:textColor="#050505"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tel2" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_tel" />
+
+    <TextView
+        android:id="@+id/tv_id_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="160dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/tv_join"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/shelter_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="32dp"
+        android:text="보호소입니까?"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_addr" />
 </androidx.constraintlayout.widget.ConstraintLayout>
