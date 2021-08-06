@@ -22,6 +22,8 @@
             </intent-filter>
 
         </activity>
+<!--        <activity android:name=".MainActivity2"></activity>-->
+<!--        <activity android:name=".MainActivity" />-->
         <activity android:name=".Login" />
         <activity android:name=".Join" />
         <activity android:name=".F_Dog_Write_1"/>
