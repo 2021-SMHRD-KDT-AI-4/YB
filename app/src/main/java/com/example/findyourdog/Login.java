@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.util.Log;
 import android.widget.Toast;
@@ -35,9 +36,10 @@ import java.util.HashMap;
 import java.util.Map;
 public class Login extends AppCompatActivity {
 
+    private ImageView img_logo2;
     private EditText edt_login_id, edt_login_pw;
-    private TextView app_name, tv_login, tv_id, tv_pw;
-    private Button btn_login, btn_join_go;
+    private Button btn_login;
+
 
     private RequestQueue queue;
     private StringRequest stringRequest;
@@ -48,12 +50,8 @@ public class Login extends AppCompatActivity {
 
         edt_login_id = findViewById(R.id.edt_login_id);
         edt_login_pw = findViewById(R.id.edt_login_pw);
-        app_name = findViewById(R.id.app_name);
-        tv_login = findViewById(R.id.tv_login);
-        tv_id = findViewById(R.id.tv_id);
-        tv_pw = findViewById(R.id.tv_pw);
         btn_login = findViewById(R.id.btn_login);
-        btn_join_go = findViewById(R.id.btn_join_go);
+        img_logo2 = findViewById(R.id.img_logo2);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,13 +60,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        btn_join_go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Join.class);
-                startActivity(intent);
-            }
-        });
+//        btn_join_go.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(),Join.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
     }
@@ -146,11 +144,6 @@ public class Login extends AppCompatActivity {
 
                 Log.v("login_id",edt_login_id.getText().toString());
                 Log.v("login_pw",edt_login_pw.getText().toString());
-
-
-
-
-
 
 
                 return params;

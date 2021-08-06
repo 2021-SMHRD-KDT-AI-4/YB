@@ -6,198 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".F_Dog_List">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아줄게요"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_3"
-        app:layout_constraintTop_toBottomOf="@+id/app_name2" />
-
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="발견했어요"
-        android:textColor="#FB9F82"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_name2" />
-
-    <Button
-        android:id="@+id/btn_2"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아주세요"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_1"
-        app:layout_constraintTop_toBottomOf="@+id/app_name2" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="비문등록"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_2"
-        app:layout_constraintTop_toBottomOf="@+id/app_name2" />
-
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="입양하기"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.642"
-        app:layout_constraintStart_toEndOf="@+id/btn_4"
-        app:layout_constraintTop_toBottomOf="@+id/app_name2" />
+    <TextView
+        android:id="@+id/tv_page3"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginBottom="50dp"
+        android:text="3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/app_name2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#000000"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/main_img1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="124dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/one" />
-
-    <ImageView
-        android:id="@+id/main_img2"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/three" />
-
-    <ImageView
-        android:id="@+id/main_img4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="372dp"
-        android:layout_marginEnd="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/four" />
-
-    <ImageView
-        android:id="@+id/main_img3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="372dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/two" />
+        android:id="@+id/tv_page5"
+        android:layout_width="9dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginBottom="50dp"
+        android:text="5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/main_type1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="8dp"
-        android:text="품종 : 시바\n목격 날짜 : 2021.07.28\n목격 위치 : 운천저수지\n목격 시간 : 오전 11시경"
-        android:textColor="#050505"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_img1" />
+        android:id="@+id/tv_page4"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="50dp"
+        android:text="4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/main_type3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="5dp"
-        android:text="품종 : 닥스훈트\n목격 날짜 : 2021.07.24\n목격 위치 : 서구문화센터\n목격 시간 : 오전9시경"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_img3" />
+        android:id="@+id/tv_page1"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="50dp"
+        android:text="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/main_type2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="5dp"
-        android:text="품종 : 말티즈\n목격 날짜 : 2021.07.27\n목격 위치 : 양동시장 입구\n목격 시간 : 오후 2시 30분"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_img2" />
+        android:id="@+id/tv_page2"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="50dp"
+        android:text="2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/main_type4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="252dp"
-        android:layout_marginTop="5dp"
-        android:text="품종 : 허스키\n목격 날짜 : 2021.07.20\n목격 위치 : 롯데백화점입구\n목격 시간 : 오전 11시"
-        android:textColor="#0B0B0B"
-        android:textSize="12sp"
+    <GridView
+        android:id="@+id/gv_find"
+        android:layout_width="410dp"
+        android:layout_height="628dp"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:verticalSpacing="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_img4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06999999" />
 
-    <Button
-        android:id="@+id/btn_write"
-        android:layout_width="71dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="596dp"
-        android:backgroundTint="#C6C6C6"
-        android:text="글쓰기"
-        android:textColor="#000000"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+    <ImageButton
+        android:id="@+id/imgbtn_write"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginBottom="35dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:srcCompat="@drawable/write" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

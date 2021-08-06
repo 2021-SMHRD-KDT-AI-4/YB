@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_fdog"
+            android:layout_width="414dp"
+            android:layout_height="389dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/fdog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="228dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="540dp"
+            android:text="운천저수지"
+            android:textColor="#817B7B"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/kind"
+            android:layout_width="82dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="420dp"
+            android:text="품종"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/f_date"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="480dp"
+            android:text="목격날짜"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/f_place"
+            android:layout_width="152dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="540dp"
+            android:text="목격위치"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/f_time"
+            android:layout_width="153dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="600dp"
+            android:text="목격시간"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_kind"
+            android:layout_width="193dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="420dp"
+            android:text="믹스견"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="190dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="480dp"
+            android:text="2021.07.21"
+            android:textColor="#817B7B"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="188dp"
+            android:layout_marginTop="600dp"
+            android:text="오전10시"
+            android:textColor="#817B7B"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/img_fdog5"
+        android:layout_width="298dp"
+        android:layout_height="295dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:src="@drawable/fdog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/kind3"
+        android:layout_width="63dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="350dp"
+        android:layout_weight="1"
+        android:text="품종"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_kind3"
+        android:layout_width="63dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="350dp"
+        android:layout_weight="1"
+        android:text="믹스견"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_date4"
+        android:layout_width="127dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="390dp"
+        android:layout_weight="1"
+        android:text="2021.07.21"
+        android:textColor="#817B7B"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_place3"
+        android:layout_width="126dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="430dp"
+        android:layout_weight="1"
+        android:text="운천저수지"
+        android:textColor="#817B7B"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_time4"
+        android:layout_width="121dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="470dp"
+        android:layout_weight="1"
+        android:text="오전10시"
+        android:textColor="#817B7B"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/f_date3"
+        android:layout_width="105dp"
+        android:layout_height="37dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="390dp"
+        android:layout_weight="1"
+        android:text="목격 날짜"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/f_place3"
+        android:layout_width="108dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="430dp"
+        android:layout_weight="1"
+        android:text="목격 위치"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/f_time3"
+        android:layout_width="109dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="470dp"
+        android:layout_weight="1"
+        android:text="목격 시간"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>

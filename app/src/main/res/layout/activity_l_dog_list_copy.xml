@@ -6,178 +6,84 @@
     android:layout_height="match_parent"
     tools:context=".L_Dog_List">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
-
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="발견했어요"
-        android:textColor="#040404"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아줄게요"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="입양하기"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/btn_4"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_2"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아주세요"
-        android:textColor="#FB9F82"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="비문등록"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
 
     <TextView
-        android:id="@+id/tv_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#0B0B0B"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_l_dog_1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="124dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/img_l_dog_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/img_l_dog_3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="372dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <ImageView
-        android:id="@+id/img_l_dog_4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="372dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:id="@+id/tv_page8"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginBottom="50dp"
+        android:text="3"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_l_dog1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
+        android:id="@+id/tv_page10"
+        android:layout_width="9dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginBottom="50dp"
+        android:text="5"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_page9"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginBottom="50dp"
+        android:text="4"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_page6"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginBottom="50dp"
+        android:text="1"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_page7"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="50dp"
+        android:text="2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <GridView
+        android:id="@+id/gv_find"
+        android:layout_width="416dp"
+        android:layout_height="703dp"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:verticalSpacing="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_1" />
 
-    <TextView
-        android:id="@+id/tv_l_dog2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="100dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_2" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06999999" />
 
-    <TextView
-        android:id="@+id/tv_l_dog3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="28dp"
-        android:text="TextView"
+    <ImageButton
+        android:id="@+id/imgbtn_write2"
+        android:layout_width="59dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginBottom="35dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_3" />
-
-    <TextView
-        android:id="@+id/tv_l_dog4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="84dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_4" />
+        app:srcCompat="@drawable/write" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
