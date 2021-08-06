@@ -26,5 +26,10 @@
         android:id="@+id/page5"
         android:icon="@drawable/adopt"
         />
+<!--    <item-->
+<!--        android:title="마이페이지"-->
+<!--        android:id="@+id/page6"-->
+<!--        android:icon="@drawable/adopt"-->
+<!--        />-->
 
 </menu>
