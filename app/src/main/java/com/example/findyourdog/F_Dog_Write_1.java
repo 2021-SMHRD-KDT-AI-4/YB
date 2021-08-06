@@ -49,7 +49,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         btn_f_picture_plus = findViewById(R.id.btn_f_picture_plus);
         btn_ok = findViewById(R.id.btn_f_next);
         edt_find = findViewById(R.id.edt_find);
-        edt_tel = findViewById(R.id.edt_tel);
+        edt_tel = findViewById(R.id.edt_place);
         edt_where = findViewById(R.id.edt_time);
         tv_time = findViewById(R.id.tv_time);
         edt_time = findViewById(R.id.edt_time);

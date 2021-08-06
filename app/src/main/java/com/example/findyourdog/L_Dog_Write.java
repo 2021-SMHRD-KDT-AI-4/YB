@@ -26,7 +26,7 @@ public class L_Dog_Write extends AppCompatActivity {
         btn_l_dog_write = findViewById(R.id.btn_l_dog_write);
         img_menu = findViewById(R.id.img_menu);
         app_name4 = findViewById(R.id.tv_appname);
-        tv_l_dog_write = findViewById(R.id.tv_l_dog_write);
+//        tv_l_dog_write = findViewById(R.id.tv_l_dog_write);
         tv_l_dog_infor = findViewById(R.id.tv_l_dog_infor);
         tv_l_dog_date = findViewById(R.id.tv_l_dog_date);
         tv_l_dog_time = findViewById(R.id.tv_l_dog_time);
