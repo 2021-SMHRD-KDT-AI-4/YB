@@ -99,7 +99,7 @@ public class Login extends AppCompatActivity {
 
                         PreferenceManager.setString(getApplicationContext(),"id",dto.getId());
 
-                        Intent intent = new Intent(getApplicationContext(),Sidebar.class);
+                        Intent intent = new Intent(getApplicationContext(),Main.class);
                         startActivity(intent);
 
                         Log.v("resultValue","로그인성공");

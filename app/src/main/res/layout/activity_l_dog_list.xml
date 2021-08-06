@@ -180,4 +180,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_l_dog_4" />
 
+    <Button
+        android:id="@+id/btn_l_write"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="158dp"
+        android:text="글쓰기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

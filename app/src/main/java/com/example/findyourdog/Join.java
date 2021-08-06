@@ -95,7 +95,7 @@ public class Join extends AppCompatActivity {
                         String result = jsonObject.getString("isCheck");
                         Log.v("resultValue", result);
                         if (result.equals("true")) {
-                            Intent intent = new Intent(getApplicationContext(), Sidebar.class);
+                            Intent intent = new Intent(getApplicationContext(), Main.class);
                             startActivity(intent);
                         } else {
                             Toast.makeText(getApplicationContext(), "회원가입 실패..", Toast.LENGTH_SHORT).show();

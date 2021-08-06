@@ -11,7 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import org.jetbrains.annotations.NotNull;
 
-public class Home extends AppCompatActivity {
+public class Main extends AppCompatActivity {
     Fragment f_dog_list_copy, l_dog_list_copy, picture_or_dog_print,dog_info,p_dog_list;
     private BottomNavigationView bottom;
 
@@ -19,7 +19,7 @@ public class Home extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_main);
 
 
         f_dog_list_copy = new F_Dog_List_copy();
@@ -37,6 +37,7 @@ public class Home extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull @NotNull MenuItem item) {
 
                 if(item.getItemId() == R.id.page1){
+                    //Toast.makeText(getApplicationContext(),"눌렀음",Toast.LENGTH_SHORT).show();
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame,f_dog_list_copy).commit();
                 }else if (item.getItemId()== R.id.page2){
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame,l_dog_list_copy).commit();

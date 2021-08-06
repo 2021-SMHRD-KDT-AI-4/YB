@@ -25,7 +25,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         btn_3 = findViewById(R.id.btn_3);
         btn_4 = findViewById(R.id.btn_4);
         btn_5 = findViewById(R.id.btn_5);
-        btn_ok = findViewById(R.id.btn_ok);
+        btn_ok = findViewById(R.id.btn_f_next);
         tv_text = findViewById(R.id.tv_text);
         tv_birth = findViewById(R.id.tv_birth);
         tv_color = findViewById(R.id.tv_color);
