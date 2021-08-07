@@ -22,7 +22,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
         edt_l_type =findViewById(R.id.edt_l_type);
         edt_l_kg = findViewById(R.id.edt_l_kg);
         edt_l_feature = findViewById(R.id.edt_f_feature);
-        btn_l_enroll = findViewById(R.id.btn_l_next);
+        btn_l_enroll = findViewById(R.id.btn_f_enroll);
         btn_l_picture_plus = findViewById(R.id.btn_f_picture_plus);
 
 

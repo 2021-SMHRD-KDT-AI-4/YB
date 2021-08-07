@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".L_Dog_List">
 
+    <Button
+        android:id="@+id/btn_f_next2"
+        android:layout_width="308dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_round_pink"
+        android:text="등록하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_vital" />
+
     <TextView
         android:id="@+id/tv_f_dog_info"
         android:layout_width="wrap_content"
@@ -22,7 +34,7 @@
         android:id="@+id/tv_vital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:text="는 필수항목입니다."
         android:textColor="#5C5C5C"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +45,7 @@
         android:id="@+id/tv_star5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="24sp"
@@ -41,20 +53,6 @@
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_f_feature" />
-
-    <Button
-        android:id="@+id/btn_f_next"
-        android:layout_width="341dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="524dp"
-        android:backgroundTint="#C6C6C6"
-        android:text="등록하기"
-        android:textColor="#403F3F"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edt_f_type"

@@ -7,6 +7,18 @@
     android:orientation="vertical"
     tools:context=".F_Dog_Write_1">
 
+    <Button
+        android:id="@+id/btn_f_next"
+        android:layout_width="312dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/btn_round_pink"
+        android:text="다음으로"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_f_picture" />
+
     <EditText
         android:id="@+id/edt_f_day"
         android:layout_width="wrap_content"
@@ -17,19 +29,6 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
-
-    <Button
-        android:id="@+id/btn_f_next"
-        android:layout_width="328dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="24dp"
-        android:backgroundTint="#C6C6C6"
-        android:text="다음으로"
-        android:textColor="#686868"
-        android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_f_camera" />
 
     <TextView
         android:id="@+id/tv_star9"
@@ -53,6 +52,7 @@
         android:text="사진첨부"
         android:textColor="#686767"
         android:textSize="12sp"
+        android:background="@drawable/btn_round_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_f_picture" />
 
@@ -112,6 +112,7 @@
         android:text="카메라"
         android:textColor="#686868"
         android:textSize="12sp"
+        android:background="@drawable/btn_round_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_f_picture" />
 

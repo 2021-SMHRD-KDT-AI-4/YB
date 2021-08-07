@@ -8,10 +8,10 @@
 
     <FrameLayout
         android:id="@+id/frame"
-        android:layout_width="390dp"
-        android:layout_height="625dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="410dp"
+        android:layout_height="617dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -21,7 +21,7 @@
         android:id="@+id/tabs"
         android:layout_width="411dp"
         android:layout_height="61dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabMode="scrollable"
@@ -31,36 +31,56 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/f_dog"
-            android:text="발견했어요" />
+            android:text="발견했어요"
+            android:fontFamily="@font/nanumbarunpenb"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/l_dog"
-            android:text="찿아주세요" />
+            android:text="찿아주세요"
+            android:fontFamily="@font/nanumbarunpenb"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/dognose"
-            android:text="비문등록" />
+            android:text="비문등록"
+            android:fontFamily="@font/nanumbarunpenb"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/m_dog"
-            android:text="찿아줄게요" />
+            android:text="찿아줄게요"
+            android:fontFamily="@font/nanumbarunpenb"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/adopt"
-            android:text="입양하기" />
+            android:text="입양하기"
+            android:fontFamily="@font/nanumbarunpenb"/>
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/mypage"
-            android:text="마이페이지" />
+            android:text="마이페이지"
+            android:fontFamily="@font/nanumbarunpenb"/>
     </com.google.android.material.tabs.TabLayout>
+
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="'찾아줄개'"
+        android:textColor="#EFB29F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
