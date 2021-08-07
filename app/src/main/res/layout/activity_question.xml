@@ -4,43 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Question">
-    <TextView
-        android:id="@+id/tv_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#0B0B0B"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".Question"
+    >
 
     <TextView
         android:id="@+id/tv_Q"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:text="자주하는 질문"
-        android:textColor="#000000"
-        android:textSize="24sp"
+        android:textColor="#F69595"
+        android:textSize="28sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/listview1"
-        android:layout_width="0dp"
-        android:layout_height="550dp"
+        android:layout_width="415dp"
+        android:layout_height="532dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_Q"
+        app:layout_constraintVertical_bias="0.39"
+        android:textSize="24sp"
+        android:fontFamily="@font/nanumbarunpenb"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
