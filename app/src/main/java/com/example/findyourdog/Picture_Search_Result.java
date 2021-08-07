@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Picture_Search_list_Fail extends AppCompatActivity {
+public class Picture_Search_Result extends AppCompatActivity {
 
     private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_p_retry;
     private TextView app_name4, tv_picture, tv_fail2;
@@ -14,7 +14,7 @@ public class Picture_Search_list_Fail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_picture_search_list_fail);
+        setContentView(R.layout.activity_picture_search_result);
 
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);

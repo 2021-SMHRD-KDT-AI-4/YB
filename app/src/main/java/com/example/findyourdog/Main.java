@@ -50,9 +50,9 @@ public class Main extends AppCompatActivity {
                 }else if (position==1){
                     selected = l_dog_list_copy;
                 }else if (position ==2){
-                    selected = picture_or_dog_print;
-                }else if (position ==3){
                     selected = dog_info;
+                }else if (position ==3){
+                    selected = picture_or_dog_print;
                 }else if (position ==4){
                     selected = p_dog_list;
                 }else if (position ==5){
