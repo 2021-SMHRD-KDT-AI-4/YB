@@ -93,7 +93,6 @@
         android:layout_marginTop="224dp"
         android:backgroundTint="#7686DA"
         android:text="검색"
-        app:icon="@drawable/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
