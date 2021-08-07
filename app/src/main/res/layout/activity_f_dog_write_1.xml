@@ -160,7 +160,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_time"
+        android:id="@+id/tv_l_time"
         android:layout_width="69dp"
         android:layout_height="36dp"
         android:layout_marginStart="52dp"
@@ -196,7 +196,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_date"
+        android:id="@+id/tv_l_date"
         android:layout_width="72dp"
         android:layout_height="36dp"
         android:layout_marginStart="52dp"

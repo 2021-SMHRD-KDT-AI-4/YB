@@ -59,7 +59,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         app_name4 = findViewById(R.id.tv_appname);
         tv_info = findViewById(R.id.tv_info);
         tv_tel = findViewById(R.id.tv_tel);
-        tv_date = findViewById(R.id.tv_date);
+        tv_date = findViewById(R.id.tv_l_date);
         tv_where = findViewById(R.id.tv_where);
         tv_img = findViewById(R.id.tv_img);
         btn_1 = findViewById(R.id.btn_1);
@@ -71,7 +71,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         edt_find = findViewById(R.id.edt_find);
         edt_tel = findViewById(R.id.edt_place);
         edt_where = findViewById(R.id.edt_time);
-        tv_time = findViewById(R.id.tv_time);
+        tv_time = findViewById(R.id.tv_l_time);
         edt_time = findViewById(R.id.edt_time);
         tv_star6 = findViewById(R.id.tv_star6);
         tv_star7 = findViewById(R.id.tv_star7);
