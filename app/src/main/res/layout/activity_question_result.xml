@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Question_Result">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
     <TextView
         android:id="@+id/app_name5"
         android:layout_width="wrap_content"
@@ -43,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_Question"
+        android:id="@+id/tv_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -65,10 +55,10 @@
         android:textColor="#000000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_Question" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_question" />
 
     <TextView
-        android:id="@+id/tv_A1"
+        android:id="@+id/tv_question_re"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -80,7 +70,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_bar7" />
 
     <TextView
-        android:id="@+id/tv_A2"
+        android:id="@+id/tv_question_result"
         android:layout_width="368dp"
         android:layout_height="62dp"
         android:layout_marginTop="17dp"
@@ -90,10 +80,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_A1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_re" />
 
     <TextView
-        android:id="@+id/tv_A3"
+        android:id="@+id/tv_question_reuslt_re"
         android:layout_width="371dp"
         android:layout_height="219dp"
         android:layout_marginTop="17dp"
@@ -103,6 +93,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_A2" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
