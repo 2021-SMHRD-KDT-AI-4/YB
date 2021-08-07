@@ -7,28 +7,27 @@
     tools:context=".L_Dog_List">
 
     <TextView
-        android:id="@+id/tv_info"
+        android:id="@+id/tv_f_dog_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"
         android:text="유실견정보"
         android:textColor="#0B0B0B"
         android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_text"
+        android:id="@+id/tv_vital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="는 필수항목입니다."
-        android:textColor="#0C0C0C"
+        android:textColor="#5C5C5C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_feature" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_feature" />
 
     <TextView
         android:id="@+id/tv_star5"
@@ -38,27 +37,27 @@
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="24sp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_text"
+        app:layout_constraintEnd_toStartOf="@+id/tv_vital"
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_feature" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_feature" />
 
     <Button
         android:id="@+id/btn_f_next"
-        android:layout_width="171dp"
-        android:layout_height="52dp"
+        android:layout_width="341dp"
+        android:layout_height="44dp"
         android:layout_marginTop="524dp"
         android:backgroundTint="#C6C6C6"
         android:text="등록하기"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColor="#403F3F"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_type"
+        android:id="@+id/edt_f_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
@@ -69,25 +68,25 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_birth"
+        android:id="@+id/tv_f_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="252dp"
         android:text="출생연도"
-        android:textColor="#090909"
+        android:textColor="#5E5D5D"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_color"
+        android:id="@+id/tv_f_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="302dp"
         android:text="색"
-        android:textColor="@color/black"
+        android:textColor="#5A5858"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -117,37 +116,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_type"
+        android:id="@+id/tv_f_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="130dp"
         android:text="품종"
-        android:textColor="#0C0C0C"
+        android:textColor="#616060"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_kg"
+        android:id="@+id/tv_f_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
         android:layout_marginTop="352dp"
         android:text="무게(kg)"
-        android:textColor="#090909"
+        android:textColor="#676666"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_sex"
+        android:id="@+id/tv_f_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="192dp"
         android:text="성별"
-        android:textColor="#040303"
+        android:textColor="#5A5858"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -165,7 +164,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_birth"
+        android:id="@+id/edt_f_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -173,11 +172,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.329"
-        app:layout_constraintStart_toEndOf="@+id/tv_birth"
-        app:layout_constraintTop_toBottomOf="@+id/edt_sex" />
+        app:layout_constraintStart_toEndOf="@+id/tv_f_birth"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_sex" />
 
     <EditText
-        android:id="@+id/edt_color"
+        android:id="@+id/edt_f_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -185,17 +184,17 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toEndOf="@+id/tv_color"
-        app:layout_constraintTop_toBottomOf="@+id/edt_birth" />
+        app:layout_constraintStart_toEndOf="@+id/tv_f_color"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_birth" />
 
     <TextView
-        android:id="@+id/tv_feature"
+        android:id="@+id/tv_f_feature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="402dp"
         android:text="특징"
-        android:textColor="#070707"
+        android:textColor="#535252"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -213,7 +212,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_sex"
+        android:id="@+id/edt_f_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -221,11 +220,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toEndOf="@+id/tv_sex"
-        app:layout_constraintTop_toBottomOf="@+id/edt_type" />
+        app:layout_constraintStart_toEndOf="@+id/tv_f_sex"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_type" />
 
     <EditText
-        android:id="@+id/edt_feature"
+        android:id="@+id/edt_f_feature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -233,11 +232,11 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toEndOf="@+id/tv_feature"
-        app:layout_constraintTop_toBottomOf="@+id/edt_kg" />
+        app:layout_constraintStart_toEndOf="@+id/tv_f_feature"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_kg" />
 
     <EditText
-        android:id="@+id/edt_kg"
+        android:id="@+id/edt_f_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -245,7 +244,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.336"
-        app:layout_constraintStart_toEndOf="@+id/tv_kg"
-        app:layout_constraintTop_toBottomOf="@+id/edt_color" />
+        app:layout_constraintStart_toEndOf="@+id/tv_f_kg"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

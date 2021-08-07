@@ -8,10 +8,10 @@
 
     <FrameLayout
         android:id="@+id/frame"
-        android:layout_width="409dp"
-        android:layout_height="637dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="390dp"
+        android:layout_height="625dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 

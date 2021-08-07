@@ -63,7 +63,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imgbtn_write2"
+        android:id="@+id/imgbtn_l_write"
         android:layout_width="59dp"
         android:layout_height="54dp"
         android:layout_marginStart="290dp"
@@ -76,7 +76,7 @@
     <GridView
         android:id="@+id/gv_lost"
         android:layout_width="409dp"
-        android:layout_height="640dp"
+        android:layout_height="524dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

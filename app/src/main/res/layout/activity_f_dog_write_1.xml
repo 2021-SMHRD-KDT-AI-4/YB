@@ -8,227 +8,228 @@
     tools:context=".F_Dog_Write_1">
 
     <EditText
-        android:id="@+id/edt_find"
+        android:id="@+id/edt_f_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="25dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
 
     <Button
         android:id="@+id/btn_f_next"
-        android:layout_width="169dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="600dp"
+        android:layout_width="328dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
         android:backgroundTint="#C6C6C6"
         android:text="다음으로"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColor="#686868"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_f_camera" />
 
     <TextView
         android:id="@+id/tv_star9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="20dp"
         android:text="*"
         android:textColor="#FD0000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_place" />
 
     <Button
         android:id="@+id/btn_f_picture_plus"
-        android:layout_width="98dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="524dp"
+        android:layout_width="94dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#C6C6C6"
         android:text="사진첨부"
-        android:textColor="#000000"
+        android:textColor="#686767"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_f_picture" />
 
     <ImageView
         android:id="@+id/img_f_picture"
         android:layout_width="161dp"
         android:layout_height="140dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="368dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_tel"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tv_where"
+        android:id="@+id/tv_f_place"
         android:layout_width="71dp"
         android:layout_height="35dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="20dp"
         android:text="목격장소"
-        android:textColor="#070707"
+        android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_star10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="372dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_time" />
 
     <TextView
         android:id="@+id/tv_star6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="30dp"
         android:text="*"
         android:textColor="#FD0000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
+
+    <TextView
+        android:id="@+id/tv_star10"
+        android:layout_width="9dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="*"
+        android:textColor="#FD0000"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_tel" />
 
     <Button
         android:id="@+id/btn_f_camera"
-        android:layout_width="89dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="524dp"
+        android:layout_width="88dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="20dp"
         android:backgroundTint="#C6C6C6"
         android:text="카메라"
-        android:textColor="#000000"
+        android:textColor="#686868"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_f_picture" />
 
     <EditText
-        android:id="@+id/edt_tel"
+        android:id="@+id/edt_f_tel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_place" />
 
     <TextView
         android:id="@+id/tv_star8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="20dp"
         android:text="*"
         android:textColor="#FD0000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_time" />
 
     <TextView
         android:id="@+id/tv_star7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="20dp"
         android:text="*"
         android:textColor="#FD0000"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_day" />
 
     <EditText
-        android:id="@+id/edt_place"
+        android:id="@+id/edt_f_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_time" />
 
     <TextView
-        android:id="@+id/tv_l_time"
+        android:id="@+id/tv_f_time"
         android:layout_width="69dp"
         android:layout_height="36dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="20dp"
         android:text="목격시간"
-        android:textColor="#070707"
+        android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_day" />
 
     <TextView
-        android:id="@+id/tv_info"
+        android:id="@+id/tv_f_dog_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"
         android:text="기본정보"
         android:textColor="#0B0B0B"
         android:textSize="22sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edt_time"
+        android:id="@+id/edt_f_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_f_day" />
 
     <TextView
-        android:id="@+id/tv_l_date"
+        android:id="@+id/tv_f_day"
         android:layout_width="72dp"
         android:layout_height="36dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="30dp"
         android:text="목격날짜"
-        android:textColor="#070707"
+        android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
 
     <TextView
-        android:id="@+id/tv_img"
+        android:id="@+id/tv_f_picture"
         android:layout_width="55dp"
         android:layout_height="35dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="20dp"
         android:text="사진"
-        android:textColor="#070707"
+        android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_tel" />
 
     <TextView
-        android:id="@+id/tv_tel"
+        android:id="@+id/tv_f_tel"
         android:layout_width="71dp"
         android:layout_height="36dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="312dp"
+        android:layout_marginTop="20dp"
         android:text="연락처"
-        android:textColor="#070707"
+        android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_place" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

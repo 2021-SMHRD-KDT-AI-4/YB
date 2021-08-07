@@ -15,8 +15,10 @@
     </style>
 
     <style name="Theme.FindYourDog.NoActionBar">
+        <item name="android:windowFullscreen">false</item>
 
     </style>
+
 
     <style name="Theme.FindYourDog.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"
 

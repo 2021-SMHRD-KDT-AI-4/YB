@@ -19,7 +19,7 @@ public class L_Dog_Write_Result extends AppCompatActivity {
         setContentView(R.layout.activity_l_dog_write_result);
 
         img_menu = findViewById(R.id.img_menu);
-        img_l_dog = findViewById(R.id.img_l_dog);
+        img_l_dog = findViewById(R.id.img_f_dog);
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);

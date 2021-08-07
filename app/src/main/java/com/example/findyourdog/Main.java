@@ -24,12 +24,18 @@ public class Main extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        f_dog_list_copy = new F_Dog_List_copy();
+        f_dog_list_copy = new F_Dog_List_copy(getApplicationContext());
+
+
+
+
+
         l_dog_list_copy = new L_Dog_List_copy();
         picture_or_dog_print = new Picture_or_Dog_Print();
         dog_info = new Dog_Info();
         p_dog_list = new P_Dog_list();
         side_bar_nologin = new Side_bar_Nologin();
+
         getSupportFragmentManager().beginTransaction().replace(R.id.frame,f_dog_list_copy).commit();
 
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);

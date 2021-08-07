@@ -61,20 +61,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <GridView
-        android:id="@+id/gv_find"
-        android:layout_width="410dp"
-        android:layout_height="628dp"
-        android:horizontalSpacing="20dp"
-        android:numColumns="2"
-        android:verticalSpacing="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
     <ImageButton
-        android:id="@+id/imgbtn_write"
+        android:id="@+id/imgbtn_f_write"
         android:layout_width="59dp"
         android:layout_height="54dp"
         android:layout_marginStart="290dp"
@@ -83,5 +71,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/write" />
+
+    <GridView
+        android:id="@+id/gv_find"
+        android:layout_width="411dp"
+        android:layout_height="525dp"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:verticalSpacing="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.015" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

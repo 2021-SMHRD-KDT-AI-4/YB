@@ -27,10 +27,11 @@
         <activity android:name=".Login" />
         <activity android:name=".Join" />
         <activity android:name=".F_Dog_Write_1"/>
+        <activity android:name=".F_Dog_Write_2"/>
+        <activity android:name=".L_Dog_Write1"/>
+        <activity android:name=".L_Dog_Write2"/>
         <activity android:name=".Question"/>
         <activity android:name=".Question_Result"/>
-        <activity android:name=".Side_bar_MyPage"/>
-        <activity android:name=".Side_bar_Shelter_Info"/>
 
 
 
