@@ -27,6 +27,9 @@
         <activity android:name=".Login" />
         <activity android:name=".Join" />
         <activity android:name=".F_Dog_Write_1"/>
+        <activity android:name=".Question"/>
+        <activity android:name=".Side_bar_MyPage"/>
+        <activity android:name=".Side_bar_Shelter_Info"/>
 
 
 

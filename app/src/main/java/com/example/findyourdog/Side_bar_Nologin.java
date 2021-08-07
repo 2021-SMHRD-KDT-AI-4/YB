@@ -1,7 +1,7 @@
 package com.example.findyourdog;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,22 +14,60 @@ import androidx.fragment.app.Fragment;
 
 public class Side_bar_Nologin extends Fragment {
 
-    private ImageView img_menu;
-    private TextView app_name, tv_mypage, tv_mypage_dog_nose;
-    private TextView tv_mypage_dog_name, tv_mypage_ok;
-    private Button btn_mypage_plus;
+    private Button btn_login_go,btn_my_page_go,btn_shelter_info_go,btn_question_go;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View fragment = inflater.inflate(R.layout.activity_side_bar_nologin, container, false);
 
-        img_menu = fragment.findViewById(R.id.img_menu);
-        app_name = fragment.findViewById(R.id.app_name);
-        tv_mypage = fragment.findViewById(R.id.tv_mypage);
-        tv_mypage_dog_nose = fragment.findViewById(R.id.tv_mypage_dog_nose);
-        tv_mypage_dog_name = fragment.findViewById(R.id.tv_mypage_dog_name);
-        tv_mypage_ok = fragment.findViewById(R.id.tv_mypage_ok);
-        btn_mypage_plus = fragment.findViewById(R.id.btn_mypage_plus);
+        btn_login_go = fragment.findViewById(R.id.btn_login_go);
+        btn_my_page_go = fragment.findViewById(R.id.btn_my_page_go);
+        btn_shelter_info_go = fragment.findViewById(R.id.btn_shelter_info_go);
+        btn_question_go = fragment.findViewById(R.id.btn_question_go);
+
+        String id = PreferenceManager.getString(getContext(),"id");
+        if (id.equals(PreferenceManager.DEFAULT_STRING)){
+            btn_login_go.setText("로그인");
+        }else if (id != null){
+            btn_login_go.setText("로그아웃");
+        }
+
+
+        btn_login_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(btn_login_go.getText().equals("로그인")){
+                    Intent intent = new Intent(getActivity(),Login.class);
+                    startActivity(intent);
+                }else if (btn_login_go.getText().equals("로그아웃")){
+                    PreferenceManager.remove(getContext(),"id");
+                    Intent intent = new Intent(getActivity(),Main.class);
+                    startActivity(intent);
+                }
+            }
+        });
+        btn_shelter_info_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intnet = new Intent(getActivity(),Side_bar_Shelter_Info.class);
+                startActivity(intnet);
+            }
+        });
+        btn_my_page_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Side_bar_MyPage.class);
+                startActivity(intent);
+            }
+        });
+        btn_question_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Question.class);
+                startActivity(intent);
+            }
+        });
+
 
         return fragment;
     }

@@ -80,7 +80,7 @@
         android:layout_gravity="start"
         android:layout_marginStart="285dp"
         android:layout_marginTop="180dp"
-        android:enabled="false"
+        android:enabled="true"
         android:text="ID중복확인"
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
         android:layout_gravity="start"
         android:layout_marginStart="160dp"
         android:layout_marginTop="550dp"
-        android:enabled="false"
+        android:enabled="true"
         android:text="회원가입"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

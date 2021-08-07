@@ -38,7 +38,7 @@ public class Login extends AppCompatActivity {
 
     private ImageView img_logo2;
     private EditText edt_login_id, edt_login_pw;
-    private Button btn_login;
+    private Button btn_login, btn_join_go;
 
 
     private RequestQueue queue;
@@ -52,6 +52,15 @@ public class Login extends AppCompatActivity {
         edt_login_pw = findViewById(R.id.edt_login_pw);
         btn_login = findViewById(R.id.btn_login);
         img_logo2 = findViewById(R.id.img_logo2);
+        btn_join_go = findViewById(R.id.btn_join_go);
+
+        btn_join_go.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Join.class);
+                startActivity(intent);
+            }
+        });
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,11 +103,11 @@ public class Login extends AppCompatActivity {
                     MemberDTO dto = new MemberDTO(id,pw,name,membercode,tel,address);
 
 
-                    Log.v("resultValue", String.valueOf(dto));
+
                     if (id.equals(edt_login_id.getText().toString())){
 
                         PreferenceManager.setString(getApplicationContext(),"id",dto.getId());
-
+                        Log.v("test",id);
                         Intent intent = new Intent(getApplicationContext(),Main.class);
                         startActivity(intent);
 
@@ -149,6 +158,7 @@ public class Login extends AppCompatActivity {
                 return params;
             }
         };
+
 
         queue.add(stringRequest);
     }
