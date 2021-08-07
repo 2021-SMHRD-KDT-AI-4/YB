@@ -2,12 +2,12 @@ package com.example.findyourdog;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
@@ -56,6 +56,7 @@ public class L_Dog_List_copy extends Fragment {
         imgbtn_write2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.v("cc","click");
                 Intent intent = new Intent(getActivity(),L_Dog_Write.class);
                 startActivity(intent);
             }
