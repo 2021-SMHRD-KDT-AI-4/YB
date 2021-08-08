@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_l_place"
+            android:id="@+id/tv_p_place"
             android:layout_width="228dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
@@ -35,7 +35,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/l_kind"
+            android:id="@+id/p_kind"
             android:layout_width="82dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -47,7 +47,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/l_date"
+            android:id="@+id/p_kg"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -59,7 +59,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/l_place"
+            android:id="@+id/p_place"
             android:layout_width="152dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
@@ -71,7 +71,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/l_time"
+            android:id="@+id/p_sex"
             android:layout_width="153dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
@@ -83,7 +83,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_f_day"
+            android:id="@+id/tv_p_kg"
             android:layout_width="190dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -96,7 +96,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_l_kind"
+            android:id="@+id/tv_p_kind"
             android:layout_width="193dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -108,7 +108,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_f_time"
+            android:id="@+id/tv_p_sex"
             android:layout_width="200dp"
             android:layout_height="52dp"
             android:layout_gravity="center"

@@ -8,25 +8,31 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
         android:layout_gravity="start"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="400dp"
         android:enabled="true"
+        android:background="@drawable/btn_round_pink"
+        android:fontFamily="@font/nanumbarunpenb"
         android:text="로그인"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_join_go"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="46dp"
         android:layout_gravity="start"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="450dp"
         android:enabled="true"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:background="@drawable/btn_round_pink"
         android:text="회원가입"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

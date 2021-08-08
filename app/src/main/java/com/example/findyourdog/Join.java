@@ -33,7 +33,7 @@ import java.util.Map;
 
 public class Join extends AppCompatActivity {
 
-    private TextView tv_id_check;
+   private TextView tv_id_check;
     private EditText edt_join_id, edt_join_pw, edt_join_name, edt_join_tel, edt_join_addr;
     private Button  btn_join, btn_id_check;
     private CheckBox shelter_check;

@@ -21,7 +21,7 @@
         android:id="@+id/tabs"
         android:layout_width="411dp"
         android:layout_height="61dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:tabMode="scrollable"
@@ -30,44 +30,44 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/f_dog"
-            android:text="발견했어요"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="발견했어요" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/l_dog"
-            android:text="찿아주세요"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="찿아주세요" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/dognose"
-            android:text="비문등록"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="비문등록" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/m_dog"
-            android:text="찿아줄게요"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="찿아줄게요" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/adopt"
-            android:text="입양하기"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="입양하기" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/nanumbarunpenb"
             android:icon="@drawable/mypage"
-            android:text="마이페이지"
-            android:fontFamily="@font/nanumbarunpenb"/>
+            android:text="마이페이지" />
     </com.google.android.material.tabs.TabLayout>
 
     <TextView
