@@ -4,44 +4,237 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".F_Dog_Detail">
+    tools:context=".L_Dog_Detail">
 
     <ImageView
-        android:id="@+id/img_f_dog_1"
-        android:layout_width="365dp"
-        android:layout_height="247dp"
-        android:layout_marginTop="120dp"
+        android:id="@+id/img_f_d_dog"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/three" />
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tv_witness"
-        android:layout_width="129dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="24dp"
-        android:background="#C6C6C6"
-        android:gravity="center"
-        android:text="목격"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_f_dog_1" />
-
-    <TextView
-        android:id="@+id/tv_f_dog_detail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/f_d_sex"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="20dp"
-        android:text="수컷/5살/흰색\n품종 : 말티즈\n목격 날짜 : 2021.07.28\n목격 위치 : 쌍촌동 맥도날드\n목격 시간 : 오전 8시경\n아이디 : 무야호\n연락처 : 01012341234\n기타 : 임시보호중입니다."
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        android:text="성별"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_witness" />
+        app:layout_constraintTop_toBottomOf="@+id/img_f_d_dog" />
+
+    <TextView
+        android:id="@+id/f_d_age"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="나이"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_sex" />
+
+    <TextView
+        android:id="@+id/f_d_color"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="색"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_age" />
+
+    <TextView
+        android:id="@+id/f_d_kind"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="품종"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_color" />
+
+    <TextView
+        android:id="@+id/f_d_day"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="목격날짜"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_kind" />
+
+    <TextView
+        android:id="@+id/f_d_place"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="목격위치"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_day" />
+
+    <TextView
+        android:id="@+id/f_d_time"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="목격시간"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_place" />
+
+    <TextView
+        android:id="@+id/f_d_id"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="아이디"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_time" />
+
+    <TextView
+        android:id="@+id/f_d_tel"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="연락처"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_id" />
+
+    <TextView
+        android:id="@+id/f_d_etc"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="기타"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_tel" />
+
+    <TextView
+        android:id="@+id/tv_f_d_sex"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:text="수컷"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_f_d_dog" />
+
+    <TextView
+        android:id="@+id/tv_f_d_age"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="5살"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_sex" />
+
+    <TextView
+        android:id="@+id/tv_f_d_color"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="흰색"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_age" />
+
+    <TextView
+        android:id="@+id/tv_f_d_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="치와와"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_color" />
+
+    <TextView
+        android:id="@+id/tv_f_d_day"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="2021.07.28"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_kind" />
+
+    <TextView
+        android:id="@+id/tv_f_d_place"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="운천저수지"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_day" />
+
+    <TextView
+        android:id="@+id/tv_f_d_time"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="오전 8시"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_place" />
+
+    <TextView
+        android:id="@+id/tv_f_d_id"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="무야호"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_time" />
+
+    <TextView
+        android:id="@+id/tv_f_d_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="01012341234"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_id" />
+
+    <TextView
+        android:id="@+id/tv_f_d_etc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="6dp"
+        android:text="임시보호중입니다."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_tel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
