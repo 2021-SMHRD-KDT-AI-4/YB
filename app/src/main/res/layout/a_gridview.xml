@@ -11,51 +11,27 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:id="@+id/tv_p_kind"
+            android:layout_width="193dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="432dp"
+            android:text="믹스견"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
             android:id="@+id/tv_p_place"
             android:layout_width="228dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="540dp"
-            android:text="운천저수지"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="532dp"
+            android:text="광주동물 보호소"
             android:textColor="#817B7B"
-            android:textSize="34sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/p_kind"
-            android:layout_width="82dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="420dp"
-            android:text="품종"
-            android:textSize="34sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/p_kg"
-            android:layout_width="150dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="480dp"
-            android:text="실종날짜"
-            android:textSize="34sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/p_place"
-            android:layout_width="152dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="540dp"
-            android:text="실종위치"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -64,10 +40,58 @@
             android:layout_width="153dp"
             android:layout_height="49dp"
             android:layout_gravity="center"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="600dp"
-            android:text="실종시간"
-            android:textSize="34sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="580dp"
+            android:text="성별"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_kind"
+            android:layout_width="82dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="432dp"
+            android:text="품종"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_kg"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="480dp"
+            android:text="무게"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_feature"
+            android:layout_width="153dp"
+            android:layout_height="49dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="632dp"
+            android:text="특징"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/p_place"
+            android:layout_width="170dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="532dp"
+            android:text="관할보호센터"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,23 +100,24 @@
             android:layout_width="190dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
-            android:layout_marginStart="188dp"
+            android:layout_marginStart="192dp"
             android:layout_marginTop="480dp"
-            android:text="2021.07.21"
+            android:text="3.2kg"
             android:textColor="#817B7B"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_p_kind"
-            android:layout_width="193dp"
-            android:layout_height="48dp"
+            android:id="@+id/tv_p_feature"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
             android:layout_gravity="center"
-            android:layout_marginStart="188dp"
-            android:layout_marginTop="420dp"
-            android:text="웰시코기"
-            android:textSize="34sp"
+            android:layout_marginStart="192dp"
+            android:layout_marginTop="632dp"
+            android:text="특이사항 없음"
+            android:textColor="#817B7B"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,21 +127,21 @@
             android:layout_height="52dp"
             android:layout_gravity="center"
             android:layout_marginStart="188dp"
-            android:layout_marginTop="600dp"
-            android:text="오전10시"
+            android:layout_marginTop="580dp"
+            android:text="수컷"
             android:textColor="#817B7B"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/img_l_dog"
-            android:layout_width="404dp"
-            android:layout_height="375dp"
-            android:layout_marginStart="4dp"
+            android:id="@+id/img_p_dog"
+            android:layout_width="415dp"
+            android:layout_height="395dp"
+            android:layout_marginTop="4dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ldog" />
+            app:srcCompat="@drawable/img_a_dog" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

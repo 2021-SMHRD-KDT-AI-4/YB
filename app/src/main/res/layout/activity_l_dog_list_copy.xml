@@ -74,7 +74,7 @@
         app:srcCompat="@drawable/write" />
 
     <GridView
-        android:id="@+id/gv_lost"
+        android:id="@+id/gv_adopt"
         android:layout_width="409dp"
         android:layout_height="524dp"
         app:layout_constraintBottom_toBottomOf="parent"
