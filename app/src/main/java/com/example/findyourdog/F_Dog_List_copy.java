@@ -253,7 +253,8 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                     intent.putExtra("tel", list.get(position).getTel());
                     intent.putExtra("content", list.get(position).getContent());
 
-                    startActivity(intent);
+                    startActivityForResult(intent, 1018);
+
 
                 }
             });
@@ -271,5 +272,14 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
         }
 
     }
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 1018 && resultCode == getActivity().RESULT_OK) { // 1004번이 request code인 페이지에 들어가서 잘 통신 되었을 때
+
+        }
+
+    }
+
 
 }

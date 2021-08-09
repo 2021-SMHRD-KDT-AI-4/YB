@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class F_Dog_Detail extends AppCompatActivity {
@@ -95,5 +96,6 @@ public class F_Dog_Detail extends AppCompatActivity {
         imageLoadTask.execute();
 
     }
+
 
 }
