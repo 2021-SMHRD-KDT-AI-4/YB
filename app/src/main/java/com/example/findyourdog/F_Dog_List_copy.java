@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
@@ -53,4 +54,9 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
         Intent intent = new Intent(getActivity(), F_Dog_Write_1.class);
         startActivity(intent);
     }
+
+//    @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//    }
 }

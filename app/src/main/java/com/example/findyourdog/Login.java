@@ -82,7 +82,7 @@ public class Login extends AppCompatActivity {
     public void sendRequest(){
         // Voolley Lib 새료운 요청객체 생성
         queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "http://211.227.224.206:8081/YB_Project/Login";
+        String url = "http://211.227.224.206:8081/YB/Login";
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
             @Override

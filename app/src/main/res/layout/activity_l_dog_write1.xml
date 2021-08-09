@@ -152,6 +152,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:hint="날짜를 선택해주세요."
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info" />
@@ -163,6 +164,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="15dp"
         android:ems="10"
+        android:hint="시간을 선택해주세요."
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_day" />
@@ -185,6 +187,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="15dp"
         android:ems="10"
+
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_time" />
