@@ -4,135 +4,257 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".L_Dog_Detail">
+    tools:context=".F_Dog_Detail">
 
     <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
-
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="발견했어요"
-        android:textColor="#040404"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아줄게요"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="입양하기"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/btn_4"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_2"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아주세요"
-        android:textColor="#FB9F82"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="비문등록"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <TextView
-        android:id="@+id/tv_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#0B0B0B"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/img_l_dog_detail_img"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:id="@+id/img_l_d_dog"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/three" />
 
     <TextView
-        android:id="@+id/tv_l_dog_info"
+        android:id="@+id/l_d_sex"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="20dp"
+        android:text="성별"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_l_d_dog" />
+
+    <TextView
+        android:id="@+id/tv_l_d_sex"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="강아지정보"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:text="암컷"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_now" />
+        app:layout_constraintTop_toBottomOf="@+id/img_l_d_dog" />
 
     <TextView
-        android:id="@+id/tv_l_dog_now"
-        android:layout_width="97dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="28dp"
-        android:gravity="center"
-        android:text="실종"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        android:id="@+id/tv_l_d_age"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="5살"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_detail_img" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_sex" />
+
+    <TextView
+        android:id="@+id/tv_l_d_color"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="흰색"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_age" />
+
+    <TextView
+        android:id="@+id/tv_l_d_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="푸들"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_color" />
+
+    <TextView
+        android:id="@+id/tv_l_d_kg"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="3.5kg"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_kind" />
+
+    <TextView
+        android:id="@+id/tv_l_d_day"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="2021.07.27"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_kg" />
+
+    <TextView
+        android:id="@+id/tv_l_d_place"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="조선대학교 후문"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_day" />
+
+    <TextView
+        android:id="@+id/tv_l_d_time"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="오후 11시"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_place" />
+
+    <TextView
+        android:id="@+id/tv_l_d_id"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="나 심병주 ㅋ"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_time" />
+
+    <TextView
+        android:id="@+id/tv_l_d_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="01012341234"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_id" />
+
+    <TextView
+        android:id="@+id/tv_l_d_etc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:text="제발 찾아주세요 제발요"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_tel" />
+
+    <TextView
+        android:id="@+id/l_d_age"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="나이"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_sex" />
+
+    <TextView
+        android:id="@+id/l_d_color"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="색"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_age" />
+
+    <TextView
+        android:id="@+id/l_d_kind"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="품종"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_color" />
+
+    <TextView
+        android:id="@+id/l_d_kg"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="무게"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_kind" />
+
+    <TextView
+        android:id="@+id/l_d_day"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="실종날짜"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_kg" />
+
+    <TextView
+        android:id="@+id/l_d_place"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="실종위치"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_day" />
+
+    <TextView
+        android:id="@+id/l_d_time"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="실종시간"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_place" />
+
+    <TextView
+        android:id="@+id/l_d_id"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="아이디"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_time" />
+
+    <TextView
+        android:id="@+id/l_d_tel"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="연락처"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_id" />
+
+    <TextView
+        android:id="@+id/l_d_etc"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="4dp"
+        android:text="기타"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_tel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

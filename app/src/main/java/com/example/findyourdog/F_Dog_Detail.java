@@ -9,25 +9,27 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class F_Dog_Detail extends AppCompatActivity {
 
-    private ImageView img_menu, img_f_dog_1;
-    private Button btn_1, btn_2, btn_3, btn_4, btn_5;
-    private TextView app_name4, tv_witness, tv_f_dog_detail;
+    private ImageView img_f_d_dog;
+    private TextView f_d_sex,f_d_age,f_d_color,f_d_kind,f_d_day,f_d_place,f_d_time,f_d_id,f_d_tel,f_d_etc,
+            tv_f_d_sex,tv_f_d_age,tv_f_d_color,tv_f_d_kind,tv_f_d_day,tv_f_d_place,tv_f_d_time,tv_f_d_id,tv_f_d_tel,tv_f_d_etc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_f_dog_detail);
+        setContentView(R.layout.activity_l_dog_detail);
 
-        img_menu = findViewById(R.id.img_menu);
-        img_f_dog_1 = findViewById(R.id.img_f_dog_1);
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-        btn_5 = findViewById(R.id.btn_5);
-        app_name4 = findViewById(R.id.tv_appname);
-        tv_witness = findViewById(R.id.tv_witness);
-        tv_f_dog_detail = findViewById(R.id.tv_f_dog_detail);
+        tv_f_d_sex = findViewById(R.id.tv_f_d_sex);
+        tv_f_d_age = findViewById(R.id.tv_f_d_age);
+        tv_f_d_color = findViewById(R.id.tv_f_d_color);
+        tv_f_d_kind = findViewById(R.id.tv_f_d_kind);
+        tv_f_d_day = findViewById(R.id.tv_f_d_day);
+        tv_f_d_place = findViewById(R.id.tv_f_d_place);
+        tv_f_d_time = findViewById(R.id.tv_f_d_time);
+        tv_f_d_id = findViewById(R.id.tv_f_d_id);
+        tv_f_d_tel = findViewById(R.id.tv_f_d_tel);
+        tv_f_d_etc = findViewById(R.id.tv_f_d_etc);
+        img_f_d_dog = findViewById(R.id.img_f_d_dog);
+
 
     }
 }
