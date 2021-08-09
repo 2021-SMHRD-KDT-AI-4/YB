@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -41,7 +42,6 @@ import java.util.ArrayList;
 
 public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
 
-    private TextView tv_page1, tv_page2, tv_page3, tv_page4, tv_page5;
     private ImageButton imgbtn_f_write;
     private Context pageContext;
 
@@ -73,8 +73,14 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
         });
 
         gridView = (GridView) fragment.findViewById(R.id.gv_find);
+//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                Intent intent = new Intent(getContext(), F_Dog_Detail.class);
+//                startActivity(intent);
+//            }
+//        });
         adapter = new GridViewAdapter();
-
 
         // 서버로부터 board 테이블의 게시물 읽어올 것을 요청
         sendRequest();

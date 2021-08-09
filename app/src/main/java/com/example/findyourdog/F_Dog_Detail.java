@@ -16,7 +16,7 @@ public class F_Dog_Detail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_l_dog_detail);
+        setContentView(R.layout.activity_f_dog_detail);
 
         tv_f_d_sex = findViewById(R.id.tv_f_d_sex);
         tv_f_d_age = findViewById(R.id.tv_f_d_age);
