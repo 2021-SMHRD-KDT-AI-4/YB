@@ -1,6 +1,5 @@
 package com.example.findyourdog;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,11 +20,7 @@ public class P_Dog_list extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View fragment = inflater.inflate(R.layout.activity_p_dog_list, container, false);
 
-        tv_page15 = fragment.findViewById(R.id.tv_page15);
-        tv_page16 = fragment.findViewById(R.id.tv_page16);
-        tv_page17 = fragment.findViewById(R.id.tv_page17);
-        tv_page18 = fragment.findViewById(R.id.tv_page18);
-        tv_page19 = fragment.findViewById(R.id.tv_page19);
+
         gv_adopt = fragment.findViewById(R.id.gv_adopt);
 
 

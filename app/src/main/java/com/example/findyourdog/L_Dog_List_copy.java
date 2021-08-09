@@ -23,11 +23,7 @@ public class L_Dog_List_copy extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View fragment = inflater.inflate(R.layout.activity_l_dog_list_copy, container, false);
 
-        tv_page6 = fragment.findViewById(R.id.tv_page6);
-        tv_page7 = fragment.findViewById(R.id.tv_page7);
-        tv_page8 = fragment.findViewById(R.id.tv_page8);
-        tv_page9 = fragment.findViewById(R.id.tv_page9);
-        tv_page10 = fragment.findViewById(R.id.tv_page10);
+
         gv_lost = fragment.findViewById(R.id.gv_find);
 
         imgbtn_l_write = (ImageButton) fragment.findViewById(R.id.imgbtn_l_write);
