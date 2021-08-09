@@ -73,13 +73,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
         });
 
         gridView = (GridView) fragment.findViewById(R.id.gv_find);
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent(getContext(), F_Dog_Detail.class);
-//                startActivity(intent);
-//            }
-//        });
+
         adapter = new GridViewAdapter();
 
         // 서버로부터 board 테이블의 게시물 읽어올 것을 요청
@@ -235,6 +229,18 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                 f_time.setText("연락처");
 
             }
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Log.v("click : ","click!!"+list.get(position).getShelter());
+                    Intent intent = new Intent(getActivity(), F_Dog_Detail.class);
+                    startActivity(intent);
+
+
+                }
+            });
+
 
             return convertView;
         }
