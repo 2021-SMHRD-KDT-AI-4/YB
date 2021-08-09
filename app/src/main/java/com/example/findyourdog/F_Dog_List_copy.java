@@ -136,8 +136,10 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                     }
 
                     for (int i=0 ; i < board.size(); i++ ){
-                        adapter.addItem(new FindItem(board.get(i)[4], board.get(i)[12], board.get(i)[8], board.get(i)[16], board.get(i)[13], board.get(i)[2]));
-                        Log.v("filename",board.get(i)[4]+"");
+                        adapter.addItem(new FindItem(board.get(i)[0], board.get(i)[1], board.get(i)[2], board.get(i)[3], board.get(i)[4],
+                                board.get(i)[5], board.get(i)[6],board.get(i)[7], board.get(i)[8], board.get(i)[9], board.get(i)[10],
+                                board.get(i)[11], board.get(i)[12],board.get(i)[13], board.get(i)[14], board.get(i)[15],board.get(i)[16], board.get(i)[17]));
+
                     }
 
                     //리스트뷰에 Adapter 설정
@@ -217,7 +219,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
             TextView f_place = (TextView) convertView.findViewById(R.id.f_place);
             TextView f_time = (TextView) convertView.findViewById(R.id.f_time);
 
-            setPic(findItem.getFilename(),img_f_dog_picture);
+            setPic(findItem.getPicture(),img_f_dog_picture);
             tv_f_date.setText(findItem.getNotice());
             tv_f_kind.setText(findItem.getKind());
             tv_f_place.setText(findItem.getShelter());
@@ -235,8 +237,23 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                 public void onClick(View v) {
                     Log.v("click : ","click!!"+list.get(position).getShelter());
                     Intent intent = new Intent(getActivity(), F_Dog_Detail.class);
-                    startActivity(intent);
 
+                    intent.putExtra("id", list.get(position).getId());
+                    intent.putExtra("picture",list.get(position).getPicture());
+                    intent.putExtra("gender", list.get(position).getGender());
+                    intent.putExtra("age", list.get(position).getAge());
+                    intent.putExtra("color", list.get(position).getColor());
+                    intent.putExtra("kind", list.get(position).getKind());
+                    intent.putExtra("weight", list.get(position).getWeight());
+                    intent.putExtra("missing_date",list.get(position).getMissing_date());
+                    intent.putExtra("missing_time",list.get(position).getMissing_time());
+                    intent.putExtra("notice", list.get(position).getNotice());
+                    intent.putExtra("shelter", list.get(position).getShelter());
+                    intent.putExtra("place", list.get(position).getPlace());
+                    intent.putExtra("tel", list.get(position).getTel());
+                    intent.putExtra("content", list.get(position).getContent());
+
+                    startActivity(intent);
 
                 }
             });

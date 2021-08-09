@@ -62,26 +62,112 @@
         app:layout_constraintTop_toBottomOf="@+id/f_d_color" />
 
     <TextView
-        android:id="@+id/f_d_day"
+        android:id="@+id/f_d_weight"
         android:layout_width="87dp"
         android:layout_height="30dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="4dp"
-        android:text="목격날짜"
+        android:layout_marginTop="8dp"
+        android:text="무게"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_kind" />
 
     <TextView
-        android:id="@+id/f_d_place"
+        android:id="@+id/f_d_day"
         android:layout_width="87dp"
         android:layout_height="30dp"
         android:layout_marginStart="96dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
+        android:text="목격날짜"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_weight" />
+
+    <TextView
+        android:id="@+id/f_d_tel"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:text="연락처"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="582dp" />
+
+    <TextView
+        android:id="@+id/f_d_place"
+        android:layout_width="94dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="16dp"
         android:text="목격위치"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_day" />
+
+    <TextView
+        android:id="@+id/tv_f_d_day"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="12dp"
+        android:text="2021.07.28"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_weight" />
+
+    <TextView
+        android:id="@+id/tv_f_d_place"
+        android:layout_width="163dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="20dp"
+        android:text="운천저수지"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_day" />
+
+    <TextView
+        android:id="@+id/tv_f_d_etc"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="4dp"
+        android:text="임시보호중입니다."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_tel" />
+
+    <TextView
+        android:id="@+id/f_d_etc"
+        android:layout_width="87dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
+        android:text="기타"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_d_tel" />
+
+    <TextView
+        android:id="@+id/tv_f_d_time"
+        android:layout_width="166dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="12dp"
+        android:text="오전 8시"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_place" />
+
+    <TextView
+        android:id="@+id/tv_f_d_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginStart="200dp"
+        android:text="01012341234"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="581dp" />
 
     <TextView
         android:id="@+id/f_d_time"
@@ -93,39 +179,6 @@
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_place" />
-
-    <TextView
-        android:id="@+id/f_d_id"
-        android:layout_width="87dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="4dp"
-        android:text="아이디"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_d_time" />
-
-    <TextView
-        android:id="@+id/f_d_tel"
-        android:layout_width="87dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="4dp"
-        android:text="연락처"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_d_id" />
-
-    <TextView
-        android:id="@+id/f_d_etc"
-        android:layout_width="87dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="4dp"
-        android:text="기타"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_d_tel" />
 
     <TextView
         android:id="@+id/tv_f_d_sex"
@@ -172,69 +225,14 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_color" />
 
     <TextView
-        android:id="@+id/tv_f_d_day"
+        android:id="@+id/tv_f_d_weight"
         android:layout_width="wrap_content"
-        android:layout_height="27dp"
+        android:layout_height="30dp"
         android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="2021.07.28"
+        android:layout_marginTop="8dp"
+        android:text="3"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_kind" />
-
-    <TextView
-        android:id="@+id/tv_f_d_place"
-        android:layout_width="80dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="운천저수지"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_day" />
-
-    <TextView
-        android:id="@+id/tv_f_d_time"
-        android:layout_width="62dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="오전 8시"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_place" />
-
-    <TextView
-        android:id="@+id/tv_f_d_id"
-        android:layout_width="48dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="무야호"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_time" />
-
-    <TextView
-        android:id="@+id/tv_f_d_tel"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="01012341234"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_id" />
-
-    <TextView
-        android:id="@+id/tv_f_d_etc"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="6dp"
-        android:text="임시보호중입니다."
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_tel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
