@@ -11,7 +11,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/img_f_dog"
+            android:id="@+id/img_l_dog_picture2"
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:layout_gravity="center"

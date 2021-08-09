@@ -42,7 +42,7 @@ public class L_Dog_Write1 extends AppCompatActivity {
         edt_l_place = findViewById(R.id.edt_l_place);
         edt_l_time = findViewById(R.id.edt_l_time);
         edt_l_tel =findViewById(R.id.edt_l_tel);
-        btn_l_next = findViewById(R.id.btn_f_enroll);
+        btn_l_next = findViewById(R.id.btn_l_enroll);
 
         btn_l_next.setOnClickListener(new View.OnClickListener() {
             @Override

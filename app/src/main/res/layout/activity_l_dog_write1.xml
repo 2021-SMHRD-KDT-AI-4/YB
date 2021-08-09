@@ -111,7 +111,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_p_place" />
 
     <Button
-        android:id="@+id/btn_f_enroll"
+        android:id="@+id/btn_l_enroll"
         android:layout_width="313dp"
         android:layout_height="45dp"
         android:layout_marginTop="30dp"

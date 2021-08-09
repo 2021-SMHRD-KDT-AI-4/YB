@@ -113,7 +113,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/img_f_dog"
+        android:id="@+id/img_l_dog_picture2"
         android:layout_width="334dp"
         android:layout_height="159dp"
         android:layout_marginTop="20dp"
@@ -135,7 +135,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_f_dog" />
+        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
 
     <TextView
         android:id="@+id/tv_f_dog_info"

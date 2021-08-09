@@ -26,7 +26,7 @@ public class F_Dog_Write_Result extends AppCompatActivity {
         btn_5 = findViewById(R.id.btn_5);
         btn_f_dog_s = findViewById(R.id.btn_f_dog_s);
         btn_f_dog_s_call = findViewById(R.id.btn_f_dog_s_call);
-        img_f_dog = findViewById(R.id.img_f_dog);
+        img_f_dog = findViewById(R.id.img_l_dog_picture2);
         tv_appname = findViewById(R.id.tv_appname);
         tv_f_dog_ok = findViewById(R.id.tv_f_dog_ok);
         tv_f_dog = findViewById(R.id.tv_f_dog);

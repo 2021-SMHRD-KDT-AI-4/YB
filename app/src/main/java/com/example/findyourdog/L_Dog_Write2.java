@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.FileNotFoundException;
@@ -36,9 +35,17 @@ public class L_Dog_Write2 extends AppCompatActivity {
         edt_l_type =findViewById(R.id.edt_l_type);
         edt_l_kg = findViewById(R.id.edt_l_kg);
         edt_l_feature = findViewById(R.id.edt_f_feature);
-        btn_l_enroll = findViewById(R.id.btn_f_enroll);
+        btn_l_enroll = findViewById(R.id.btn_l_enroll);
         btn_l_picture_plus = findViewById(R.id.btn_l_picture_plus);
         img_l_dog_picture = findViewById(R.id.img_l_dog_picture);
+
+        btn_l_enroll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),L_Dog_Write_Result.class);
+                startActivity(intent);
+            }
+        });
 
         btn_l_picture_plus.setOnClickListener(new View.OnClickListener() {
             @Override

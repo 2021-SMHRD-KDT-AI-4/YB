@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE\"/>
     <uses-feature android:name="android.hardware.Camera"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -30,6 +31,7 @@
         <activity android:name=".F_Dog_Write_2"/>
         <activity android:name=".L_Dog_Write1"/>
         <activity android:name=".L_Dog_Write2"/>
+        <activity android:name=".L_Dog_Write_Result"/>
         <activity android:name=".Question"/>
         <activity android:name=".Question_Result"/>
         <activity android:name=".Side_bar_MyPage"/>

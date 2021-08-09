@@ -6,173 +6,206 @@
     android:layout_height="match_parent"
     tools:context=".L_Dog_Write_Result">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
-    <Button
-        android:id="@+id/btn_1"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="발견했어요"
-        android:textColor="#000000"
-        android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_4"
-        android:layout_width="84dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아줄게요"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_3"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_5"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="center"
-        android:text="입양하기"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toEndOf="@+id/btn_4"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_2"
-        android:layout_width="84dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="찾아주세요"
-        android:textColor="#FB9F82"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_1"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
-    <Button
-        android:id="@+id/btn_3"
-        android:layout_width="78dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="5dp"
-        android:background="#00ff0000"
-        android:backgroundTint="#FFFFFF"
-        android:text="비문등록"
-        android:textColor="#0B0B0B"
-        android:textSize="10sp"
-        app:layout_constraintStart_toEndOf="@+id/btn_2"
-        app:layout_constraintTop_toBottomOf="@+id/tv_appname" />
-
     <TextView
-        android:id="@+id/tv_appname"
+        android:id="@+id/tv_l_dog_write_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#0B0B0B"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_l_dog_ok"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="112dp"
+        android:layout_marginTop="70dp"
         android:text="게시글 등록이 완료되었습니다!"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:textColor="#706E6E"
+        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/img_f_dog"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:id="@+id/img_l_dog_picture2"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_ok"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_write_result"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/tv_l_dog"
+        android:id="@+id/l_d_result_kind"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="20dp"
+        android:text="품종"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
+
+    <TextView
+        android:id="@+id/tv_l_d_result_day"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="6dp"
+        android:text="2021.07.27"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_result_kind" />
+
+    <TextView
+        android:id="@+id/tv_l_d_result_time"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="6dp"
+        android:text="오후 11시"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_result_place" />
+
+    <TextView
+        android:id="@+id/tv_l_d_result_kind"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="20dp"
+        android:text="푸들"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
+
+    <TextView
+        android:id="@+id/tv_l_d_result_tel"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="6dp"
+        android:text="01012341234"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_result_time" />
+
+    <TextView
+        android:id="@+id/tv_l_d_result_place"
+        android:layout_width="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="204dp"
+        android:layout_marginTop="6dp"
+        android:text="조선대학교 후문"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_d_result_day" />
+
+    <TextView
+        android:id="@+id/l_d_result_day"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="6dp"
+        android:text="실종날짜"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_result_kind" />
+
+    <TextView
+        android:id="@+id/l_d_result_place"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="6dp"
+        android:text="실종위치"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_result_day" />
+
+    <TextView
+        android:id="@+id/l_d_result_time"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="6dp"
+        android:text="실종시간"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_result_place" />
+
+    <TextView
+        android:id="@+id/l_d_result_tel"
+        android:layout_width="76dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="6dp"
+        android:text="연락처"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/l_d_result_time" />
+
+    <TextView
+        android:id="@+id/tv_l_dog_shelter_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="실종"
+        android:layout_marginTop="30dp"
+        android:text="주변에 가까운 보호소가 있어요"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_f_dog" />
+        app:layout_constraintTop_toBottomOf="@+id/l_d_result_tel" />
 
     <TextView
-        android:id="@+id/tv_l_dog_detail"
+        android:id="@+id/tv_s_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="실종견 정보"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="4dp"
+        android:text="정보보기"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog" />
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_l_s_info" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_l_s_tel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="570dp"
+        android:background="@android:color/transparent"
+        android:onClick="calling"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/s_tel" />
 
     <TextView
-        android:id="@+id/tv_l_dog_s"
+        android:id="@+id/tv_s_tel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="주변에 가까운 보호소가 있어요"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_detail" />
-
-    <Button
-        android:id="@+id/btn_l_dog_s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="520dp"
-        android:text="정보 보기"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_l_dog_s_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="520dp"
-        android:layout_marginEnd="64dp"
+        android:layout_marginStart="235dp"
+        android:layout_marginTop="4dp"
         android:text="전화하기"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_l_s_tel" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_l_s_info"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="570dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/s_info" />
+
+    <TextView
+        android:id="@+id/tv_l_dog_shelter_alarm2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="연락해볼까요?"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_shelter_alarm" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -129,8 +129,8 @@
 
     <TextView
         android:id="@+id/tv_f_d_sex"
-        android:layout_width="87dp"
-        android:layout_height="30dp"
+        android:layout_width="75dp"
+        android:layout_height="29dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="20dp"
         android:text="수컷"
@@ -140,8 +140,8 @@
 
     <TextView
         android:id="@+id/tv_f_d_age"
-        android:layout_width="87dp"
-        android:layout_height="30dp"
+        android:layout_width="86dp"
+        android:layout_height="25dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="6dp"
         android:text="5살"
@@ -174,7 +174,7 @@
     <TextView
         android:id="@+id/tv_f_d_day"
         android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_height="27dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="6dp"
         android:text="2021.07.28"
@@ -184,8 +184,8 @@
 
     <TextView
         android:id="@+id/tv_f_d_place"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="80dp"
+        android:layout_height="29dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="6dp"
         android:text="운천저수지"
@@ -195,8 +195,8 @@
 
     <TextView
         android:id="@+id/tv_f_d_time"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="62dp"
+        android:layout_height="28dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="6dp"
         android:text="오전 8시"
@@ -206,8 +206,8 @@
 
     <TextView
         android:id="@+id/tv_f_d_id"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="48dp"
+        android:layout_height="26dp"
         android:layout_marginStart="200dp"
         android:layout_marginTop="6dp"
         android:text="무야호"
