@@ -8,12 +8,12 @@
 
     <FrameLayout
         android:id="@+id/frame"
-        android:layout_width="410dp"
-        android:layout_height="617dp"
+        android:layout_width="408dp"
+        android:layout_height="614dp"
         android:layout_marginStart="4dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        android:layout_marginTop="116dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
     </FrameLayout>
 
