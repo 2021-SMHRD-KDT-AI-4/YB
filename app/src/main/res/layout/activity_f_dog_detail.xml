@@ -241,7 +241,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_sex" />
 
-    <androidx.recyclerview.widget.RecyclerView
+    <ListView
         android:id="@+id/content_listview"
         android:layout_width="409dp"
         android:layout_height="80dp"
