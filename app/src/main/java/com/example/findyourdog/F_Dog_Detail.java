@@ -126,7 +126,7 @@ public class F_Dog_Detail extends AppCompatActivity {
 
     public void setPic(String filename, ImageView imageView) {
 
-        String urlStr = "http://211.63.240.26:8081/YB/ImageService?filename="+filename;
+        String urlStr = "http://211.63.240.26:8081/YB/ImageService?folder="+"BoardPic"+"&filename="+filename;
         ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
         imageLoadTask.execute();
 
@@ -134,7 +134,7 @@ public class F_Dog_Detail extends AppCompatActivity {
     public void sendRequest(){
         // Voolley Lib 새료운 요청객체 생성
         queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "http://211.227.224.206:8081/YB/CommentWriteService";
+        String url = "http://211.63.240.26:8081/YB/CommentWriteService";
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
             @Override
@@ -151,18 +151,24 @@ public class F_Dog_Detail extends AppCompatActivity {
                         builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-
+                                Intent intent = new Intent(getApplicationContext(),Main.class);
+                                startActivity(intent);
                             }
                         });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
                     }else{
                         AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
                         builder.setTitle("댓글등록").setMessage("댓글등록이 실패되었습니다.");
                         builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-
+                                Intent intent = new Intent(getApplicationContext(),Main.class);
+                                startActivity(intent);
                             }
                         });
+                        AlertDialog alertDialog = builder.create();
+                        alertDialog.show();
                     }
 
 
