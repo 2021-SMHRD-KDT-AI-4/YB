@@ -244,6 +244,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                     intent.putExtra("place", list.get(position).getPlace());
                     intent.putExtra("tel", list.get(position).getTel());
                     intent.putExtra("content", list.get(position).getContent());
+                    intent.putExtra("board_num",list.get(position).getBoard_num());
 
                     startActivityForResult(intent, 1018);
 
@@ -257,7 +258,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
 
         public void setPic(String filename, ImageView imageView) {
 
-            String urlStr = "http://211.63.240.26:8081/YB/ImageService?filename="+filename;
+            String urlStr = "http://211.63.240.26:8081/YB/ImageService?folder="+"BoardPic"+"&filename="+filename;
             ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
             imageLoadTask.execute();
 
