@@ -92,7 +92,7 @@ public class P_Dog_Detail extends AppCompatActivity {
 
     public void setPic(String filename, ImageView imageView) {
 
-        String urlStr = "http://211.63.240.26:8081/YB/AdpImageService?filename="+filename;
+        String urlStr = "http://211.63.240.26:8081/YB/ImageService?folder="+"AdpPic"+"&filename="+filename;
         ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
         imageLoadTask.execute();
 

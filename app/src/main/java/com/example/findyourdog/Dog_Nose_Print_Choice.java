@@ -51,7 +51,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
     private String TAG = Dog_Nose_Print_Choice.class.getSimpleName();
 
     private ListView listView;
-    private ListItemAdapter adapter = new ListItemAdapter();
+    private ListItemAdapter adapter = null;
 
 
     private RequestQueue queue;
@@ -65,12 +65,12 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_nose_print_choice);
 
-//        listView = findViewById(R.id.listview);
-//
-//
-//        listView.setAdapter(adapter);
-//
+
+        listView = (ListView) findViewById(R.id.listview);
+        adapter = new ListItemAdapter();
         sendRequest();
+
+
 
     }
     public void sendRequest(){
@@ -85,22 +85,26 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.v("무야호의 힘",response);
-                String filename ="";
-                String name ="";
+//                String filename ="";
+//                String name ="";
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        filename = jsonObject.getString("picture");
-                        name = jsonObject.getString("dog_name");
+                        String filename = jsonObject.getString("dog_nose_print");
+                        String name = jsonObject.getString("dog_name");
 
+                        Log.v("무야호!",filename+" "+name);
                         String[] list = {filename, name};
                         userList.add(list);
                     }
+
                     for (int i=0 ; i < userList.size(); i++ ){
+                        Log.v("userList.get("+i+")",userList.get(i)[0]+" "+userList.get(i)[1]+" "+userList.size());
                         adapter.addItem(new NoseItem(userList.get(i)[0], userList.get(i)[1]));
                     }
                     listView.setAdapter(adapter);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -173,7 +177,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                // 비문선택시
+                    //
                 }
             });
 
@@ -183,92 +187,11 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
 
     public void setPic(String filename, ImageView imageView) {
 
-        String urlStr = "http://211.63.240.26:8081/YB/BoardService?filename="+filename;
+        String urlStr = "http://211.63.240.26:8081/YB/ImageService?folder="+"Nose_Print"+"&filename="+filename;
         ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
         imageLoadTask.execute();
 
     }
 
-
-
-
-
-
-
-
-//    public void sendRequest(){
-//        // Voolley Lib 새료운 요청객체 생성
-//        queue = Volley.newRequestQueue(getApplicationContext());
-//        String url = "http://211.227.224.206:8081/YB/UserNoseService";
-//        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-//            // 응답데이터를 받아오는 곳
-//            @Override
-//            public void onResponse(String response) {
-//                Log.v("resultValue",response);
-//                String filename = "";
-//                String name = "";
-//
-//                try {
-//                    JSONArray jsonArray = new JSONArray(response);
-//                    for (int i =0; i <jsonArray.length(); i++){
-//                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-//                        filename = jsonObject.getString("picture");
-//                        name = jsonObject.getString("dog_name");
-//                        Log.v("filename",filename);
-//
-//                        String[] list = {filename, name};
-//                        userList.add(list);
-//
-//                    }
-//
-//                    for (int i=0 ; i < userList.size(); i++ ){
-//                        adapter.addItem(new NoseItem(userList.get(i)[0], userList.get(i)[1]));
-//
-//                    }
-//
-//                    listView.setAdapter(adapter);
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            // 서버와의 연동 에러시 출력
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                error.printStackTrace();
-//            }
-//        }){
-//            @Override //response를 UTF8로 변경해주는 소스코드
-//            protected Response<String> parseNetworkResponse(NetworkResponse response) {
-//                try {
-//                    String utf8String = new String(response.data, "UTF-8");
-//                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
-//                } catch (UnsupportedEncodingException e) {
-//                    // log error
-//                    return Response.error(new ParseError(e));
-//                } catch (Exception e) {
-//                    // log error
-//                    return Response.error(new ParseError(e));
-//                }
-//            }
-//
-//            // 보낼 데이터를 저장하는 곳
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<>();
-//                String id = PreferenceManager.getString(getApplicationContext(),"id");
-//
-//                Log.v("resultValue id ",id);
-//                params.put("id",id);
-//                return params;
-//            }
-//        };
-//
-//
-//        queue.add(stringRequest);
-//    }
 
 }
