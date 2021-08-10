@@ -132,8 +132,7 @@ public class Dog_Info extends Fragment {
     public void sendRequest(){
         // Voolley Lib 새료운 요청객체 생성
         queue = Volley.newRequestQueue(getActivity());
-//        String url = "http://211.227.224.206:5000/picture";
-        String url = "http://211.227.224.206:8081/YB/NosePrintService";
+        String url = "http://211.63.240.26:8081/YB/NosePrintService";
 
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳

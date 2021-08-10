@@ -74,9 +74,9 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
 
     }
     public void sendRequest(){
-        // Voolley Lib 새료운 요청객체 생성
+
         queue = Volley.newRequestQueue(getApplicationContext());
-//        String url = "http://211.227.224.206:5000/picture";
+
         String n_id = PreferenceManager.getString(getApplicationContext(),"id");
         String url = "http://211.63.240.26:8081/YB/UserNoseService?id="+n_id;
 
@@ -126,16 +126,6 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
                     return Response.error(new ParseError(e));
                 }
             }
-
-            // 보낼 데이터를 저장하는 곳
-//            @Override
-//            protected Map<String, String> getParams() throws AuthFailureError {
-//                Map<String, String> params = new HashMap<>();
-//                String id = PreferenceManager.getString(getApplicationContext(),"id");
-//                params.put("id",id);
-//
-//                return params;
-//            }
         };
         queue.add(stringRequest);
     }
