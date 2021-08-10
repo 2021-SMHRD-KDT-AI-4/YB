@@ -3,9 +3,11 @@
     package="com.example.findyourdog">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE\"/>
-    <uses-feature android:name="android.hardware.Camera"/>
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE\" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -15,38 +17,34 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FindYourDog"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Comments"></activity>
         <activity android:name=".Main">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-        </activity>
-<!--        <activity android:name=".MainActivity2"></activity>-->
-<!--        <activity android:name=".MainActivity" />-->
+        </activity> <!-- <activity android:name=".MainActivity2"></activity> -->
+        <!-- <activity android:name=".MainActivity" /> -->
         <activity android:name=".Login" />
         <activity android:name=".Join" />
-        <activity android:name=".F_Dog_Detail"/>
-        <activity android:name=".F_Dog_Write_1"/>
-        <activity android:name=".F_Dog_Write_2"/>
-        <activity android:name=".F_Dog_Write_Result"/>
-        <activity android:name=".L_Dog_Detail"/>
-        <activity android:name=".L_Dog_Write1"/>
-        <activity android:name=".L_Dog_Write2"/>
-        <activity android:name=".L_Dog_Write_Result"/>
-        <activity android:name=".Question"/>
-        <activity android:name=".Question_Result"/>
-        <activity android:name=".Side_bar_MyPage"/>
-        <activity android:name=".Side_bar_Shelter_Info"/>
-        <activity android:name=".Dog_Nose_Print_Choice"/>
-        <activity android:name=".Picture_Choice"/>
-        <activity android:name=".Dog_Nose_print_Search_list_Success"/>
-        <activity android:name=".Picture_Search_Result"/>
-        <activity android:name=".P_Dog_Detail"/>
-
-
-
+        <activity android:name=".F_Dog_Detail" />
+        <activity android:name=".F_Dog_Write_1" />
+        <activity android:name=".F_Dog_Write_2" />
+        <activity android:name=".F_Dog_Write_Result" />
+        <activity android:name=".L_Dog_Detail" />
+        <activity android:name=".L_Dog_Write1" />
+        <activity android:name=".L_Dog_Write2" />
+        <activity android:name=".L_Dog_Write_Result" />
+        <activity android:name=".Question" />
+        <activity android:name=".Question_Result" />
+        <activity android:name=".Side_bar_MyPage" />
+        <activity android:name=".Side_bar_Shelter_Info" />
+        <activity android:name=".Dog_Nose_Print_Choice" />
+        <activity android:name=".Picture_Choice" />
+        <activity android:name=".Dog_Nose_print_Search_list_Success" />
+        <activity android:name=".Picture_Search_Result" />
+        <activity android:name=".P_Dog_Detail" />
     </application>
 
 </manifest>
