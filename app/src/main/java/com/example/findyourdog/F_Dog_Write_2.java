@@ -3,6 +3,7 @@ package com.example.findyourdog;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,13 +14,14 @@ public class F_Dog_Write_2 extends AppCompatActivity {
                      tv_star1,tv_star2,tv_star3,tv_star4,tv_star5;
     private Button btn_f_enroll;
     private EditText edt_f_type, edt_f_birth, edt_f_color, edt_f_sex, edt_f_feature, edt_f_kg;
+    private Spinner spn_f_breed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_dog_write_2);
 
-        edt_f_type = findViewById(R.id.edt_f_type);
+        spn_f_breed = findViewById(R.id.spn_f_breed);
         edt_f_birth = findViewById(R.id.edt_f_birth);
         edt_f_color = findViewById(R.id.edt_f_color);
         edt_f_feature = findViewById(R.id.edt_f_feature);
