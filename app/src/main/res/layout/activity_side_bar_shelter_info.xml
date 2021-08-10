@@ -6,30 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Side_bar_Shelter_Info">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
-    <TextView
-        android:id="@+id/tv_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="찾아줄개"
-        android:textColor="#0B0B0B"
-        android:textSize="26sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/tv_shelter_info"
         android:layout_width="wrap_content"
@@ -93,6 +69,7 @@
         android:layout_marginTop="224dp"
         android:backgroundTint="#7686DA"
         android:text="검색"
+        app:icon="@drawable/search"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
