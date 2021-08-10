@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="100dp"
         android:background="#00ff0000"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="로그인"
@@ -25,10 +25,10 @@
         android:id="@+id/tv_bar"
         android:layout_width="78dp"
         android:layout_height="18dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="1dp"
         android:text="───────"
-        android:textColor="#000000"
+        android:textColor="#A5A0A0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_login_go" />
 
@@ -51,18 +51,18 @@
         android:layout_width="102dp"
         android:layout_height="18dp"
         android:layout_marginStart="64dp"
-        android:text="───────"
-        android:textColor="#000000"
+        android:text="──────────"
+        android:textColor="#A5A0A0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_my_page_go" />
 
     <TextView
         android:id="@+id/tv_bar3"
-        android:layout_width="139dp"
+        android:layout_width="115dp"
         android:layout_height="20dp"
         android:layout_marginStart="64dp"
-        android:text="────────"
-        android:textColor="#000000"
+        android:text="────────────"
+        android:textColor="#A5A0A0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_shelter_info_go" />
 
@@ -85,11 +85,10 @@
         android:layout_width="139dp"
         android:layout_height="20dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="88dp"
-        android:text="──────────"
-        android:textColor="#000000"
+        android:text="─────────────"
+        android:textColor="#A5A0A0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_shelter_info_go" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_question_go" />
 
     <Button
         android:id="@+id/btn_shelter_info_go"

@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="400dp"
     android:layout_height="match_parent"
     tools:context=".L_Dog_List">
 
@@ -11,18 +11,19 @@
         android:id="@+id/imgbtn_l_write"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="300dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginBottom="5dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/write" />
 
     <GridView
-        android:id="@+id/gv_adopt"
-        android:layout_width="400dp"
-        android:layout_height="530dp"
+        android:id="@+id/gv_lost"
+        android:layout_width="390dp"
+        android:layout_height="525dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

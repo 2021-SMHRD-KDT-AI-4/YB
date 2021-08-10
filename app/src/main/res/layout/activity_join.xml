@@ -13,65 +13,67 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="20dp"
         android:text="보호소입니까?"
+        android:textColor="#5E5C5C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_addr" />
 
     <EditText
         android:id="@+id/edt_join_tel"
         android:layout_width="160dp"
-        android:layout_height="40dp"
+        android:layout_height="45dp"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="390dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_name" />
 
     <EditText
         android:id="@+id/edt_join_id"
-        android:layout_width="159dp"
-        android:layout_height="40dp"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo3" />
 
     <TextView
         android:id="@+id/tv_tel1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="392dp"
+        android:layout_marginTop="40dp"
         android:text="Tel"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_name1" />
 
     <TextView
         android:id="@+id/tv_pw1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="252dp"
+        android:layout_marginTop="40dp"
         android:text="PW"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_id1" />
 
     <EditText
         android:id="@+id/edt_join_addr"
-        android:layout_width="159dp"
-        android:layout_height="38dp"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
         android:layout_marginStart="124dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_tel" />
 
     <Button
         android:id="@+id/btn_id_check"
@@ -79,25 +81,28 @@
         android:layout_height="33dp"
         android:layout_gravity="start"
         android:layout_marginStart="285dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="22dp"
         android:enabled="true"
-        android:text="ID중복확인"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="ID중복확인"
+        android:textColor="#5E5C5C"
         android:textSize="9sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo3" />
 
     <Button
         android:id="@+id/btn_join"
-        android:layout_width="306dp"
+        android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="start"
-        android:layout_marginStart="48dp"
         android:layout_marginTop="20dp"
-        android:enabled="true"
         android:background="@drawable/btn_round_pink"
-        android:text="회원가입"
+        android:enabled="true"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="회원가입"
+        android:textColor="#5E5C5C"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/shelter_check" />
 
@@ -106,41 +111,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="40dp"
         android:text="Name"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_pw1" />
 
     <EditText
         android:id="@+id/edt_join_pw"
-        android:layout_width="168dp"
+        android:layout_width="160dp"
         android:layout_height="45dp"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_id" />
 
     <TextView
         android:id="@+id/tv_add1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="460dp"
+        android:layout_marginTop="40dp"
         android:text="Addr"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_tel1" />
 
     <ImageView
         android:id="@+id/img_logo3"
-        android:layout_width="130dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -148,26 +153,26 @@
 
     <EditText
         android:id="@+id/edt_join_name"
-        android:layout_width="161dp"
-        android:layout_height="44dp"
+        android:layout_width="160dp"
+        android:layout_height="45dp"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="315dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_join_pw" />
 
     <TextView
         android:id="@+id/tv_id1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="28dp"
         android:text="ID"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo3" />
 
     <TextView
         android:id="@+id/tv_id_check"

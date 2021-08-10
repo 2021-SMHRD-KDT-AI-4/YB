@@ -24,6 +24,7 @@ public class P_Dog_Detail extends AppCompatActivity {
 
     private ImageButton imgbtn_shelter_place, imgbtn_adopt_ask;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,8 @@ public class P_Dog_Detail extends AppCompatActivity {
         tv_p_d_place = findViewById(R.id.tv_p_d_place);
         tv_p_d_neutering = findViewById(R.id.tv_p_d_neutering);
         tv_p_d_feature = findViewById(R.id.tv_p_d_feature);
+
+
 
 
         Intent intent = getIntent();

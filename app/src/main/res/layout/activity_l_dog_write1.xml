@@ -7,54 +7,6 @@
     tools:context=".L_Dog_Write1">
 
     <TextView
-        android:id="@+id/tv_star12"
-        android:layout_width="9dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info" />
-
-    <TextView
-        android:id="@+id/tv_star13"
-        android:layout_width="9dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
-
-    <TextView
-        android:id="@+id/tv_star14"
-        android:layout_width="9dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
-
-    <TextView
-        android:id="@+id/tv_star15"
-        android:layout_width="9dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_shelter" />
-
-    <TextView
         android:id="@+id/tv_l_dog_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -71,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="실종날짜"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="실종위치"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +45,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="실종시간"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +56,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="연락처"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -112,7 +64,7 @@
 
     <Button
         android:id="@+id/btn_l_enroll"
-        android:layout_width="313dp"
+        android:layout_width="320dp"
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_round_pink"
@@ -128,20 +80,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="30dp"
-        android:text="는 필수항목입니다."
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_l_tel" />
-
-    <TextView
-        android:id="@+id/tv_star16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="135dp"
-        android:layout_marginTop="30dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
+        android:layout_marginTop="33dp"
+        android:text='"모두 필수항목입니다"'
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_tel" />
 
@@ -160,9 +100,9 @@
     <EditText
         android:id="@+id/edt_l_time"
         android:layout_width="201dp"
-        android:layout_height="42dp"
+        android:layout_height="40dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="시간을 선택해주세요."
         android:inputType="textPersonName"
@@ -172,9 +112,9 @@
     <EditText
         android:id="@+id/edt_l_tel"
         android:layout_width="200dp"
-        android:layout_height="37dp"
+        android:layout_height="40dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -183,9 +123,9 @@
     <EditText
         android:id="@+id/edt_l_place"
         android:layout_width="202dp"
-        android:layout_height="42dp"
+        android:layout_height="40dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
 
         android:inputType="textPersonName"

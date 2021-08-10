@@ -25,7 +25,7 @@
         <TextView
             android:id="@+id/f_kind"
             android:layout_width="50sp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
@@ -37,7 +37,7 @@
         <TextView
             android:id="@+id/f_date"
             android:layout_width="50sp"
-            android:layout_height="24sp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
@@ -49,7 +49,7 @@
         <TextView
             android:id="@+id/f_time"
             android:layout_width="50sp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
@@ -61,7 +61,7 @@
         <TextView
             android:id="@+id/f_place"
             android:layout_width="50sp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
@@ -73,7 +73,7 @@
         <TextView
             android:id="@+id/tv_f_kind"
             android:layout_width="134dp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="64dp"
             android:layout_marginTop="8dp"
@@ -85,7 +85,7 @@
         <TextView
             android:id="@+id/tv_f_date"
             android:layout_width="136dp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"
@@ -98,7 +98,7 @@
         <TextView
             android:id="@+id/tv_p_sex"
             android:layout_width="145dp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"
@@ -111,7 +111,7 @@
         <TextView
             android:id="@+id/tv_f_place"
             android:layout_width="138dp"
-            android:layout_height="24dp"
+            android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"

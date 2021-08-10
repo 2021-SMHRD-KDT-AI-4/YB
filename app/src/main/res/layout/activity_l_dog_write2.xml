@@ -9,9 +9,9 @@
     <EditText
         android:id="@+id/edt_l_birth"
         android:layout_width="191dp"
-        android:layout_height="38dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,7 +20,7 @@
     <EditText
         android:id="@+id/edt_l_type"
         android:layout_width="195dp"
-        android:layout_height="35dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="15dp"
         android:ems="10"
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
         android:text="특징"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +42,7 @@
     <EditText
         android:id="@+id/edt_l_sex"
         android:layout_width="190dp"
-        android:layout_height="36dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="25dp"
         android:ems="10"
@@ -55,7 +55,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:text="무게(kg)"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
     <EditText
         android:id="@+id/edt_l_feature"
         android:layout_width="196dp"
-        android:layout_height="38dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="15dp"
         android:ems="10"
@@ -89,7 +89,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="32dp"
         android:text="품종"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +98,7 @@
     <EditText
         android:id="@+id/edt_l_kg"
         android:layout_width="197dp"
-        android:layout_height="37dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="15dp"
         android:ems="10"
@@ -111,7 +111,7 @@
         android:layout_width="133dp"
         android:layout_height="19dp"
         android:layout_marginStart="145dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:text='"모두 필수항목입니다"'
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_feature" />
@@ -140,9 +140,9 @@
 
     <Button
         android:id="@+id/btn_l_enroll"
-        android:layout_width="311dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="24dp"
+        android:layout_width="320dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_round_pink"
         android:text="등록하기"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +154,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="105dp"
         android:text="성별"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -173,20 +173,20 @@
 
     <Button
         android:id="@+id/btn_l_picture_plus"
-        android:layout_width="76dp"
-        android:layout_height="32dp"
+        android:layout_width="75dp"
+        android:layout_height="30dp"
         android:layout_marginStart="260dp"
         android:layout_marginTop="25dp"
+        android:background="@drawable/btn_round_gray"
         android:text="사진첨부"
         android:textSize="10sp"
-        android:background="@drawable/btn_round_gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info" />
 
     <EditText
         android:id="@+id/edt_l_color"
         android:layout_width="193dp"
-        android:layout_height="38dp"
+        android:layout_height="40dp"
         android:layout_marginStart="150dp"
         android:layout_marginTop="15dp"
         android:ems="10"

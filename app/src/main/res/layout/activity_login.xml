@@ -8,39 +8,41 @@
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="214dp"
-        android:layout_height="43dp"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
         android:layout_gravity="start"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="400dp"
-        android:enabled="true"
+        android:layout_marginTop="50dp"
         android:background="@drawable/btn_round_pink"
+        android:enabled="true"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="로그인"
+        android:textColor="#5E5C5C"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_login_pw" />
 
     <Button
         android:id="@+id/btn_join_go"
-        android:layout_width="216dp"
-        android:layout_height="46dp"
+        android:layout_width="250dp"
+        android:layout_height="45dp"
         android:layout_gravity="start"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="450dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_round_pink"
         android:enabled="true"
         android:fontFamily="@font/nanumbarunpenb"
-        android:background="@drawable/btn_round_pink"
         android:text="회원가입"
+        android:textColor="#5E5C5C"
         android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
 
     <ImageView
         android:id="@+id/img_logo2"
-        android:layout_width="130dp"
-        android:layout_height="108dp"
-        android:layout_marginTop="50dp"
+        android:layout_width="110dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,25 +50,25 @@
 
     <EditText
         android:id="@+id/edt_login_id"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="60dp"
         android:ems="10"
         android:hint="ID"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo2" />
 
     <EditText
         android:id="@+id/edt_login_pw"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
         android:hint="PW"
         android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_login_id" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -64,8 +64,6 @@ public class L_Dog_Write_Result extends AppCompatActivity {
                 });
         AlertDialog msgDlg = msgBuilder.create();
         msgDlg.show();
-
-
     }
 
 
@@ -82,7 +80,6 @@ public class L_Dog_Write_Result extends AppCompatActivity {
 //            e.printStackTrace();
 //        }
     }
-
 
 
     public void onClick(View v){

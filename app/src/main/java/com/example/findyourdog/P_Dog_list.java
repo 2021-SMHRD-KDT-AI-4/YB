@@ -53,7 +53,7 @@ public class P_Dog_list extends Fragment implements View.OnClickListener {
         View fragment = inflater.inflate(R.layout.activity_p_dog_list, container, false);
 
 
-        gv_adopt = (GridView) fragment.findViewById(R.id.gv_adopt);
+        gv_adopt = (GridView) fragment.findViewById(R.id.gv_lost);
 
         adapter = new P_Dog_list.GridViewAdapter();
 

@@ -33,6 +33,7 @@ public class F_Dog_Detail extends AppCompatActivity {
         tv_f_d_day = findViewById(R.id.tv_f_d_day);
         tv_f_d_place = findViewById(R.id.tv_f_d_place);
         tv_f_d_time = findViewById(R.id.tv_f_d_time);
+        tv_f_d_time.setSelected(true);
         tv_f_d_tel = findViewById(R.id.tv_f_d_tel);
         tv_f_d_etc = findViewById(R.id.tv_f_d_etc);
         img_f_d_dog = findViewById(R.id.img_f_d_dog);
