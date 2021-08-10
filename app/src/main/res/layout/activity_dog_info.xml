@@ -6,12 +6,43 @@
     android:layout_height="match_parent"
     tools:context=".Dog_Info">
 
+    <ImageView
+        android:id="@+id/img_nose_print"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_profile"
+        tools:src="@tools:sample/avatars" />
+
+    <Button
+        android:id="@+id/btn_nose_print_picture_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="24dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_nose_print" />
+
+    <TextView
+        android:id="@+id/tv_info_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="52dp"
+        android:text="이름"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nose_print_camera" />
+
     <TextView
         android:id="@+id/tv_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="24dp"
         android:text="반려견 프로필"
         android:textColor="#000000"
         android:textSize="28sp"
@@ -19,45 +50,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_info_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="50dp"
-        android:text="이름"
-        android:textSize="20sp"
+    <Button
+        android:id="@+id/btn_profile_ok"
+        android:layout_width="163dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:text="다음으로"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_nose_print_camera" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_info_type" />
 
     <TextView
         android:id="@+id/tv_info_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
         android:text="성별"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_info_name" />
 
-    <TextView
-        android:id="@+id/tv_info_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="25dp"
-        android:text="품종"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info_sex" />
-
     <EditText
         android:id="@+id/edt_info_sex"
         android:layout_width="170dp"
         android:layout_height="45dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#555252"
@@ -65,25 +84,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_info_name" />
 
-    <EditText
-        android:id="@+id/edt_info_type"
-        android:layout_width="163dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#555252"
+    <TextView
+        android:id="@+id/tv_info_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="24dp"
+        android:text="품종"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_info_sex" />
 
     <EditText
         android:id="@+id/edt_info_name"
         android:layout_width="164dp"
         android:layout_height="46dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="#555252"
@@ -91,43 +108,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nose_print_picture_plus" />
 
-    <Button
-        android:id="@+id/btn_profile_ok"
+    <EditText
+        android:id="@+id/edt_info_type"
         android:layout_width="163dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="20dp"
-        android:text="다음으로"
+        android:layout_height="47dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="#555252"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_type" />
-
-    <ImageView
-        android:id="@+id/img_nose_print"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profile"
-        tools:src="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/edt_info_sex" />
 
     <Button
         android:id="@+id/btn_nose_print_camera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="24dp"
         android:text="카메라"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_nose_print" />
-
-    <Button
-        android:id="@+id/btn_nose_print_picture_plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="220dp"
-        android:layout_marginTop="20dp"
-        android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_nose_print" />
 

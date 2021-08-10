@@ -42,6 +42,7 @@ public class FindItem {
         this.content = content;
     }
 
+
     public String getBoard_num() {
         return board_num;
     }
