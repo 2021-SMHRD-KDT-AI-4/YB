@@ -10,6 +10,7 @@
         android:id="@+id/gv_adopt"
         android:layout_width="400dp"
         android:layout_height="530dp"
+        android:numColumns="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

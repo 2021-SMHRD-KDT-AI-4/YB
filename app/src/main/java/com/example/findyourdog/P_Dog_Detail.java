@@ -1,5 +1,6 @@
 package com.example.findyourdog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -14,6 +15,8 @@ public class P_Dog_Detail extends AppCompatActivity {
                      tv_p_d_sex,tv_p_d_kind,tv_p_d_color,tv_p_d_kg,tv_p_d_neutering,tv_p_d_place,tv_p_d_feature,tv_p_d_birth,
                      shelter_place, adopt_ask;
 
+    private ImageView img_p_d_dog;
+
     private ImageButton imgbtn_shelter_place, imgbtn_adopt_ask;
 
 
@@ -22,17 +25,54 @@ public class P_Dog_Detail extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_p_dog_detail);
 
+        img_p_d_dog = findViewById(R.id.img_p_d_dog);
 
         tv_p_d_sex = findViewById(R.id.tv_p_d_sex);
-        tv_p_d_kind = findViewById(R.id.tv_p_d_kind);
-        tv_p_d_color = findViewById(R.id.tv_p_d_color);
-        tv_p_d_kg = findViewById(R.id.tv_p_d_kg);
-        tv_p_d_neutering = findViewById(R.id.tv_p_d_neutering);
-        tv_p_d_place = findViewById(R.id.tv_p_d_place);
-        tv_p_d_feature = findViewById(R.id.tv_p_d_feature);
         tv_p_d_birth = findViewById(R.id.tv_p_d_birth);
+        tv_p_d_color = findViewById(R.id.tv_p_d_color);
+        tv_p_d_kind = findViewById(R.id.tv_p_d_kind);
+        tv_p_d_kg = findViewById(R.id.tv_p_d_kg);
+        tv_p_d_place = findViewById(R.id.tv_p_d_place);
+        tv_p_d_neutering = findViewById(R.id.tv_p_d_neutering);
+        tv_p_d_feature = findViewById(R.id.tv_p_d_feature);
+
+
+        Intent intent = getIntent();
+
+
+        String picture = intent.getStringExtra("picture");
+        setPic(picture,img_p_d_dog);
+        String gender = intent.getStringExtra("gender");
+        String age = intent.getStringExtra("age");
+        String color = intent.getStringExtra("color");
+        String kind = intent.getStringExtra("kind");
+        String weight = intent.getStringExtra("weight");
+        String shelter = intent.getStringExtra("shelter");
+        String neuter = intent.getStringExtra("neuter");
+        String content = intent.getStringExtra("content");
+        String addr = intent.getStringExtra("addr");
+        String tel = intent.getStringExtra("tel");
+
+
+        tv_p_d_sex.setText(gender);
+        tv_p_d_birth.setText(age+" (연도)");
+        tv_p_d_color.setText(color);
+        tv_p_d_kind.setText(kind);
+        tv_p_d_kg.setText(weight+" (kg)");
+        tv_p_d_place.setText(shelter);
+        tv_p_d_neutering.setText(neuter);
+        tv_p_d_feature.setText(content);
+
         imgbtn_shelter_place = findViewById(R.id.imgbtn_shelter_place);
         imgbtn_adopt_ask = findViewById(R.id.imgbtn_adopt_ask);
+
+    }
+
+    public void setPic(String filename, ImageView imageView) {
+
+        String urlStr = "http://211.63.240.26:8081/YB/AdpImageService?filename="+filename;
+        ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
+        imageLoadTask.execute();
 
     }
 }

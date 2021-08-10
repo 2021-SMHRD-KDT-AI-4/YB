@@ -28,7 +28,7 @@
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_day" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
 
     <TextView
         android:id="@+id/tv_star14"
@@ -40,7 +40,7 @@
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_time" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
 
     <TextView
         android:id="@+id/tv_star15"
@@ -52,7 +52,7 @@
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_place" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_shelter" />
 
     <TextView
         android:id="@+id/tv_l_dog_info"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_f_day"
+        android:id="@+id/tv_p_weight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
@@ -78,7 +78,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info" />
 
     <TextView
-        android:id="@+id/tv_p_place"
+        android:id="@+id/tv_p_shelter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
@@ -86,10 +86,10 @@
         android:text="실종위치"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_time" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
 
     <TextView
-        android:id="@+id/tv_f_time"
+        android:id="@+id/tv_p_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
@@ -97,7 +97,7 @@
         android:text="실종시간"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_day" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
 
     <TextView
         android:id="@+id/tv_l_tel"
@@ -108,7 +108,7 @@
         android:text="연락처"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_place" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_p_shelter" />
 
     <Button
         android:id="@+id/btn_l_enroll"

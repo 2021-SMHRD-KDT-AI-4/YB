@@ -2,23 +2,17 @@ package com.example.findyourdog;
 
 import android.content.Context;
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.android.volley.NetworkResponse;
@@ -30,8 +24,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.findyourdog.databinding.ActivityFDogListCopyBinding;
-import com.example.findyourdog.databinding.ActivityLoginBinding;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -213,7 +205,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
             TextView tv_f_date = (TextView) convertView.findViewById(R.id.tv_f_date);
             TextView tv_f_kind = (TextView) convertView.findViewById(R.id.tv_f_kind);
             TextView tv_f_place = (TextView) convertView.findViewById(R.id.tv_f_place);
-            TextView tv_f_time = (TextView) convertView.findViewById(R.id.tv_f_time);
+            TextView tv_f_time = (TextView) convertView.findViewById(R.id.tv_p_sex);
 
             TextView f_date = (TextView) convertView.findViewById(R.id.f_date);
             TextView f_place = (TextView) convertView.findViewById(R.id.f_place);

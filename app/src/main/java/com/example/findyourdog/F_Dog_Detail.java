@@ -40,13 +40,6 @@ public class F_Dog_Detail extends AppCompatActivity {
         Intent intent = getIntent();
         String id = intent.getStringExtra("id");
         String gender = intent.getStringExtra("gender");
-        if(gender.equals("M")){
-            gender = "수컷";
-        }else if(gender.equals("F")){
-            gender = "암컷";
-        }else{
-            gender = "알수없음";
-        }
 
         String picture = intent.getStringExtra("picture");
         setPic(picture,img_f_d_dog);
@@ -68,7 +61,7 @@ public class F_Dog_Detail extends AppCompatActivity {
         tv_f_d_age.setText(age+"(연도)");
         tv_f_d_color.setText(color);
         tv_f_d_kind.setText(kind);
-        tv_f_d_weight.setText(weight+"(kg)");
+        tv_f_d_weight.setText(weight+" (kg)");
         tv_f_d_place.setText(shelter);
         tv_f_d_tel.setText(tel);
         tv_f_d_etc.setText(content);
