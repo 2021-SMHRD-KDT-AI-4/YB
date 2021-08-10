@@ -27,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -186,12 +187,14 @@ public class P_Dog_list extends Fragment implements View.OnClickListener {
 
             TextView tv_p_kind = (TextView) convertView.findViewById(R.id.tv_p_kind);
             TextView tv_p_weight = (TextView) convertView.findViewById(R.id.tv_p_weight);
+            TextView tv_p_shelter = (TextView) convertView.findViewById(R.id.tv_p_shelter);
             TextView tv_p_sex = (TextView) convertView.findViewById(R.id.tv_p_sex);
             TextView tv_p_content = (TextView) convertView.findViewById(R.id.tv_p_content);
 
             setPic(adpItem.getAdp_picture(), img_p_dog);
             tv_p_kind.setText(adpItem.getAdp_kind());
             tv_p_weight.setText(adpItem.getAdp_weight()+" (kg)");
+            tv_p_shelter.setText(adpItem.getAdp_shelter());
             tv_p_sex.setText(adpItem.getAdp_gender());
             tv_p_content.setText(adpItem.getAdp_content());
 
@@ -207,7 +210,7 @@ public class P_Dog_list extends Fragment implements View.OnClickListener {
                     intent.putExtra("kind", list.get(position).getAdp_kind());
                     intent.putExtra("weight", list.get(position).getAdp_weight());
                     intent.putExtra("shelter", list.get(position).getAdp_shelter());
-                    intent.putExtra("neuter", list.get(position).getAdp_shelter());
+                    intent.putExtra("neuter", list.get(position).getAdp_neuter());
                     intent.putExtra("content", list.get(position).getAdp_content());
                     intent.putExtra("addr", list.get(position).getAdp_addr());
                     intent.putExtra("tel", list.get(position).getAdp_tel());

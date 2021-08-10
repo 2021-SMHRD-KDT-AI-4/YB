@@ -1,12 +1,17 @@
 package com.example.findyourdog;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class P_Dog_Detail extends AppCompatActivity {
@@ -18,7 +23,6 @@ public class P_Dog_Detail extends AppCompatActivity {
     private ImageView img_p_d_dog;
 
     private ImageButton imgbtn_shelter_place, imgbtn_adopt_ask;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +68,22 @@ public class P_Dog_Detail extends AppCompatActivity {
         tv_p_d_feature.setText(content);
 
         imgbtn_shelter_place = findViewById(R.id.imgbtn_shelter_place);
+
+        imgbtn_shelter_place.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog(v, addr);
+            }
+        });
+
         imgbtn_adopt_ask = findViewById(R.id.imgbtn_adopt_ask);
+
+        imgbtn_adopt_ask.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calling(v, tel);
+            }
+        });
 
     }
 
@@ -75,4 +94,29 @@ public class P_Dog_Detail extends AppCompatActivity {
         imageLoadTask.execute();
 
     }
+
+    void showDialog(View v, String addr){
+        AlertDialog.Builder msgBuilder = new AlertDialog.Builder(P_Dog_Detail.this)
+
+                .setTitle("보호소 위치")
+                .setMessage(addr)
+                .setPositiveButton("닫기", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        AlertDialog msgDlg = msgBuilder.create();
+        msgDlg.show();
+
+    }
+
+    public void calling(View view, String tel){
+        Uri uri = Uri.parse("tel:"+tel);
+        Intent it = new Intent(Intent.ACTION_DIAL,uri);
+        startActivity(it);
+    }
+
+
+
 }
