@@ -227,8 +227,8 @@ public class P_Dog_list extends Fragment implements View.OnClickListener {
         public void setPic(String filename, ImageView imageView) {
 
             String urlStr = "http://211.63.240.26:8081/YB/AdpImageService?filename=" + filename;
-            ImageLoadTask2 imageLoadTask2 = new ImageLoadTask2(urlStr, imageView);
-            imageLoadTask2.execute();
+            ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
+            imageLoadTask.execute();
 
         }
 
