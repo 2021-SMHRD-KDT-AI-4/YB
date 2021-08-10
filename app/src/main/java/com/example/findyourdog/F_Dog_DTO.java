@@ -6,6 +6,7 @@ public class F_Dog_DTO {
     private String date;
     private String time;
     private String city;
+
     private String place;
     private String tel;
     private String picture;

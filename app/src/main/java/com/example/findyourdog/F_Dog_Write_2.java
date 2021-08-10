@@ -87,6 +87,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
 
 
 
+
         Spinner spinner = findViewById(R.id.spn_f_breed);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, dogs

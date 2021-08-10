@@ -286,6 +286,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                 }
             }
 
+
             // 보낼 데이터를 저장하는 곳
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
