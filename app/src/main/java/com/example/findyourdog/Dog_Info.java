@@ -7,8 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,6 +39,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -102,6 +105,7 @@ public class Dog_Info extends Fragment {
         if(requestCode == 1001 && resultCode == Activity.RESULT_OK) {
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+
             img_nose_print.setImageBitmap(imageBitmap);
 
         }else if (requestCode == 1003 && resultCode == Activity.RESULT_OK){
@@ -128,7 +132,9 @@ public class Dog_Info extends Fragment {
     public void sendRequest(){
         // Voolley Lib 새료운 요청객체 생성
         queue = Volley.newRequestQueue(getActivity());
+//        String url = "http://211.227.224.206:5000/picture";
         String url = "http://211.227.224.206:8081/YB/NosePrintService";
+
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
             @Override
@@ -199,19 +205,18 @@ public class Dog_Info extends Fragment {
                 Map<String, String> params = new HashMap<>();
                 String id = PreferenceManager.getString(getActivity(),"id");
 
-
+                BitmapDrawable drawable = (BitmapDrawable) img_nose_print.getDrawable();
+                Bitmap bitmap = drawable.getBitmap();
+                String filename = BitmapToBase64(bitmap);
+                Log.v("bitmapp",filename);
 
                 params.put("dog_name", edt_info_name.getText().toString());
                 params.put("dog_gender", edt_info_sex.getText().toString());
                 params.put("dog_kind", edt_info_type.getText().toString());
                 params.put("id", id);
-                params.put("dog_picture", img_nose_print.toString());
+                params.put("dog_picture", filename);
 
-                Log.v("nose_print",edt_info_name.getText().toString());
-                Log.v("nose_print",edt_info_sex.getText().toString());
-                Log.v("nose_print",edt_info_type.getText().toString());
-                Log.v("nose_print",img_nose_print.toString());
-                Log.v("nose_print",id);
+
 
 
                 return params;
@@ -220,6 +225,14 @@ public class Dog_Info extends Fragment {
 
 
         queue.add(stringRequest);
+    }
+    // Bitmap -> Base64 변환
+    public String BitmapToBase64(Bitmap bitmap){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] bImage = baos.toByteArray();
+        String base64 = Base64.encodeToString(bImage, Base64.DEFAULT);
+        return base64;
     }
 
 
