@@ -78,7 +78,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
         queue = Volley.newRequestQueue(getApplicationContext());
 //        String url = "http://211.227.224.206:5000/picture";
         String n_id = PreferenceManager.getString(getApplicationContext(),"id");
-        String url = "http://211.227.224.206:8081/YB/UserNoseService?id="+n_id;
+        String url = "http://211.63.240.26:8081/YB/UserNoseService?id="+n_id;
 
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳

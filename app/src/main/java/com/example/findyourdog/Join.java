@@ -79,9 +79,9 @@ public class Join extends AppCompatActivity {
         String url = "";
         queue = Volley.newRequestQueue(getApplicationContext());
         if (v.equals(btn_join)) {
-            url = "http://211.227.224.206:8081/YB/Join";
+            url = "http://211.63.240.26:8081/YB/Join";
         } else if (v.equals(btn_id_check)) {
-            url = "http://211.227.224.206:8081/YB/Join_id_check";
+            url = "http://211.63.240.26:8081/YB/Join_id_check";
         }
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
