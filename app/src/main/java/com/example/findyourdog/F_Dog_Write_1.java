@@ -147,8 +147,9 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         btn_f_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),F_Dog_Write_2.class);
-                startActivity(intent);
+                sendRequest();
+//                Intent intent = new Intent(getApplicationContext(),F_Dog_Write_2.class);
+//                startActivity(intent);
             }
         });
 
@@ -188,8 +189,6 @@ public class F_Dog_Write_1 extends AppCompatActivity {
 
         return outFile;
     }
-
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable @org.jetbrains.annotations.Nullable Intent data) {
@@ -244,20 +243,21 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                     Log.v("dogbreed",dogBreed);
                     if (dogBreed != null) {
 
-                        Intent intent = new Intent(getApplicationContext(), F_Dog_Write_2.class);
-                        String e_f_Day = edt_f_day.getText().toString();
+                        Intent intent1 = new Intent(getApplicationContext(), F_Dog_Write_2.class);
+                        String e_f_day = edt_f_day.getText().toString();
                         String e_f_tel = edt_f_tel.getText().toString();
                         String f_city = spn_f_sido.getSelectedItem().toString() ;
                         String e_f_place = edt_f_place.getText().toString();
                         String e_f_time = edt_f_time.getText().toString();
 
-                        intent.putExtra("e_f_Day",e_f_Day);
-                        intent.putExtra("e_f_tel",e_f_tel);
-                        intent.putExtra("f_city",f_city);
-                        intent.putExtra("e_f_place",e_f_place);
-                        intent.putExtra("e_f_time",e_f_time);
-                        intent.putExtra("dogbreed",dogBreed);
-                        startActivity(intent);
+                        intent1.putExtra("f_Day",e_f_day);
+                        intent1.putExtra("f_tel",e_f_tel);
+                        intent1.putExtra("f_city",f_city);
+                        intent1.putExtra("f_place",e_f_place);
+                        intent1.putExtra("f_time",e_f_time);
+                        intent1.putExtra("f_breed",dogBreed);
+
+                        startActivity(intent1);
                     }
 
                 } catch (JSONException e) {
@@ -294,7 +294,8 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                 BitmapDrawable drawable = (BitmapDrawable) img_f_picture.getDrawable();
                 Bitmap bitmap = drawable.getBitmap();
                 String imgStr = BitmapToBase64(bitmap);
-                String user_id = "sim";
+
+                String user_id = PreferenceManager.getString(getApplicationContext(),"id");
 
                 params.put("user_id",user_id);
                 params.put("bitmap", imgStr);

@@ -30,6 +30,7 @@
         <activity android:name=".F_Dog_Detail"/>
         <activity android:name=".F_Dog_Write_1"/>
         <activity android:name=".F_Dog_Write_2"/>
+        <activity android:name=".F_Dog_Write_Result"/>
         <activity android:name=".L_Dog_Detail"/>
         <activity android:name=".L_Dog_Write1"/>
         <activity android:name=".L_Dog_Write2"/>
