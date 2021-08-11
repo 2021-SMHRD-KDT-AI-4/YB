@@ -56,6 +56,8 @@ public class Dog_Info extends Fragment {
     private RequestQueue queue;
     private StringRequest stringRequest;
 
+    public String id = "";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -141,9 +143,9 @@ public class Dog_Info extends Fragment {
                 Log.v("resultValue",response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    String result = jsonObject.getString("isCheck");
+                    String result = jsonObject.getString("dog_nose_print");
                     Log.v("resultValue",result);
-                    if(result.equals("true")){
+                    if(!result.equals("없음")){
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         builder.setTitle("비문등록").setMessage("비문등록이 완료되었습니다.");
                         builder.setPositiveButton("확인", new DialogInterface.OnClickListener() {
@@ -156,6 +158,8 @@ public class Dog_Info extends Fragment {
 
                         AlertDialog alertDialog = builder.create();
                         alertDialog.show();
+                        sendFlaskRequest(id);
+
                     }else if (result.equals("false")){
                         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                         builder.setTitle("비문등록").setMessage("비문등록이 실패하였습니다.");
@@ -202,7 +206,7 @@ public class Dog_Info extends Fragment {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                String id = PreferenceManager.getString(getActivity(),"id");
+                id = PreferenceManager.getString(getActivity(),"id");
 
                 BitmapDrawable drawable = (BitmapDrawable) img_nose_print.getDrawable();
                 Bitmap bitmap = drawable.getBitmap();
@@ -232,6 +236,46 @@ public class Dog_Info extends Fragment {
         byte[] bImage = baos.toByteArray();
         String base64 = Base64.encodeToString(bImage, Base64.DEFAULT);
         return base64;
+    }
+
+    public void sendFlaskRequest(String id){
+        Log.v("resultValue","비문등록을 위한 플라스크 서버 시작");
+        queue = Volley.newRequestQueue(getActivity());
+        String url = "http://211.63.240.26:5000/UploadNose?user_id="+id;
+//        String url = "http://211.63.240.26:8081/YB/UploadNose?id="+id+"&filename="+filename;
+
+        stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }){
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+        };
+
+
+        queue.add(stringRequest);
+
     }
 
 
