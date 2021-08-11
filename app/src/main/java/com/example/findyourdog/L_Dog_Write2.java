@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +23,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
   private EditText edt_l_sex, edt_l_birth, edt_l_color, edt_l_type, edt_l_kg, edt_l_feature;
   private Button btn_l_picture_plus,btn_l_enroll;
   private ImageView img_l_dog_picture;
+  private Spinner spn_type;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
         edt_l_sex = findViewById(R.id.edt_l_sex);
         edt_l_birth = findViewById(R.id.edt_l_birth);
         edt_l_color = findViewById(R.id.edt_l_color);
-        edt_l_type =findViewById(R.id.edt_l_type);
+        spn_type =findViewById(R.id.spinner);
         edt_l_kg = findViewById(R.id.edt_l_kg);
         edt_l_feature = findViewById(R.id.edt_f_feature);
         btn_l_enroll = findViewById(R.id.btn_l_enroll);
