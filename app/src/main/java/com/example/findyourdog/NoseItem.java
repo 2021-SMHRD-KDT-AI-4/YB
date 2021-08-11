@@ -2,12 +2,22 @@ package com.example.findyourdog;
 
 public class NoseItem {
 
+    private String num;
     private String filename;
     private String name;
 
-    public NoseItem(String filename, String name) {
+    public NoseItem(String num, String filename, String name) {
+        this.num = num;
         this.filename = filename;
         this.name = name;
+    }
+
+    public String getNum() {
+        return num;
+    }
+
+    public void setNum(String num) {
+        this.num = num;
     }
 
     public String getFilename() {

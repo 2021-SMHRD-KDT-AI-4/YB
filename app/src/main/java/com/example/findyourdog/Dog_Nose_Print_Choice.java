@@ -12,6 +12,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
@@ -49,6 +50,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
     private TextView tv_appname, tv_dog_nose_print_choice, tv_img1_name, tv_img2_name;
 
     private String TAG = Dog_Nose_Print_Choice.class.getSimpleName();
+    public String n_id = "";  // 사용자 아이디
 
     private ListView listView;
     private ListItemAdapter adapter = null;
@@ -70,38 +72,34 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
         adapter = new ListItemAdapter();
         sendRequest();
 
-
-
     }
     public void sendRequest(){
 
         queue = Volley.newRequestQueue(getApplicationContext());
 
-        String n_id = PreferenceManager.getString(getApplicationContext(),"id");
+        n_id = PreferenceManager.getString(getApplicationContext(),"id");
         String url = "http://211.63.240.26:8081/YB/UserNoseService?id="+n_id;
 
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
             @Override
             public void onResponse(String response) {
-                Log.v("무야호의 힘",response);
-//                String filename ="";
-//                String name ="";
+
                 try {
                     JSONArray jsonArray = new JSONArray(response);
                     for (int i = 0; i < jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        String num = jsonObject.getString("nose_print_num");
                         String filename = jsonObject.getString("dog_nose_print");
                         String name = jsonObject.getString("dog_name");
 
                         Log.v("무야호!",filename+" "+name);
-                        String[] list = {filename, name};
+                        String[] list = {num, filename, name};
                         userList.add(list);
                     }
 
                     for (int i=0 ; i < userList.size(); i++ ){
-                        Log.v("userList.get("+i+")",userList.get(i)[0]+" "+userList.get(i)[1]+" "+userList.size());
-                        adapter.addItem(new NoseItem(userList.get(i)[0], userList.get(i)[1]));
+                        adapter.addItem(new NoseItem(userList.get(i)[0], userList.get(i)[1], userList.get(i)[2]));
                     }
                     listView.setAdapter(adapter);
 
@@ -177,7 +175,13 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //
+                    String nose_print_num = items.get(position).getNum();
+                    String filename = items.get(position).getFilename();
+                    sendFlaskRequest(n_id, nose_print_num, filename);
+
+//                    Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+//                    startActivity(intent);
+
                 }
             });
 
@@ -191,6 +195,59 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
         ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
         imageLoadTask.execute();
 
+    }
+
+    public void sendFlaskRequest(String id, String num, String filename){
+
+        queue = Volley.newRequestQueue(getApplicationContext());
+
+        String url = "http://211.63.240.26:5000/noseprint?id="+id+"&num="+num+"&filename="+filename;
+
+        stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+//                    for (int i = 0; i < jsonArray.length(); i++){
+//                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+//                        String num = jsonObject.getString("nose_print_num");
+//                        String filename = jsonObject.getString("dog_nose_print");
+//                        String name = jsonObject.getString("dog_name");
+//
+//                        Log.v("무야호!",filename+" "+name);
+//                        String[] list = {num, filename, name};
+//                        userList.add(list);
+//                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }){
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+        };
+        queue.add(stringRequest);
     }
 
 
