@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/spn_l_type "
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".L_Dog_Write1">
@@ -16,17 +17,6 @@
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_sex" />
-
-    <EditText
-        android:id="@+id/edt_l_type"
-        android:layout_width="195dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="15dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_l_color" />
 
     <TextView
         android:id="@+id/tv_l_feature"
@@ -104,7 +94,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_l_type" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <TextView
         android:id="@+id/tv_l_vital"
@@ -203,5 +193,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info"
         app:srcCompat="@drawable/one" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="193dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_l_color" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

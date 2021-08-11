@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/img_p_d_dog"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -19,10 +19,10 @@
     <TextView
         android:id="@+id/p_d_sex"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="20dp"
         android:text="성별"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_p_d_dog" />
@@ -30,10 +30,11 @@
     <TextView
         android:id="@+id/p_d_kind"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="품종"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_color" />
@@ -41,10 +42,11 @@
     <TextView
         android:id="@+id/p_d_color"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="색"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_birth" />
@@ -52,10 +54,11 @@
     <TextView
         android:id="@+id/p_d_kg"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="무게"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_kind" />
@@ -63,10 +66,11 @@
     <TextView
         android:id="@+id/p_d_place"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="관할보호센터"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_kg" />
@@ -74,10 +78,11 @@
     <TextView
         android:id="@+id/p_d_neutering"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="중성화 여부"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_place" />
@@ -85,10 +90,11 @@
     <TextView
         android:id="@+id/p_d_feature"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="특징"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_neutering" />
@@ -96,10 +102,11 @@
     <TextView
         android:id="@+id/p_d_birth"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="80dp"
         android:layout_marginTop="6dp"
         android:text="출생연도"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_sex" />
@@ -107,10 +114,10 @@
     <TextView
         android:id="@+id/tv_p_d_sex"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
-        android:layout_marginTop="20dp"
         android:text="암컷"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_p_d_dog" />
@@ -118,10 +125,11 @@
     <TextView
         android:id="@+id/tv_p_d_color"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="검정"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_birth" />
@@ -129,10 +137,11 @@
     <TextView
         android:id="@+id/tv_p_d_kind"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="믹스견"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_color" />
@@ -140,10 +149,11 @@
     <TextView
         android:id="@+id/tv_p_d_kg"
         android:layout_width="108dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="3.1kg"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_kind" />
@@ -151,10 +161,11 @@
     <TextView
         android:id="@+id/tv_p_d_place"
         android:layout_width="163dp"
-        android:layout_height="34dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="광주동물보호소"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_kg" />
@@ -162,21 +173,23 @@
     <TextView
         android:id="@+id/tv_p_d_neutering"
         android:layout_width="162dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="O"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_place" />
 
     <TextView
         android:id="@+id/tv_p_d_feature"
-        android:layout_width="154dp"
-        android:layout_height="32dp"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="경계심이 많음"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_neutering" />
@@ -184,10 +197,11 @@
     <TextView
         android:id="@+id/tv_p_d_birth"
         android:layout_width="133dp"
-        android:layout_height="33dp"
+        android:layout_height="30dp"
         android:layout_marginStart="192dp"
         android:layout_marginTop="6dp"
         android:text="2020년 02월"
+        android:textColor="#787878"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_sex" />
@@ -197,7 +211,7 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_feature"

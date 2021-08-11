@@ -1,36 +1,98 @@
 package com.example.findyourdog;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class F_Dog_Write_Result extends AppCompatActivity {
 
-    private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_f_dog_s, btn_f_dog_s_call;
-    private ImageView img_menu, img_f_dog;
-    private TextView tv_appname, tv_f_dog_ok, tv_f_dog, tv_f_dog_s, tv_f_dog_info;
 
+    private ImageButton imgbtn_f_s_info, imgbtn_f_s_tel;
+    private ImageView img_f_dog_picture;
+    private TextView tv_l_d_result_day,tv_l_d_result_place,tv_l_d_result_time,tv_l_d_result_tel,tv_l_d_result_kind;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_dog_write_result);
 
-        img_menu = findViewById(R.id.img_menu);
-        btn_1 = findViewById(R.id.btn_1);
-        btn_2 = findViewById(R.id.btn_2);
-        btn_3 = findViewById(R.id.btn_3);
-        btn_4 = findViewById(R.id.btn_4);
-        btn_5 = findViewById(R.id.btn_5);
-        btn_f_dog_s = findViewById(R.id.btn_f_dog_s);
-        btn_f_dog_s_call = findViewById(R.id.btn_f_dog_s_call);
-        img_f_dog = findViewById(R.id.img_f_dog_picture);
-        tv_appname = findViewById(R.id.tv_appname);
-        tv_f_dog_ok = findViewById(R.id.tv_f_dog_ok);
-        tv_f_dog = findViewById(R.id.tv_f_dog);
-        tv_f_dog_s = findViewById(R.id.tv_f_dog_s);
-        tv_f_dog_info = findViewById(R.id.tv_f_dog_info);
+        imgbtn_f_s_info = (ImageButton) findViewById(R.id.imgbtn_f_s_info);
+        imgbtn_f_s_tel = (ImageButton) findViewById(R.id.imgbtn_f_s_tel);
+        img_f_dog_picture = findViewById(R.id.img_f_dog_picture);
+        tv_l_d_result_day = findViewById(R.id.tv_l_d_result_day);
+        tv_l_d_result_place = findViewById(R.id.tv_l_d_result_place);
+        tv_l_d_result_time = findViewById(R.id.tv_l_d_result_time);
+        tv_l_d_result_tel = findViewById(R.id.tv_l_d_result_tel);
+        tv_l_d_result_kind = findViewById(R.id.tv_l_d_result_kind);
+
+
+        imgbtn_f_s_tel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calling(v);
+            }
+        });
+
+        imgbtn_f_s_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                showDialog();
+            }
+        });
     }
-}
+    void showDialog(){
+        AlertDialog.Builder msgBuilder = new AlertDialog.Builder(F_Dog_Write_Result.this)
+                .setTitle("보호소 위치")
+                .setMessage("")
+                .setPositiveButton("닫기", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                });
+        AlertDialog msgDlg = msgBuilder.create();
+        msgDlg.show();
+    }
+
+
+    public void calling(View view){
+        Log.v("callresult","gogo");
+        Uri uri = Uri.parse("tel:010010101");
+        Intent it = new Intent(Intent.ACTION_DIAL,uri);
+        startActivity(it);
+//        Intent intent = new Intent((Intent.ACTION_CALL));
+//        intent.setData(Uri.parse("tel:01062159216"));
+//        try {
+//            startActivity(intent);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+    }
+
+    public void onClick(View v){
+        switch (v.getId()){
+            case R.id.btn_dog_nose_print_reg:
+                new AlertDialog.Builder(this)
+                        .setTitle("보호소 위치")
+                        .setMessage("등록이 완료되었습니다!")
+                        .setNeutralButton("닫기", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+
+                            }
+                        })
+                        .show();
+                break;
+        }
+
+    }
+
+    }
