@@ -24,7 +24,7 @@ public class L_Dog_Write_Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l_dog_write_result);
 
-        img_l_dog_picture2 = findViewById(R.id.img_f_dog_picture);
+        img_l_dog_picture2 = findViewById(R.id.img_l_dog_picture);
         imgbtn_l_s_tel =(ImageButton) findViewById(R.id.imgbtn_l_s_tel);
         imgbtn_l_s_info =(ImageButton) findViewById(R.id.imgbtn_l_s_info);
 

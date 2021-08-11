@@ -7,22 +7,25 @@
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="130dp"
         android:layout_weight="1"
-        android:orientation="vertical">
+        android:gravity="center">
 
         <ImageView
             android:id="@+id/img_dog_nose_print"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             tools:srcCompat="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/tv_dog_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/nanumbarunpenb"
             android:gravity="center"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textColor="#8E8B8B"
+            android:textSize="26sp" />
 
     </LinearLayout>
 

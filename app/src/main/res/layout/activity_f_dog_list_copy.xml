@@ -11,7 +11,6 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginStart="320dp"
-        android:layout_marginBottom="5dp"
         android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,13 +18,13 @@
 
     <GridView
         android:id="@+id/gv_find"
-        android:layout_width="390dp"
+        android:layout_width="400dp"
         android:layout_height="525dp"
         android:horizontalSpacing="20dp"
         android:numColumns="2"
         android:verticalSpacing="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
