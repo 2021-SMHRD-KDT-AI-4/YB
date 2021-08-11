@@ -39,9 +39,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Comments extends AppCompatActivity {
-    private RequestQueue queue;
-    private StringRequest stringRequest;
-    private Button btn_write_review;
+    private RequestQueue queue,queue1;
+    private StringRequest stringRequest,stringRequest1;
+    private Button btn_write_review,btn_show;
     private EditText edt_write_review;
     private String result ;
     private ListView listView;
@@ -57,18 +57,103 @@ public class Comments extends AppCompatActivity {
         btn_write_review = findViewById(R.id.btn_write_review);
         edt_write_review = findViewById(R.id.edt_write_review);
 
-        listView = (ListView) findViewById(R.id.comment_listview);
+        listView =  findViewById(R.id.comment_listview);
         adapter = new CommentAdapter();
         showRequest();
+
+
+        Log.v("댓글","쇼리퀘스트");
 
         btn_write_review.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sendRequest();
+
             }
         });
 
 
+    }
+    public void showRequest(){
+        // Voolley Lib 새료운 요청객체 생성
+        queue = Volley.newRequestQueue(getApplicationContext());
+        String url = "http://211.63.240.26:8081/YB/CommentViewService";
+        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+                Log.v("댓글",response);
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+                    Log.v("댓글",response);
+                    for (int i = 0; i < jsonArray.length(); i++){
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+//                        if(!commentlist.contains(jsonArray.getJSONObject(i))){
+
+
+                        String id = jsonObject.getString("id");
+                        String comments = jsonObject.getString("comments");
+                        Log.v("댓글확인","아이디 : "+id+"댓글내용 : "+comments );
+
+
+                        String[] list = {id, comments};
+
+                        commentlist.add(list);
+//                        }
+                    }
+                    for (int i = 0; i < commentlist.size(); i++){
+
+                        Log.v("무야~호", commentlist.get(i)[0]+commentlist.get(i)[1]);
+                        adapter.addItem(new CommentItem(commentlist.get(i)[0],commentlist.get(i)[1]));
+                    }
+                    listView.setAdapter(adapter);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }){
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+            // 보낼 데이터를 저장하는 곳
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                String id = PreferenceManager.getString(getApplicationContext(),"id");
+
+                String board_num = getIntent().getStringExtra("board_num");
+
+                params.put("board_num", board_num);
+
+                Log.v("review",board_num);
+
+
+
+                return params;
+            }
+        };
+
+
+        queue.add(stringRequest);
     }
     public void sendRequest(){
         // Voolley Lib 새료운 요청객체 생성
@@ -83,6 +168,11 @@ public class Comments extends AppCompatActivity {
                     result = jsonObject.getString("isCheck");
                     if(result.equals("true")){
                         Log.v("댓글등록","댓글등록완료");
+                        Intent intent = getIntent();
+                        finish(); //현재 액티비티 종료 실시
+                        overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+                        startActivity(intent); //현재 액티비티 재실행 실시
+                        overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
                     }else {
                         Log.v("댓글등록","댓글등록실패");
                     }
@@ -139,79 +229,9 @@ public class Comments extends AppCompatActivity {
 
         queue.add(stringRequest);
     }
-    public void showRequest(){
-        // Voolley Lib 새료운 요청객체 생성
-        queue = Volley.newRequestQueue(getApplicationContext());
-        String url = "http://211.63.240.26:8081/YB/CommentViewService";
-        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            // 응답데이터를 받아오는 곳
-            @Override
-            public void onResponse(String response) {
-                try {
-                    JSONArray jsonArray = new JSONArray(response);
-                    Log.v("댓글","리스폰");
-                    for (int i = 0; i < jsonArray.length(); i++){
-                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        String id = jsonObject.getString("id");
-                        String comments = jsonObject.getString("comments");
-
-
-                        String[] list = {id, comments};
-                        commentlist.add(list);
-                    }
-                    for (int i = 0; i < commentlist.size(); i++){
-                        Log.v("무야~호", commentlist.get(i)[0]+commentlist.get(i)[1]);
-                        adapter.addItem(new CommentItem(commentlist.get(i)[0],commentlist.get(i)[1]));
-                    }
-                    listView.setAdapter(adapter);
-
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-        }, new Response.ErrorListener() {
-            // 서버와의 연동 에러시 출력
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        }){
-            @Override //response를 UTF8로 변경해주는 소스코드
-            protected Response<String> parseNetworkResponse(NetworkResponse response) {
-                try {
-                    String utf8String = new String(response.data, "UTF-8");
-                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
-                } catch (UnsupportedEncodingException e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                } catch (Exception e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                }
-            }
-
-            // 보낼 데이터를 저장하는 곳
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                String id = PreferenceManager.getString(getApplicationContext(),"id");
-
-                String board_num = getIntent().getStringExtra("board_num");
-
-                params.put("board_num", board_num);
-
-                Log.v("review",board_num);
 
 
 
-                return params;
-            }
-        };
-
-
-        queue.add(stringRequest);
-    }
     public class CommentAdapter extends BaseAdapter {
         ArrayList<CommentItem> items = new ArrayList<CommentItem>();
         @Override
