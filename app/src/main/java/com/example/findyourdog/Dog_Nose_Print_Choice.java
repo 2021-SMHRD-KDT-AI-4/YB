@@ -220,7 +220,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
 
                     Log.v("ResultValue shelter ", code +" "+ name +" "+ info+" "+picture);
 
-                    if(name.equals("미등록")){ // 실패시
+                    if(name.equals("없음")){ // 실패시
                         Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
                         startActivity(intent);
                     }else{
