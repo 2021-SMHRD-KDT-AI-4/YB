@@ -27,7 +27,6 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -185,10 +184,10 @@ public class P_Dog_list extends Fragment implements View.OnClickListener {
 
             ImageView img_p_dog = (ImageView) convertView.findViewById(R.id.img_p_dog);
 
-            TextView tv_p_kind = (TextView) convertView.findViewById(R.id.tv_p_kind);
-            TextView tv_p_weight = (TextView) convertView.findViewById(R.id.tv_p_weight);
-            TextView tv_p_shelter = (TextView) convertView.findViewById(R.id.tv_p_shelter);
-            TextView tv_p_sex = (TextView) convertView.findViewById(R.id.tv_p_sex);
+            TextView tv_p_kind = (TextView) convertView.findViewById(R.id.tv_l_kind);
+            TextView tv_p_weight = (TextView) convertView.findViewById(R.id.tv_l_date);
+            TextView tv_p_shelter = (TextView) convertView.findViewById(R.id.tv_l_place);
+            TextView tv_p_sex = (TextView) convertView.findViewById(R.id.tv_l_time);
             TextView tv_p_content = (TextView) convertView.findViewById(R.id.tv_p_content);
 
             setPic(adpItem.getAdp_picture(), img_p_dog);

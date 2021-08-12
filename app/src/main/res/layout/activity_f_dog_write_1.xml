@@ -84,7 +84,7 @@
         android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_time" />
 
     <TextView
         android:id="@+id/tv_star6"
@@ -147,7 +147,7 @@
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_time" />
 
     <TextView
         android:id="@+id/tv_star7"
@@ -159,7 +159,7 @@
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_date" />
 
     <EditText
         android:id="@+id/edt_f_place"
@@ -174,7 +174,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_f_time" />
 
     <TextView
-        android:id="@+id/tv_p_sex"
+        android:id="@+id/tv_l_time"
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginStart="52dp"
@@ -188,7 +188,7 @@
         android:textColor="#787676"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_date" />
 
     <TextView
         android:id="@+id/tv_f_dog_info"
@@ -217,7 +217,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edt_f_day" />
 
     <TextView
-        android:id="@+id/tv_p_weight"
+        android:id="@+id/tv_l_date"
         android:layout_width="70dp"
         android:layout_height="45dp"
         android:layout_marginStart="52dp"
