@@ -8,8 +8,8 @@
 
     <Button
         android:id="@+id/btn_f_next2"
-        android:layout_width="308dp"
-        android:layout_height="40dp"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/btn_round_pink"
         android:text="등록하기"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"
-        android:text="유실견정보"
+        android:text="목격견정보"
         android:textColor="#0B0B0B"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"

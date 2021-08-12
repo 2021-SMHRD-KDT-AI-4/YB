@@ -40,7 +40,7 @@
         android:layout_marginTop="40dp"
         android:background="#00ff0000"
         android:fontFamily="@font/nanumbarunpenb"
-        android:text="마이페이지"
+        android:text="비문등록현황"
         android:textColor="#959292"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         android:layout_width="102dp"
         android:layout_height="18dp"
         android:layout_marginStart="64dp"
-        android:text="──────────"
+        android:text="────────────"
         android:textColor="#A5A0A0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_my_page_go" />

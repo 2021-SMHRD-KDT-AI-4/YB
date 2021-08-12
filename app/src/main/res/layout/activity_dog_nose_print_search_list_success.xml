@@ -12,13 +12,29 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:text="해당 보호소에 연락해보세요!"
-        android:textColor="#000000"
+        android:textColor="#5C5B5B"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:textStyle="normal"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_find" />
+
+    <TextView
+        android:id="@+id/tv_call_shelter2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="비문조회 결과"
+        android:textColor="#5C5B5B"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_find"
@@ -26,98 +42,77 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="'초코'를 찾았어요!"
-        android:textColor="#000000"
+        android:textColor="#5C5B5B"
         android:textSize="24sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_success" />
 
     <TextView
+        android:id="@+id/tv_shelter_add1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:gravity="center"
+        android:text="보호소 주소"
+        android:textColor="#5C5B5B"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_name1" />
+
+    <TextView
         android:id="@+id/tv_shelter_name1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:gravity="center"
-        android:text="보호소 이름"
-        android:textColor="#000000"
-        android:textSize="17sp"
+        android:text="보호소명"
+        android:textColor="#5C5B5B"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_call_shelter" />
+
+    <TextView
+        android:id="@+id/tv_shelter_add2"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="16dp"
+        android:text="광주 북구 본촌마을길 27"
+        android:textColor="#5C5B5B"
+        android:textSize="18sp"
+        android:fontFamily="@font/nanumbarunpenb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_name2" />
 
     <TextView
         android:id="@+id/tv_shelter_name2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="100dp"
         android:gravity="center"
         android:text="광주동물보호소"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#5C5B5B"
+        android:textSize="18sp"
+        android:fontFamily="@font/nanumbarunpenb"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_call_shelter" />
-
-    <TextView
-        android:id="@+id/tv_shelter_add1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="보호소 주소"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_name1" />
-
-    <TextView
-        android:id="@+id/tv_shelter_add2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:gravity="center"
-        android:text="광주 북구 본촌마을길 27"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_name2" />
-
-    <TextView
-        android:id="@+id/tv_shelter_tel1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="보호소 전화번호"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_add1" />
-
-    <TextView
-        android:id="@+id/tv_shelter_tel2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="104dp"
-        android:gravity="center"
-        android:text="062-571-2808"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_shelter_add2" />
 
     <ImageView
         android:id="@+id/img_success"
-        android:layout_width="279dp"
-        android:layout_height="137dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="104dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_call_shelter2"
         tools:srcCompat="@tools:sample/avatars" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

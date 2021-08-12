@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/tv_guide"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="조회할 반려견을 하나만 선택해주세요."
