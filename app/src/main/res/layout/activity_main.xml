@@ -11,6 +11,7 @@
         android:layout_width="410dp"
         android:layout_height="590dp"
         android:layout_marginTop="115dp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

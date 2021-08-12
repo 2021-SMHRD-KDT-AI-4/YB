@@ -19,6 +19,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:text="믹스견"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_p_dog" />
@@ -31,6 +32,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="광주동물 보호소"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,6 +46,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="수컷"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,6 +60,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="특이사항 없음"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -70,6 +74,7 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="3.2kg"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +88,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:text="품종"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_p_dog" />
@@ -95,6 +101,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="관할보호센터"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p_weight" />
@@ -108,6 +115,7 @@
             android:layout_marginTop="4dp"
             android:text="성별"
             android:textSize="13sp"
+            android:fontFamily="@font/nanumbarunpenb"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p_shelter" />
 
@@ -119,6 +127,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="특징"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p_sex" />
@@ -131,6 +140,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="무게"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/p_kind" />

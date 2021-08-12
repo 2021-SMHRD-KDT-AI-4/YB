@@ -12,7 +12,7 @@
         android:background="@drawable/border">
 
         <ImageView
-            android:id="@+id/img_l_dog_picture"
+            android:id="@+id/img_l_dog_picture2"
             android:layout_width="180dp"
             android:layout_height="180dp"
             android:layout_gravity="center"
@@ -31,9 +31,10 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:text="품종"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture" />
+            app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
 
         <TextView
             android:id="@+id/f_date"
@@ -43,6 +44,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="목격날짜"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/f_kind" />
@@ -55,6 +57,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="목격시간"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/f_place" />
@@ -67,6 +70,7 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="목격위치"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/f_date" />
@@ -79,9 +83,10 @@
             android:layout_marginStart="64dp"
             android:layout_marginTop="8dp"
             android:text="믹스견"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture" />
+            app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
 
         <TextView
             android:id="@+id/tv_f_date"
@@ -104,6 +109,7 @@
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"
             android:text="오전10시"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -117,6 +123,7 @@
             android:layout_marginStart="64dp"
             android:layout_marginTop="4dp"
             android:text="운천저수지"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"

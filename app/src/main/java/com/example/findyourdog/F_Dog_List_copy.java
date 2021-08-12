@@ -200,7 +200,7 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.f_gridview, viewGroup, false);
 
-            ImageView img_f_dog_picture = (ImageView) convertView.findViewById(R.id.img_l_dog_picture);
+            ImageView img_f_dog_picture = (ImageView) convertView.findViewById(R.id.img_l_dog_picture2);
 
             TextView tv_f_date = (TextView) convertView.findViewById(R.id.tv_f_date);
             TextView tv_f_kind = (TextView) convertView.findViewById(R.id.tv_f_kind);

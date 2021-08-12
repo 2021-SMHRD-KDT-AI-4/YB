@@ -25,7 +25,7 @@
         android:id="@+id/tv_call_shelter2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="비문조회 결과"
         android:textColor="#5C5B5B"

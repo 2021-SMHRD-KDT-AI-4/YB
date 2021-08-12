@@ -34,12 +34,12 @@ public class L_Dog_Write2 extends AppCompatActivity {
         edt_l_sex = findViewById(R.id.edt_l_sex);
         edt_l_birth = findViewById(R.id.edt_l_birth);
         edt_l_color = findViewById(R.id.edt_l_color);
-        spn_type =findViewById(R.id.spinner);
+        spn_type =findViewById(R.id.spn_l_type);
         edt_l_kg = findViewById(R.id.edt_l_kg);
         edt_l_feature = findViewById(R.id.edt_f_feature);
         btn_l_enroll = findViewById(R.id.btn_l_enroll);
         btn_l_picture_plus = findViewById(R.id.btn_l_picture_plus);
-        img_l_dog_picture = findViewById(R.id.img_l_dog_picture);
+        img_l_dog_picture = findViewById(R.id.img_l_dog_picture2);
 
         btn_l_enroll.setOnClickListener(new View.OnClickListener() {
             @Override

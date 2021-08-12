@@ -26,6 +26,7 @@
         android:layout_marginTop="624dp"
         android:backgroundTint="#C6C6C6"
         android:text="글쓰기"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
