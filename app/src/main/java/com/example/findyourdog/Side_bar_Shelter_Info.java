@@ -2,21 +2,56 @@ package com.example.findyourdog;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
 
 public class Side_bar_Shelter_Info extends AppCompatActivity {
 
     private TextView tv_shelter_info, tv_city, tv_gungu;
     private Button btn_search;
     private Spinner spin_city, spin_gungu;
+    private RequestQueue queue;
+    private StringRequest stringRequest;
+    private ShelterAdapter shelterAdapter;
+    private ListView listView;
+
+
+    public ArrayList<String[]> shelter_list = new ArrayList<String[]>();
 
     String[] items = {"제주","강원","서울","경기","충북","충남","경북","경남",
             "전북","전남","인천","대전","대구","울산","부산","광주","세종"};
@@ -71,6 +106,11 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_bar_shelter_info);
+
+        listView = findViewById(R.id.shelter_listview);
+        shelterAdapter = new ShelterAdapter();
+
+
 
         tv_shelter_info = findViewById(R.id.tv_shelter_info);
         tv_city = findViewById(R.id.tv_city);
@@ -170,6 +210,178 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
                 //tv_city.setText("선택 : ");
             }
         });
+        btn_search.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent intent = getIntent();
+//                finish(); //현재 액티비티 종료 실시
+//                overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+//                startActivity(intent); //현재 액티비티 재실행 실시
+//                overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+
+
+//                shelterAdapter.clear();
+//                shelterAdapter.notifyDataSetChanged();
+                showRequest();
+
+
+            }
+        });
+
+
+    }
+    public void showRequest() {
+        // Voolley Lib 새료운 요청객체 생성
+        queue = Volley.newRequestQueue(getApplicationContext());
+        //211.63.240.26 연지
+        //211.227.224.206 창현
+        String url = "http://211.63.240.26:8081/YB/ShelterInfoService";
+        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+                Log.v("보호소", response);
+                shelterAdapter.clear();
+                shelterAdapter.notifyDataSetChanged();
+                shelter_list.clear();
+                try {
+                    JSONArray jsonArray = new JSONArray(response);
+//                    shelterAdapter.notifyDataSetChanged();
+//                    Log.v("마이페이지", response);
+                    for (int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
+                        String shelter_name = jsonObject.getString("shelter_name");
+                        String shelter_addr = jsonObject.getString("shelter_addr");
+
+                        Log.v("보호소정보확인", "보호소이름 : " + shelter_name + "보호소주소 : " + shelter_addr);
+
+
+                        String[] list = {shelter_name, shelter_addr};
+                        shelter_list.add(list);
+
+                    }
+
+//                    int count = shelterAdapter.getCount();
+//                    for (int i = 0; i < count; i++){
+//                        shelterAdapter.removeItem(new ShelterItem(shelter_list.get(i)[0],shelter_list.get(i)[1]));
+//                    }
+//                    shelterAdapter.notifyDataSetChanged();
+
+
+                    for (int i = 0; i < shelter_list.size(); i++) {
+                        shelterAdapter.addItem(new ShelterItem(shelter_list.get(i)[0], shelter_list.get(i)[1]));
+                        Log.v("무야~호", shelter_list.get(i)[0] + shelter_list.get(i)[1]);
+
+                    }
+                    shelterAdapter.notifyDataSetChanged();
+                    listView.setAdapter(shelterAdapter);
+
+
+
+//                    Intent intent = getIntent();
+//                    finish(); //현재 액티비티 종료 실시
+//                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+//                    startActivity(intent); //현재 액티비티 재실행 실시
+//                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }) {
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+            // 보낼 데이터를 저장하는 곳
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+
+
+                String sido = spin_city.getSelectedItem().toString();
+                String gungu = spin_gungu.getSelectedItem().toString();
+
+                params.put("sido",sido);
+                params.put("gungu",gungu);
+                Log.v("resultValue", "sido : " + sido);
+                Log.v("resultValue", "gungu : " + gungu);
+
+
+                return params;
+            }
+        };
+
+
+        queue.add(stringRequest);
+    }
+    public class ShelterAdapter extends BaseAdapter {
+        ArrayList<ShelterItem> items = new ArrayList<ShelterItem>();
+        @Override
+        public int getCount() { return items.size(); }
+
+        @Override
+        public Object getItem(int position) { return items.get(position); }
+        @Override
+        public long getItemId(int position) { return 0; }
+
+        public void removeItem(ShelterItem item){items.remove(item);}
+
+        public void clear( ){
+            items.clear();
+        }
+
+
+        public void addItem(ShelterItem item) { items.add(item); }
+
+
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            Context context = parent.getContext();
+            ShelterItem shelterItem = items.get(position);
+
+            if(convertView == null){
+                LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                convertView = inflater.inflate(R.layout.shelter_listview,parent,false);
+            }
+
+            TextView tv_shelter_name = convertView.findViewById(R.id.tv_shelter_name);
+            TextView tv_shelter_addr = convertView.findViewById(R.id.tv_shelter_addr);
+
+
+            tv_shelter_name.setText(shelterItem.getShelter_name());
+            tv_shelter_addr.setText(shelterItem.getShelter_addr());
+//            Log.v("무야~호", mypageItem.getDog_name()+mypageItem.getResult());
+
+            convertView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //
+                }
+            });
+
+            return convertView;
+
+        }
 
 
     }

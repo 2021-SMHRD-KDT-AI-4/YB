@@ -76,6 +76,8 @@ public class Join extends AppCompatActivity {
     public void sendRequest(View v) {
         // Voolley Lib 새료운 요청객체 생성
 
+        //211.63.240.26 연지
+        //211.227.224.206 창현
         String url = "";
         queue = Volley.newRequestQueue(getApplicationContext());
         if (v.equals(btn_join)) {

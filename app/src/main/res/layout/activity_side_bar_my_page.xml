@@ -2,9 +2,30 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/conn"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Side_bar_MyPage">
+
+    <ListView
+        android:id="@+id/mypage_listview"
+        android:layout_width="match_parent"
+        android:layout_height="373dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_nose_print_go"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mypage_dog_nose">
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_nose_print_go"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="48dp"
+        android:text="홈으로"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/img_menu"
@@ -57,25 +78,5 @@
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_nose_print_go"
-        android:layout_width="128dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="672dp"
-        android:text="비문 추가하기"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ListView
-        android:id="@+id/mypage_listview"
-        android:layout_width="409dp"
-        android:layout_height="467dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nose_print_go"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

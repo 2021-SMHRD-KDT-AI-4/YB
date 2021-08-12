@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.NetworkResponse;
@@ -45,7 +46,9 @@ public class Side_bar_MyPage extends AppCompatActivity {
     private Button btn_nose_print_go;
     private StringRequest stringRequest;
     private RequestQueue queue;
-    private MypageAdapter adapter;
+    private MypageAdapter mypageAdapter;
+
+
 
     public ArrayList<String[]> mypagelist = new ArrayList<String[]>();
 
@@ -53,16 +56,19 @@ public class Side_bar_MyPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_side_bar_my_page);
-        adapter = new MypageAdapter();
-        listView = (ListView) findViewById(R.id.mypage_listview);
+        mypageAdapter = new MypageAdapter();
+        listView =  findViewById(R.id.mypage_listview);
         showRequest();
+
 
         btn_nose_print_go =findViewById(R.id.btn_nose_print_go);
         btn_nose_print_go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Dog_Info.class);
+
+                Intent intent = new Intent(getApplicationContext(),Main.class);
                 startActivity(intent);
+
             }
         });
 
@@ -71,6 +77,8 @@ public class Side_bar_MyPage extends AppCompatActivity {
     public void showRequest(){
         // Voolley Lib 새료운 요청객체 생성
         queue = Volley.newRequestQueue(getApplicationContext());
+        //211.63.240.26 연지
+        //211.227.224.206 창현
         String url = "http://211.63.240.26:8081/YB/MypageNosePrintService";
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
@@ -82,24 +90,24 @@ public class Side_bar_MyPage extends AppCompatActivity {
                     Log.v("마이페이지",response);
                     for (int i = 0; i < jsonArray.length(); i++){
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
-//                        if(!commentlist.contains(jsonArray.getJSONObject(i))){
+
                         String dog_name = jsonObject.getString("dog_name");
                         String str = "등록완료";
 
-                        Log.v("마이페이지확인","개이름 : "+dog_name+"등록여부 : 완료");
+                        Log.v("마이페이지확인","개이름 : "+dog_name+"등록여부 : "+str);
 
 
                         String[] list = {dog_name, str};
 
                         mypagelist.add(list);
-//                        }
+
                     }
                     for (int i = 0; i < mypagelist.size(); i++){
 
                         Log.v("무야~호", mypagelist.get(i)[0]+mypagelist.get(i)[1]);
-                        adapter.addItem(new MypageItem(mypagelist.get(i)[0],mypagelist.get(i)[1]));
+                        mypageAdapter.addItem(new MypageItem(mypagelist.get(i)[0],mypagelist.get(i)[1]));
                     }
-                    listView.setAdapter(adapter);
+                    listView.setAdapter(mypageAdapter);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -135,7 +143,7 @@ public class Side_bar_MyPage extends AppCompatActivity {
 
 
                 params.put("id", id);
-
+                Log.v("resultValue","id : "+id);
 
 
 
@@ -170,12 +178,12 @@ public class Side_bar_MyPage extends AppCompatActivity {
             }
 
             TextView tv_my_dog_name = convertView.findViewById(R.id.tv_my_dog_name);
-            TextView tv_my_dog_noseprint = convertView.findViewById(R.id.tv_my_dog_noseprint);
+            TextView tv_my_dog_noseprint_ = convertView.findViewById(R.id.tv_my_dog_noseprint);
 
 
             tv_my_dog_name.setText(mypageItem.getDog_name());
-            tv_my_dog_noseprint.setText(mypageItem.getResult());
-            Log.v("무야~호", mypageItem.getDog_name()+mypageItem.getResult());
+            tv_my_dog_noseprint_.setText(mypageItem.getResult());
+//            Log.v("무야~호", mypageItem.getDog_name()+mypageItem.getResult());
 
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -188,4 +196,6 @@ public class Side_bar_MyPage extends AppCompatActivity {
 
         }
     }
+
+
 }
