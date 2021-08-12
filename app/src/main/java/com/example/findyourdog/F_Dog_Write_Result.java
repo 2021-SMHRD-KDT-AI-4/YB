@@ -2,6 +2,8 @@ package com.example.findyourdog;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,12 +16,34 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.ParseError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.HttpHeaderParser;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 public class F_Dog_Write_Result extends AppCompatActivity {
 
 
     private ImageButton imgbtn_f_s_info, imgbtn_f_s_tel;
     private ImageView img_f_dog_picture;
-    private TextView tv_l_d_result_day,tv_l_d_result_place,tv_l_d_result_time,tv_l_d_result_tel,tv_l_d_result_kind;
+    private TextView tv_f_d_result_day,tv_f_d_result_place,tv_f_d_result_time,tv_f_d_result_tel,tv_f_d_result_kind;
+    private StringRequest stringRequest;
+    private RequestQueue queue;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +52,26 @@ public class F_Dog_Write_Result extends AppCompatActivity {
         imgbtn_f_s_info = (ImageButton) findViewById(R.id.imgbtn_f_s_info);
         imgbtn_f_s_tel = (ImageButton) findViewById(R.id.imgbtn_f_s_tel);
         img_f_dog_picture = findViewById(R.id.img_f_dog_picture);
-        tv_l_d_result_day = findViewById(R.id.tv_l_d_result_day);
-        tv_l_d_result_place = findViewById(R.id.tv_l_d_result_place);
-        tv_l_d_result_time = findViewById(R.id.tv_l_d_result_time);
-        tv_l_d_result_tel = findViewById(R.id.tv_l_d_result_tel);
-        tv_l_d_result_kind = findViewById(R.id.tv_l_d_result_kind);
+        tv_f_d_result_day = findViewById(R.id.tv_f_d_result_day);
+        tv_f_d_result_place = findViewById(R.id.tv_f_d_result_place);
+        tv_f_d_result_time = findViewById(R.id.tv_f_d_result_time);
+        tv_f_d_result_tel = findViewById(R.id.tv_f_d_result_tel);
+        tv_f_d_result_kind = findViewById(R.id.tv_f_d_result_kind);
 
+
+        Intent intent = getIntent();
+        F_Dog_DTO dto = (F_Dog_DTO) intent.getSerializableExtra("f_dog_dto");
+        String[] pictures = intent.getStringArrayExtra("pictures");
+        Log.v("f_dog_dto",dto.getDate().toString());
+        Bitmap imgbit = intent.getParcelableExtra("imgbit");
+        if (dto != null) {
+            tv_f_d_result_day.setText(dto.getDate().toString());
+            tv_f_d_result_kind.setText(dto.getKind().toString());
+            tv_f_d_result_place.setText(dto.getPlace().toString());
+            tv_f_d_result_tel.setText(dto.getTel().toString());
+            tv_f_d_result_time.setText(dto.getTime().toString());
+            img_f_dog_picture.setImageBitmap(imgbit);
+        }
 
         imgbtn_f_s_tel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,4 +133,6 @@ public class F_Dog_Write_Result extends AppCompatActivity {
 
     }
 
-    }
+
+
+}

@@ -1,6 +1,7 @@
 package com.example.findyourdog;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,10 +26,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.StringRequest;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.sql.Time;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
@@ -43,10 +47,14 @@ public class F_Dog_Write_2 extends AppCompatActivity {
 
     private StringRequest stringRequest;
     private RequestQueue queue;
+    String matchresult="";
+    String f_filename = "";
 
+    F_Dog_DTO f_dto;
+    ArrayList<F_Dog_DTO> pictures = new ArrayList<F_Dog_DTO>();
     String f_dog_json = "";
-    String[] dogs = {"품종","골든리트리버","닥스훈트","말티즈","믹스견","보더콜리","비숑","시바견",
-            "시츄","요크셔테리어","웰시코기","진돗개","차우차우","치와와","포메라니안","미니어처푸들","허스키","알수없음"};
+    String[] dogs = {"품종","골든 리트리버","닥스훈트","말티즈","믹스견","보더 콜리","비숑","시바",
+            "시츄","요크셔 테리어","웰시 코기","진도견","차우차우","치와와","포메라니안","푸들","허스키","알수없음"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,40 +72,15 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         Intent intent = getIntent();
         String f_id = intent.getStringExtra("f_id");
         String f_type = intent.getStringExtra("f_type");
-        String f_day= intent.getStringExtra("f_day");
+        String f_day= intent.getStringExtra("f_Day");
         String f_time= intent.getStringExtra("f_time");
         String f_city= intent.getStringExtra("f_city");
         Log.v("f_city",f_city);
         String f_place= intent.getStringExtra("f_place");
         String f_tel= intent.getStringExtra("f_tel");
-        String f_filename= intent.getStringExtra("f_filename");
+        f_filename= intent.getStringExtra("f_filename");
         String f_breed= intent.getStringExtra("f_breed");
 
-
-        btn_f_next2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String f_feature = edt_f_feature.getText().toString();
-                String f_sex = edt_f_sex.getText().toString();
-                String f_age = edt_f_birth.getText().toString();
-                String f_color = edt_f_color.getText().toString();
-                String f_kg = edt_f_kg.getText().toString();
-                String f_s_breed = spn_f_breed.getSelectedItem().toString();
-
-                F_Dog_DTO f_dog_dto = new F_Dog_DTO(f_id,f_type,f_day,f_time,f_city,f_place,f_tel,f_filename,
-                        f_s_breed,f_feature,f_sex,f_age,f_color,f_kg);
-
-                Gson gson = new Gson();
-                f_dog_json = gson.toJson(f_dog_dto);
-                Intent intent1 = new Intent(getApplicationContext(),F_Dog_Write_Result.class);
-
-                intent1.putExtra("f_dog_dto",f_dog_dto);
-                sendRequest();
-                startActivity(intent1);
-
-
-            }
-        });
 
 
         Spinner spinner = findViewById(R.id.spn_f_breed);
@@ -117,6 +100,34 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             spinner.setSelection(dogs_index);
         }
 
+        btn_f_next2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String f_feature = edt_f_feature.getText().toString();
+                String f_sex = edt_f_sex.getText().toString();
+                String f_age = edt_f_birth.getText().toString();
+                String f_color = edt_f_color.getText().toString();
+                String f_kg = edt_f_kg.getText().toString();
+                String f_s_breed = spn_f_breed.getSelectedItem().toString();
+
+                F_Dog_DTO f_dog_dto = new F_Dog_DTO(f_id,f_type,f_day,f_time,f_city,f_place,f_tel,f_filename,
+                        f_s_breed,f_feature,f_sex,f_age,f_color,f_kg);
+
+                Gson gson = new Gson();
+                f_dog_json = gson.toJson(f_dog_dto);
+                Intent intent1 = new Intent(getApplicationContext(),F_Dog_Write_Result.class);
+                Bitmap imgbit = (Bitmap) intent.getParcelableExtra("imgbit");
+                intent1.putExtra("f_dog_dto",f_dog_dto);
+                intent1.putExtra("imgbit",imgbit);
+                Log.v("result111",f_dog_json);
+                intent1.putExtra("pictures",pictures);
+
+                sendRequest();
+                sendRequest2();
+                startActivity(intent1);
+            }
+        });
+
     }
 
     public void sendRequest() {
@@ -129,18 +140,29 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 Log.v("resultValue", response);
+                matchresult = response;
 
                 try {
-                    JSONObject jsonObject = new JSONObject(response);
+                    JSONArray jsonArray = new JSONArray(response);
 
-                    String result = jsonObject.getString("reulstest");
-                    Log.v("resultest",result);
+                    for(int i = 0; i < jsonArray.length(); i++) {
+                        JSONObject jsonObject = jsonArray.getJSONObject(i);
 
+                        String board_num = jsonObject.getString("board_num");
+                        String picture = jsonObject.getString("picture");
+                        f_dto = new F_Dog_DTO(board_num,picture);
+
+                        pictures.add(f_dto);
+
+                        Log.v("board_num", board_num);
+                        Log.v("picture", picture);
+
+
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         }, new Response.ErrorListener() {
             // 서버와의 연동 에러시 출력
@@ -167,9 +189,66 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                String testdata = "test!";
-                params.put("f_dog_json",f_dog_json);
-                params.put("testdata",testdata);
+
+
+                params.put("dog_json",f_dog_json);
+                params.put("testdata","test!");
+
+                return params;
+            }
+        };
+        queue.add(stringRequest);
+
+    }
+    public void sendRequest2() {
+        // Voolley Lib 새로운 요청객체 생성
+        queue = Volley.newRequestQueue(this);
+        String url = "http://59.0.147.251:5000/matchresult"; // 병주 주소
+
+        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+                Log.v("resultValue2", response);
+
+//                try {
+//                    JSONArray jsonArray = new JSONArray(response);
+//
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                }
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }) {
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+            // 보낼 데이터를 저장하는 곳
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+
+                Log.v("matchresult",matchresult);
+
+                params.put("matchresult",matchresult);
+                params.put("f_filename",f_filename);
 
                 return params;
             }

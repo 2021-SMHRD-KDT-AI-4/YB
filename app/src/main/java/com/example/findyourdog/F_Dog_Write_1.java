@@ -46,10 +46,12 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 public class F_Dog_Write_1 extends AppCompatActivity {
 
@@ -65,6 +67,11 @@ public class F_Dog_Write_1 extends AppCompatActivity {
     Calendar myCalendar = Calendar.getInstance();
     File file;
 
+    Random r = new Random();
+    String id = "";
+    int rand = 0;
+    String f_filename="";
+    Bitmap imgbit;
     String[] items = new String[]{"시/도","서울","부산","대구","인천","광주","세종","대전","울산",
             "경기","강원","충남","충북","전남","전북","경남","경북","제주"};
 
@@ -147,9 +154,13 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         btn_f_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                id = PreferenceManager.getString(getApplicationContext(),"id");
+                rand = r.nextInt(1000);
+                f_filename = id+rand+".jpg";
+                Log.v("f_filename1", f_filename);
                 sendRequest();
-//                Intent intent = new Intent(getApplicationContext(),F_Dog_Write_2.class);
-//                startActivity(intent);
+
             }
         });
 
@@ -197,10 +208,9 @@ public class F_Dog_Write_1 extends AppCompatActivity {
             if (resultCode == RESULT_OK) {
                 try {
                     InputStream in = getContentResolver().openInputStream(data.getData());
-
                     Bitmap img = BitmapFactory.decodeStream(in);
+                    imgbit = img;
                     in.close();
-
                     img_f_picture.setImageBitmap(img);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
@@ -213,6 +223,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         } else if(requestCode == 1111 && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
+            imgbit = imageBitmap;
             img_f_picture.setImageBitmap(imageBitmap);
         }
 
@@ -246,18 +257,25 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                         Intent intent1 = new Intent(getApplicationContext(), F_Dog_Write_2.class);
                         String e_f_day = edt_f_day.getText().toString();
                         String e_f_tel = edt_f_tel.getText().toString();
-                        String f_city = spn_f_sido.getSelectedItem().toString() ;
+                        String f_city = spn_f_sido.getSelectedItem().toString();
+                        int cityNum = Arrays.asList(items).indexOf(f_city);
+                        Log.v("citynum",cityNum+"");
                         String e_f_place = edt_f_place.getText().toString();
                         String e_f_time = edt_f_time.getText().toString();
 
+                        intent1.putExtra("imgbit",imgbit);
+                        intent1.putExtra("f_id",id);
+                        intent1.putExtra("f_type","2");
+                        intent1.putExtra("f_filename",f_filename);
                         intent1.putExtra("f_Day",e_f_day);
                         intent1.putExtra("f_tel",e_f_tel);
-                        intent1.putExtra("f_city",f_city);
+                        intent1.putExtra("f_city",cityNum+"");
                         intent1.putExtra("f_place",e_f_place);
                         intent1.putExtra("f_time",e_f_time);
                         intent1.putExtra("f_breed",dogBreed);
 
                         startActivity(intent1);
+                        finish();
                     }
 
                 } catch (JSONException e) {
@@ -296,11 +314,10 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                 Bitmap bitmap = drawable.getBitmap();
                 String imgStr = BitmapToBase64(bitmap);
 
-                String user_id = PreferenceManager.getString(getApplicationContext(),"id");
-
-                params.put("user_id",user_id);
+                params.put("f_filename",f_filename);
                 params.put("bitmap", imgStr);
                 Log.v("Find", imgStr);
+                Log.v("f_filename2", f_filename);
 
                 return params;
             }

@@ -2,6 +2,7 @@ package com.example.findyourdog;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,19 +16,35 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class L_Dog_Write_Result extends AppCompatActivity {
 
-    private TextView tv_s_tel, tv_s_info,tv_l_dog_detail,tv_l_dog_shelter_alarm,tv_l_dog_alarm2;
-    private ImageView img_l_dog_picture2;
+    private TextView tv_l_type,tv_l_day,tv_l_place,tv_l_time,tv_l_tel;
+    private ImageView l_dog_picture2;
     private ImageButton imgbtn_l_s_tel, imgbtn_l_s_info;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l_dog_write_result);
 
-        img_l_dog_picture2 = findViewById(R.id.img_l_dog_picture2);
+
+        l_dog_picture2 = findViewById(R.id.img_l_dog_picture2);
         imgbtn_l_s_tel =(ImageButton) findViewById(R.id.imgbtn_l_s_tel);
         imgbtn_l_s_info =(ImageButton) findViewById(R.id.imgbtn_l_s_info);
+        tv_l_type =findViewById(R.id.tv_l_d_result_kind2);
+        tv_l_day =findViewById(R.id.tv_l_d_result_day);
+        tv_l_place =findViewById(R.id.tv_l_d_result_place);
+        tv_l_time =findViewById(R.id.tv_l_d_result_time);
+        tv_l_tel =findViewById(R.id.tv_l_d_result_tel);
 
+        Intent intent = getIntent();
+        tv_l_type.setText(intent.getStringExtra("l_type"));
+        tv_l_day.setText(intent.getStringExtra("l_day"));
+        tv_l_place.setText(intent.getStringExtra("l_place"));
+        tv_l_time.setText(intent.getStringExtra("l_time"));
+        tv_l_tel.setText(intent.getStringExtra("l_tel"));
+        Bitmap imgbit = intent.getParcelableExtra("imgbit");
+        l_dog_picture2.setImageBitmap(imgbit);
 
         imgbtn_l_s_tel.setOnClickListener(new View.OnClickListener() {
             @Override
