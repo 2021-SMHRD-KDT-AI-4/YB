@@ -2,14 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/imgbtn_l_home"
+    android:id="@+id/ConstraintLayout"
     android:layout_width="match_parent"
 
     android:layout_height="match_parent"
     tools:context=".L_Dog_Write_Result">
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imgbtn_l_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="176dp"
