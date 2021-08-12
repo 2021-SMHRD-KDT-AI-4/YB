@@ -140,7 +140,7 @@ public class Dog_Info extends Fragment {
             // 응답데이터를 받아오는 곳
             @Override
             public void onResponse(String response) {
-                Log.v("resultValue",response);
+                Log.v("resultValue : 비문등록",response);
                 try {
                     JSONObject jsonObject = new JSONObject(response);
                     String result = jsonObject.getString("dog_nose_print");

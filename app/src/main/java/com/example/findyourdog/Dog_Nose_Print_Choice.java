@@ -175,9 +175,10 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String nose_print_num = items.get(position).getNum();
+                    String dog_name = items.get(position).getName();
                     String filename = items.get(position).getFilename();
-                    sendFlaskRequest(n_id, nose_print_num, filename);
+
+                    sendFlaskRequest(dog_name,n_id, filename);
 
 //                    Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
 //                    startActivity(intent);
@@ -197,11 +198,12 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
 
     }
 
-    public void sendFlaskRequest(String id, String num, String filename){
+    public void sendFlaskRequest(String dog_Name, String n_id, String filename){
 
         queue = Volley.newRequestQueue(getApplicationContext());
 
-        String url = "http://211.63.240.26:5000/noseprint?id="+id+"&num="+num+"&filename="+filename;
+        String url = "http://211.63.240.26:5000/FindNose?filename="+filename+"&user_id="+n_id;
+
 
         stringRequest = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
@@ -209,17 +211,36 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
             public void onResponse(String response) {
 
                 try {
-                    JSONArray jsonArray = new JSONArray(response);
-//                    for (int i = 0; i < jsonArray.length(); i++){
-//                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-//                        String num = jsonObject.getString("nose_print_num");
-//                        String filename = jsonObject.getString("dog_nose_print");
-//                        String name = jsonObject.getString("dog_name");
-//
-//                        Log.v("무야호!",filename+" "+name);
-//                        String[] list = {num, filename, name};
-//                        userList.add(list);
-//                    }
+                    JSONObject jsonObject = new JSONObject(response);
+
+                    String code = jsonObject.getString("code");
+                    String name = jsonObject.getString("name");
+                    String info = jsonObject.getString("info");
+                    String picture = jsonObject.getString("picture");
+
+                    Log.v("ResultValue shelter ", code +" "+ name +" "+ info+" "+picture);
+
+                    if(name.equals("미등록")){ // 실패시
+                        Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+                        startActivity(intent);
+                    }else{
+                        if(code.equals("1")) { // 보호소 직원
+                            Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Success_Shelter.class);
+                            intent.putExtra("dog_name", dog_Name);
+                            intent.putExtra("name", name);
+                            intent.putExtra("info", info);
+                            intent.putExtra("picture", picture);
+                            startActivity(intent);
+
+                        } else { // 일반 회원
+                            Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Success.class);
+                            intent.putExtra("dog_name", dog_Name);
+                            intent.putExtra("name", name);
+                            intent.putExtra("info", info);
+                            intent.putExtra("picture", picture);
+                            startActivity(intent);
+                        }
+                    }
 
                 } catch (JSONException e) {
                     e.printStackTrace();

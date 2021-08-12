@@ -43,6 +43,7 @@
         <activity android:name=".Dog_Nose_Print_Choice" />
         <activity android:name=".Picture_Choice" />
         <activity android:name=".Dog_Nose_print_Search_list_Success" />
+        <activity android:name=".Dog_Nose_print_Search_list_Success_Shelter" />
         <activity android:name=".Picture_Search_Result" />
         <activity android:name=".P_Dog_Detail" />
     </application>
