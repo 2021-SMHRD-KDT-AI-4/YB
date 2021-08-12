@@ -88,7 +88,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
         String l_tel = intent.getStringExtra("l_tel");
         String l_city = intent.getStringExtra("l_city");
 
-        Spinner spinner = findViewById(R.id.spinner);
+        Spinner spinner = findViewById(R.id.spn_l_type);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, dogs
         );
