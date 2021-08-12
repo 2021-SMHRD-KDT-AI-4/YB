@@ -246,8 +246,7 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
                 shelter_list.clear();
                 try {
                     JSONArray jsonArray = new JSONArray(response);
-//                    shelterAdapter.notifyDataSetChanged();
-//                    Log.v("마이페이지", response);
+
                     for (int i = 0; i < jsonArray.length(); i++) {
                         JSONObject jsonObject = jsonArray.getJSONObject(i);
                         String shelter_name = jsonObject.getString("shelter_name");
@@ -261,11 +260,6 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
 
                     }
 
-//                    int count = shelterAdapter.getCount();
-//                    for (int i = 0; i < count; i++){
-//                        shelterAdapter.removeItem(new ShelterItem(shelter_list.get(i)[0],shelter_list.get(i)[1]));
-//                    }
-//                    shelterAdapter.notifyDataSetChanged();
 
 
                     for (int i = 0; i < shelter_list.size(); i++) {
@@ -278,11 +272,7 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
 
 
 
-//                    Intent intent = getIntent();
-//                    finish(); //현재 액티비티 종료 실시
-//                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
-//                    startActivity(intent); //현재 액티비티 재실행 실시
-//                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
+
 
                 } catch (JSONException e) {
                     e.printStackTrace();

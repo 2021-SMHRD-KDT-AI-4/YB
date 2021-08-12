@@ -188,7 +188,7 @@ public class Side_bar_MyPage extends AppCompatActivity {
             convertView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //
+                    /////
                 }
             });
 
