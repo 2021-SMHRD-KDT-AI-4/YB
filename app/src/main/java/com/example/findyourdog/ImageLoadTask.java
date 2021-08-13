@@ -38,7 +38,7 @@ public class ImageLoadTask extends AsyncTask<Void, Void, Bitmap> { // 보낼 타
         Bitmap bitmap = null;
         if(bitmapHashMap.containsKey(urlStr)) {
             Bitmap oldbitmap = bitmapHashMap.remove(urlStr); // 이전에 있던 bitmap에 담겨있는 것을 지워준다
-            if(oldbitmap != null){
+            if(oldbitmap != null && !oldbitmap.isRecycled()){
                 oldbitmap.recycle();
                 oldbitmap = null;
             }

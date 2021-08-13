@@ -7,7 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.ExifInterface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.Base64;
@@ -35,6 +38,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -58,6 +62,8 @@ public class Dog_Info extends Fragment {
 
     public String id = "";
 
+    ExifInterface exif = null;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -70,8 +76,6 @@ public class Dog_Info extends Fragment {
         edt_info_name = fragment.findViewById(R.id.edt_info_name);
         edt_info_sex = fragment.findViewById(R.id.edt_info_sex);
         edt_info_type = fragment.findViewById(R.id.edt_info_type);
-
-
 
         btn_nose_print_camera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,8 +99,6 @@ public class Dog_Info extends Fragment {
             public void onClick(View v) { sendRequest(); }
         });
 
-
-
         return fragment;
     }
 
@@ -109,6 +111,10 @@ public class Dog_Info extends Fragment {
             Bitmap imageBitmap = (Bitmap) extras.get("data");
 
             img_nose_print.setImageBitmap(imageBitmap);
+
+//            Uri uri = data.getData();
+//            Glide.with(getActivity().getApplicationContext()).load(uri).into(img_nose_print);
+
 
         }else if (requestCode == 1003 && resultCode == Activity.RESULT_OK){
             InputStream in = null;
@@ -124,7 +130,11 @@ public class Dog_Info extends Fragment {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-                img_nose_print.setImageBitmap(img);
+
+            img_nose_print.setImageBitmap(img);
+
+
+
         }
     }
 
@@ -277,6 +287,42 @@ public class Dog_Info extends Fragment {
         queue.add(stringRequest);
 
     }
+    public int exifOrientationToDegrees(int exifOrientation) {
+      if(exifOrientation == ExifInterface.ORIENTATION_ROTATE_90) {
+        return 90;
+      } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_180) {
+          return 180;
+      } else if (exifOrientation == ExifInterface.ORIENTATION_ROTATE_270) {
+          return 270;
+      } return 0;
+    }
+
+    public Bitmap rotate(Bitmap bitmap, int degrees)
+    {
+        if(degrees != 0 && bitmap != null)
+        {
+            Matrix m = new Matrix();
+            m.setRotate(degrees, (float) bitmap.getWidth() / 2,
+                    (float) bitmap.getHeight() / 2);
+
+            try
+            {
+                Bitmap converted = Bitmap.createBitmap(bitmap, 0, 0,
+                        bitmap.getWidth(), bitmap.getHeight(), m, true);
+                if(bitmap != converted)
+                {
+                    bitmap.recycle();
+                    bitmap = converted;
+                }
+            }
+            catch(OutOfMemoryError ex)
+            {
+                // 메모리가 부족하여 회전을 시키지 못할 경우 그냥 원본을 반환합니다.
+            }
+        }
+        return bitmap;
+    }
+
 
 
 }
