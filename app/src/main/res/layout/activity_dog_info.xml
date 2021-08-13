@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_info_name" />
 
-    <EditText
+    <TextView
         android:id="@+id/edt_info_sex"
         android:layout_width="200dp"
         android:layout_height="45dp"
@@ -92,6 +92,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="#555252"
         android:textSize="18sp"
@@ -119,6 +120,7 @@
         android:layout_marginTop="30dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="#555252"
         android:textSize="18sp"
@@ -133,6 +135,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="#555252"
         android:textSize="18sp"
@@ -152,5 +155,23 @@
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_nose_print" />
+
+    <Spinner
+        android:id="@+id/sp_i_gender"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/edt_info_sex"
+        app:layout_constraintTop_toBottomOf="@+id/edt_info_name" />
+
+    <Spinner
+        android:id="@+id/sp_i_kind"
+        android:layout_width="30dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintStart_toEndOf="@+id/edt_info_type"
+        app:layout_constraintTop_toBottomOf="@+id/edt_info_sex" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

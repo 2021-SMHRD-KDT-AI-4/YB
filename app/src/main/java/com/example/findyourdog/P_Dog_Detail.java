@@ -22,7 +22,7 @@ public class P_Dog_Detail extends AppCompatActivity {
 
     private ImageView img_p_d_dog;
 
-    private ImageButton imgbtn_shelter_place, imgbtn_adopt_ask;
+    private ImageButton imgbtn_shelter_place, imgbtn_adopt_ask, imgbtn_p_back;
 
 
     @Override
@@ -40,8 +40,16 @@ public class P_Dog_Detail extends AppCompatActivity {
         tv_p_d_place = findViewById(R.id.tv_p_d_place);
         tv_p_d_neutering = findViewById(R.id.tv_p_d_neutering);
         tv_p_d_feature = findViewById(R.id.tv_p_d_feature);
+        imgbtn_p_back = findViewById(R.id.imgbtn_p_back);
 
-
+        imgbtn_p_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main.class);
+                finish();
+                startActivity(intent);
+            }
+        });
 
 
         Intent intent = getIntent();

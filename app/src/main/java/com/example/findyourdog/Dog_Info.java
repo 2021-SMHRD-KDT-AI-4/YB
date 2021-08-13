@@ -18,9 +18,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,7 +41,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.bumptech.glide.Glide;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -56,11 +58,13 @@ import javax.xml.transform.Result;
 public class Dog_Info extends Fragment {
     private ImageView img_nose_print;
     private Button btn_nose_print_picture_plus,btn_nose_print_camera,btn_profile_ok;
-    private EditText edt_info_name,edt_info_sex,edt_info_type;
+    private EditText edt_info_name,edt_info_type;
     private RequestQueue queue;
     private StringRequest stringRequest;
+    private Spinner sp_i_gender, sp_i_kind;
 
     public String id = "";
+    private TextView edt_info_sex;
 
     ExifInterface exif = null;
 
@@ -76,6 +80,11 @@ public class Dog_Info extends Fragment {
         edt_info_name = fragment.findViewById(R.id.edt_info_name);
         edt_info_sex = fragment.findViewById(R.id.edt_info_sex);
         edt_info_type = fragment.findViewById(R.id.edt_info_type);
+        sp_i_gender = fragment.findViewById(R.id.sp_i_gender);
+        sp_i_kind = fragment.findViewById(R.id.sp_i_kind);
+
+        genderspinner();
+        kindspinner();
 
         btn_nose_print_camera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +109,52 @@ public class Dog_Info extends Fragment {
         });
 
         return fragment;
+    }
+    private void genderspinner( ){
+        String[] gender_items = new String[]{
+                "수컷","암컷"
+        };
+        ArrayAdapter <String> genderAdapter = new ArrayAdapter<String>(
+                getActivity(),R.layout.support_simple_spinner_dropdown_item,gender_items);
+        genderAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        sp_i_gender.setAdapter(genderAdapter);
+        sp_i_gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                edt_info_sex.setText(gender_items[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+    private void kindspinner( ){
+        String[] dogkind = new String[]{
+                "품종","골든 리트리버","닥스훈트","말티즈","믹스견","보더 콜리","비숑","시바",
+                "시츄","요크셔 테리어","웰시 코기","진도견","차우차우","치와와","포메라니안","푸들","허스키","알수없음"
+        };
+
+
+
+        ArrayAdapter <String> kindadpter = new ArrayAdapter<String>(
+                getActivity(),R.layout.support_simple_spinner_dropdown_item,dogkind);
+        kindadpter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        sp_i_kind.setAdapter(kindadpter);
+        sp_i_kind.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                edt_info_type.setText(dogkind[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
     }
 
 

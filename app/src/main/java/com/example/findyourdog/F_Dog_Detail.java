@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -44,6 +45,7 @@ public class F_Dog_Detail extends AppCompatActivity {
     private StringRequest stringRequest;
     private RequestQueue queue;
     private String result;
+    private ImageButton imgbtn_f_back;
 
 
     @Override
@@ -67,6 +69,17 @@ public class F_Dog_Detail extends AppCompatActivity {
         tv_f_d_tel = findViewById(R.id.tv_f_d_tel);
         tv_f_d_etc = findViewById(R.id.tv_f_d_etc);
         img_f_d_dog = findViewById(R.id.img_f_d_dog);
+        imgbtn_f_back = findViewById(R.id.imgbtn_f_back);
+        imgbtn_f_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main.class);
+                finish();
+                startActivity(intent);
+            }
+        });
+
+
 
         btn_comment_go = findViewById(R.id.btn_comment_go);
 

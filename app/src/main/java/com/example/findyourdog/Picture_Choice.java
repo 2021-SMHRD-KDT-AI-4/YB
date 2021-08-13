@@ -154,7 +154,7 @@ public class Picture_Choice extends AppCompatActivity {
         ImageLoadTask imageLoadTask = new ImageLoadTask(urlStr, imageView);
         imageLoadTask.execute();
 
-    }
+    }//
 
     public class PictureAdapter extends BaseAdapter {
         ArrayList<PictureItem> items = new ArrayList<PictureItem>();

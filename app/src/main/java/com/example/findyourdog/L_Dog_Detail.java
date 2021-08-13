@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class L_Dog_Detail extends AppCompatActivity {
     private ImageView img_l_d_dog;
     private TextView tv_l_d_sex,tv_l_d_age,tv_l_d_color,tv_l_d_kind,tv_l_d_kg,tv_l_d_day,tv_l_d_place,tv_l_d_time,tv_l_d_tel,tv_l_d_etc;
     private Button btn_comment_go;
+    private ImageButton imgbtn_l_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,15 @@ public class L_Dog_Detail extends AppCompatActivity {
         tv_l_d_tel = findViewById(R.id.tv_l_d_tel);
         tv_l_d_etc = findViewById(R.id.tv_l_d_etc);
         img_l_d_dog = findViewById(R.id.img_l_d_dog);
+        imgbtn_l_back = findViewById(R.id.imgbtn_l_back);
+        imgbtn_l_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main.class);
+                finish();
+                startActivity(intent);
+            }
+        });
 
         btn_comment_go = findViewById(R.id.btn_comment_go);
 
