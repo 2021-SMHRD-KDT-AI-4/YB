@@ -402,9 +402,9 @@ public class Picture_Choice extends AppCompatActivity {
                     String weight = jsonObject.getString("weight");
                     String missing_date = "";
                     if (jsonObject.isNull("missing_date")){
-                         missing_date = "null";
+                        missing_date = "null";
                     }else {
-                         missing_date = jsonObject.getString("missing_date");
+                        missing_date = jsonObject.getString("missing_date");
 
                     }
                     String missing_time = "";
