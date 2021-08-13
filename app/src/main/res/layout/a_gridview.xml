@@ -12,42 +12,45 @@
         android:background="@drawable/border">
 
         <TextView
-            android:id="@+id/tv_p_kind"
+            android:id="@+id/tv_l_kind"
             android:layout_width="115dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="80dp"
             android:layout_marginTop="8dp"
             android:text="믹스견"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_p_dog" />
 
         <TextView
-            android:id="@+id/tv_p_shelter"
+            android:id="@+id/tv_l_place"
             android:layout_width="120dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="광주동물 보호소"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_l_date" />
 
         <TextView
-            android:id="@+id/tv_p_sex"
+            android:id="@+id/tv_l_time"
             android:layout_width="100dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="수컷"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_p_shelter" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_l_place" />
 
         <TextView
             android:id="@+id/tv_p_content"
@@ -57,50 +60,54 @@
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="특이사항 없음"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_l_time" />
 
         <TextView
-            android:id="@+id/tv_p_weight"
+            android:id="@+id/tv_l_date"
             android:layout_width="119dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="80dp"
             android:layout_marginTop="4dp"
             android:text="3.2kg"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textColor="#817B7B"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_p_kind" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_l_kind" />
 
         <TextView
-            android:id="@+id/p_kind"
+            android:id="@+id/l_kind"
             android:layout_width="45dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="8dp"
             android:text="품종"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/img_p_dog" />
 
         <TextView
-            android:id="@+id/p_shelter"
+            android:id="@+id/l_place"
             android:layout_width="wrap_content"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="관할보호센터"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_weight" />
+            app:layout_constraintTop_toBottomOf="@+id/l_date" />
 
         <TextView
-            android:id="@+id/p_sex"
+            android:id="@+id/l_time"
             android:layout_width="55dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
@@ -108,8 +115,9 @@
             android:layout_marginTop="4dp"
             android:text="성별"
             android:textSize="13sp"
+            android:fontFamily="@font/nanumbarunpenb"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_shelter" />
+            app:layout_constraintTop_toBottomOf="@+id/l_place" />
 
         <TextView
             android:id="@+id/p_content"
@@ -119,21 +127,23 @@
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="특징"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_sex" />
+            app:layout_constraintTop_toBottomOf="@+id/l_time" />
 
         <TextView
-            android:id="@+id/p_weight"
+            android:id="@+id/l_date"
             android:layout_width="46dp"
             android:layout_height="20dp"
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginTop="4dp"
             android:text="무게"
+            android:fontFamily="@font/nanumbarunpenb"
             android:textSize="13sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/p_kind" />
+            app:layout_constraintTop_toBottomOf="@+id/l_kind" />
 
         <ImageView
             android:id="@+id/img_p_dog"

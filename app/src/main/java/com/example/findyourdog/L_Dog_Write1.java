@@ -5,14 +5,17 @@ import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -20,7 +23,13 @@ public class L_Dog_Write1 extends AppCompatActivity {
 
   private EditText edt_l_day, edt_l_time,edt_l_tel,edt_l_place;
   private Button btn_l_next;
-    Calendar myCalendar = Calendar.getInstance();
+
+  private Spinner spn_l_sido;
+  Calendar myCalendar = Calendar.getInstance();
+
+  String[] items = new String[]{"시/도","서울","부산","대구","인천","광주","세종","대전","울산",
+            "경기","강원","충남","충북","전남","전북","경남","경북","제주"};
+
 
     // 날짜 구하는 거거
     DatePickerDialog.OnDateSetListener myDatePicker = new DatePickerDialog.OnDateSetListener() {
@@ -43,11 +52,33 @@ public class L_Dog_Write1 extends AppCompatActivity {
         edt_l_time = findViewById(R.id.edt_l_time);
         edt_l_tel =findViewById(R.id.edt_l_tel);
         btn_l_next = findViewById(R.id.btn_l_enroll);
+        spn_l_sido = findViewById(R.id.spnl_sido);
+
+        Spinner spinner = (Spinner) findViewById(R.id.spnl_sido);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, items
+        );
+
+        // 드롭다운 클릭 시 선택 창
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // 스피너에 어댑터 설정
+        spinner.setAdapter(adapter);
+        // 스피너에서 선택 했을 경우 이벤트 처리
+
 
         btn_l_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(),L_Dog_Write2.class);
+
+                intent.putExtra("l_day",edt_l_day.getText().toString());
+                intent.putExtra("l_place",edt_l_place.getText().toString());
+                intent.putExtra("l_time",edt_l_time.getText().toString());
+                intent.putExtra("l_tel",edt_l_tel.getText().toString());
+                String l_city = spinner.getSelectedItem().toString();
+                int cityNum = Arrays.asList(items).indexOf(l_city);
+                intent.putExtra("l_city",cityNum+"");
+
                 startActivity(intent);
             }
         });

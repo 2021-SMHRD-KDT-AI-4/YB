@@ -24,6 +24,7 @@
         android:text="성별"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_p_d_dog" />
 
@@ -36,6 +37,7 @@
         android:text="품종"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_color" />
 
@@ -48,6 +50,7 @@
         android:text="색"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_birth" />
 
@@ -60,6 +63,7 @@
         android:text="무게"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_kind" />
 
@@ -72,6 +76,7 @@
         android:text="관할보호센터"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_kg" />
 
@@ -84,6 +89,7 @@
         android:text="중성화 여부"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_place" />
 
@@ -96,6 +102,7 @@
         android:text="특징"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_neutering" />
 
@@ -108,6 +115,7 @@
         android:text="출생연도"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_sex" />
 
@@ -119,6 +127,7 @@
         android:text="암컷"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_p_d_dog" />
 
@@ -131,6 +140,7 @@
         android:text="검정"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_birth" />
 
@@ -143,6 +153,7 @@
         android:text="믹스견"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_color" />
 
@@ -155,6 +166,7 @@
         android:text="3.1kg"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_kind" />
 
@@ -167,6 +179,7 @@
         android:text="광주동물보호소"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_kg" />
 
@@ -179,6 +192,7 @@
         android:text="O"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_place" />
 
@@ -191,6 +205,7 @@
         android:text="경계심이 많음"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_neutering" />
 
@@ -203,8 +218,31 @@
         android:text="2020년 02월"
         android:textColor="#787878"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_sex" />
+
+    <TextView
+        android:id="@+id/shelter_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="보호소 위치"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_shelter_place" />
+
+    <TextView
+        android:id="@+id/adopt_ask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="입양문의"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_adopt_ask" />
 
     <ImageButton
         android:id="@+id/imgbtn_shelter_place"
@@ -215,35 +253,17 @@
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/p_d_feature"
-        app:srcCompat="@drawable/place" />
-
-    <TextView
-        android:id="@+id/shelter_place"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="118dp"
-        android:text="보호소 위치"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgbtn_shelter_place" />
-
-    <TextView
-        android:id="@+id/adopt_ask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="225dp"
-        android:text="입양문의"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgbtn_adopt_ask" />
+        app:srcCompat="@drawable/s_info" />
 
     <ImageButton
         android:id="@+id/imgbtn_adopt_ask"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_marginStart="220dp"
+        android:layout_marginStart="224dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_p_d_feature"
-        app:srcCompat="@drawable/a_call" />
+        app:srcCompat="@drawable/s_tel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

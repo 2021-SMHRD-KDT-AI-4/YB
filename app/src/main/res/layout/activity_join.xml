@@ -13,6 +13,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="20dp"
         android:text="보호소입니까?"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#5E5C5C"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_addr" />
@@ -26,6 +27,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="16sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_name" />
 
@@ -36,6 +38,7 @@
         android:layout_marginStart="125dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo3" />
@@ -47,6 +50,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="40dp"
         android:text="Tel"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +65,7 @@
         android:text="PW"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_id1" />
 
@@ -72,6 +77,7 @@
         android:layout_marginTop="20dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_tel" />
 
@@ -113,6 +119,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="40dp"
         android:text="Name"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -125,6 +132,7 @@
         android:layout_marginStart="125dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_id" />
@@ -136,6 +144,7 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="40dp"
         android:text="Addr"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,6 +167,7 @@
         android:layout_marginStart="125dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_join_pw" />
@@ -171,17 +181,8 @@
         android:text="ID"
         android:textColor="#AFA9A9"
         android:textSize="20sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo3" />
-
-    <TextView
-        android:id="@+id/tv_id_check"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="40dp"
-        android:text="결과"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

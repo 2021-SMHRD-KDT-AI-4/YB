@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 public class F_Dog_DTO implements Serializable {
 
+    private String board_num;
     private String id;
     private String type;
     private String date;
@@ -12,6 +13,7 @@ public class F_Dog_DTO implements Serializable {
     private String place;
     private String tel;
     private String picture;
+
 
     private String kind;
     private String content;
@@ -35,6 +37,19 @@ public class F_Dog_DTO implements Serializable {
         this.age = age;
         this.color = color;
         this.weight = weight;
+    }
+
+    public F_Dog_DTO(String board_num, String picture) {
+        this.board_num = board_num;
+        this.picture = picture;
+    }
+
+    public String getBoard_num() {
+        return board_num;
+    }
+
+    public void setBoard_num(String board_num) {
+        this.board_num = board_num;
     }
 
     public String getId() {

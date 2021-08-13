@@ -106,7 +106,9 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
                         String board_num = jsonObject.getString("board_num");
                         String id = jsonObject.getString("id");
                         String board_type = jsonObject.getString("board_type");
-
+                        if(board_type.equals("1")){
+                            continue;
+                        }
                         String picture = jsonObject.getString("picture");
                         String gender= jsonObject.getString("gender");
                         String age = jsonObject.getString("age");
@@ -200,12 +202,12 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.f_gridview, viewGroup, false);
 
-            ImageView img_f_dog_picture = (ImageView) convertView.findViewById(R.id.img_l_dog_picture);
+            ImageView img_f_dog_picture = (ImageView) convertView.findViewById(R.id.img_l_dog_picture2);
 
             TextView tv_f_date = (TextView) convertView.findViewById(R.id.tv_f_date);
             TextView tv_f_kind = (TextView) convertView.findViewById(R.id.tv_f_kind);
             TextView tv_f_place = (TextView) convertView.findViewById(R.id.tv_f_place);
-            TextView tv_f_time = (TextView) convertView.findViewById(R.id.tv_p_sex);
+            TextView tv_f_time = (TextView) convertView.findViewById(R.id.tv_l_time);
 
             TextView f_date = (TextView) convertView.findViewById(R.id.f_date);
             TextView f_place = (TextView) convertView.findViewById(R.id.f_place);

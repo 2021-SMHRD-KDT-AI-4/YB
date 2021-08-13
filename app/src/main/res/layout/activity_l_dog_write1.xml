@@ -13,43 +13,47 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="70dp"
         android:text="기본정보"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#050505"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_p_weight"
+        android:id="@+id/tv_l_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="35dp"
         android:text="실종날짜"
+        android:fontFamily="@font/nanumbarunpenb"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_l_dog_info" />
 
     <TextView
-        android:id="@+id/tv_p_shelter"
+        android:id="@+id/tv_l_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="35dp"
         android:text="실종위치"
         android:textSize="17sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_time" />
 
     <TextView
-        android:id="@+id/tv_p_sex"
+        android:id="@+id/tv_l_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="35dp"
         android:text="실종시간"
         android:textSize="17sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_weight" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_date" />
 
     <TextView
         android:id="@+id/tv_l_tel"
@@ -59,8 +63,9 @@
         android:layout_marginTop="35dp"
         android:text="연락처"
         android:textSize="17sp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_shelter" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_l_place" />
 
     <Button
         android:id="@+id/btn_l_enroll"
@@ -68,8 +73,10 @@
         android:layout_height="45dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/btn_round_pink"
+        android:fontFamily="@font/nanumbarunpenb"
         android:text="다음으로"
         android:textColor="#454444"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,6 +88,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="145dp"
         android:layout_marginTop="33dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:text='"모두 필수항목입니다"'
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_tel" />
@@ -92,6 +100,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="25dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:hint="날짜를 선택해주세요."
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,6 +113,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:hint="시간을 선택해주세요."
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,6 +126,7 @@
         android:layout_marginStart="136dp"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_place" />
@@ -127,7 +138,7 @@
         android:layout_marginStart="236dp"
         android:layout_marginTop="20dp"
         android:ems="10"
-
+        android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_time" />
@@ -137,6 +148,7 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_marginStart="130dp"
+        android:fontFamily="@font/nanumbarunpenb"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_time" />

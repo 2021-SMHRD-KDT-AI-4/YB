@@ -1,5 +1,6 @@
 package com.example.findyourdog;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.AuthFailureError;
@@ -33,7 +35,7 @@ import java.util.Map;
 
 public class Join extends AppCompatActivity {
 
-   private TextView tv_id_check;
+
     private EditText edt_join_id, edt_join_pw, edt_join_name, edt_join_tel, edt_join_addr;
     private Button  btn_join, btn_id_check;
     private CheckBox shelter_check;
@@ -48,7 +50,7 @@ public class Join extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-        tv_id_check = findViewById(R.id.tv_id_check);
+
         edt_join_id = findViewById(R.id.edt_join_id);
         edt_join_pw = findViewById(R.id.edt_join_pw);
         edt_join_name = findViewById(R.id.edt_join_name);
@@ -111,19 +113,16 @@ public class Join extends AppCompatActivity {
 
                         idcheck = jsonObject.getString("isCheck");
                         Log.v("iii", idcheck);
+                        showDialog(v, idcheck);
+
 
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
                 }
-                if (idcheck.equals("true")) {
-                    tv_id_check.setText("X");
-                } else if (idcheck.equals("false")) {
-                    tv_id_check.setText("O");
-                } else {
-                    tv_id_check.setText("no");
-                }
+
+
 
 
             }
@@ -181,5 +180,30 @@ public class Join extends AppCompatActivity {
         };
 
         queue.add(stringRequest);
+    }
+
+    void showDialog(View v, String idcheck){
+        String msg = "";
+        if (idcheck.equals("true")) {
+            msg = "사용 중인 아이디 입니다.";
+        } else if (idcheck.equals("false")) {
+            msg = "사용 가능한 아이디입니다!";
+        } else {
+            msg = "알 수 없는 오류 발생";
+        }
+
+        AlertDialog.Builder msgBuilder = new AlertDialog.Builder(Join.this)
+
+                .setTitle("아이디 중복확인")
+                .setMessage(msg)
+                .setPositiveButton("닫기", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        AlertDialog msgDlg = msgBuilder.create();
+        msgDlg.show();
+
     }
 }
