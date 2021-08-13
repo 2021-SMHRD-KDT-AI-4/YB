@@ -76,7 +76,7 @@
         android:fontFamily="@font/nanumbarunpenb"
         android:text="다음으로"
         android:textColor="#454444"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -145,11 +145,11 @@
 
     <Spinner
         android:id="@+id/spnl_sido"
-        android:layout_width="100dp"
+        android:layout_width="110dp"
         android:layout_height="40dp"
-        android:layout_marginStart="130dp"
-        android:fontFamily="@font/nanumbarunpenb"
+        android:layout_marginStart="125dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_time" />
 

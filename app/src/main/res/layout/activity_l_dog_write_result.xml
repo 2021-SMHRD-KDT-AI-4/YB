@@ -8,10 +8,21 @@
     android:layout_height="match_parent"
     tools:context=".L_Dog_Write_Result">
 
-    <ImageButton
-        android:id="@+id/imgbtn_l_home"
+    <TextView
+        android:id="@+id/tv_l_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="Home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_l_home" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_l_home"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginStart="176dp"
         android:layout_marginTop="30dp"
         android:background="@android:color/transparent"
