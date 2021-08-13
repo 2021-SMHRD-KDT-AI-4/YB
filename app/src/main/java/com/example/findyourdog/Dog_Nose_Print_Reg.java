@@ -19,7 +19,7 @@ public class Dog_Nose_Print_Reg extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dog_nose_print_reg);
 
-        img_menu = findViewById(R.id.img_menu);
+//        img_menu = findViewById(R.id.img_menu);
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);

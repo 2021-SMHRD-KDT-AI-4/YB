@@ -18,13 +18,13 @@ public class L_Dog_List extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l_dog_list);
 
-        img_menu = findViewById(R.id.img_menu);
+//        img_menu = findViewById(R.id.img_menu);
         btn_1 = findViewById(R.id.btn_1);
         btn_2 = findViewById(R.id.btn_2);
         btn_3 = findViewById(R.id.btn_3);
         btn_4 = findViewById(R.id.btn_4);
         btn_5 = findViewById(R.id.btn_5);
-        img_menu = findViewById(R.id.img_menu);
+//        img_menu = findViewById(R.id.img_menu);
         img_l_dog_1 = findViewById(R.id.img_l_dog_1);
         img_l_dog_2 = findViewById(R.id.img_l_dog_2);
         img_l_dog_3 = findViewById(R.id.img_l_dog_3);

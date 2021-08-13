@@ -31,6 +31,17 @@
         app:layout_constraintTop_toBottomOf="@+id/imgbtn_f_s_info" />
 
     <TextView
+        android:id="@+id/tv_f_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="185dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="Home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgbtn_f_home" />
+
+    <TextView
         android:id="@+id/tv_f_dog_shelter_alarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -224,9 +235,9 @@
 
     <ImageButton
         android:id="@+id/imgbtn_f_home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="170dp"
         android:layout_marginTop="30dp"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"

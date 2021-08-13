@@ -14,7 +14,7 @@
         android:fontFamily="@font/nanumbarunpenb"
         android:text="자주하는 질문"
         android:textColor="#F69595"
-        android:textSize="30sp"
+        android:textSize="28sp"
         android:textStyle="bold"
 
         app:layout_constraintEnd_toEndOf="parent"

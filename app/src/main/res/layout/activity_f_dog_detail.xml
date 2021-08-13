@@ -21,34 +21,39 @@
         android:id="@+id/f_d_sex"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="3dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="성별"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_f_d_dog" />
 
     <TextView
-        android:id="@+id/f_d_kind"
+        android:id="@+id/f_d_age"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:text="품종"
+        android:text="나이"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_d_color" />
+        app:layout_constraintTop_toBottomOf="@+id/f_d_sex" />
 
     <TextView
         android:id="@+id/f_d_color"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="색"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_age" />
@@ -57,10 +62,12 @@
         android:id="@+id/f_d_weight"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="무게"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_kind" />
@@ -69,10 +76,12 @@
         android:id="@+id/f_d_day"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="공고기간"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_weight" />
@@ -81,10 +90,12 @@
         android:id="@+id/f_d_place"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="관할보호센터"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_day" />
@@ -93,10 +104,12 @@
         android:id="@+id/f_d_time"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="보호장소"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_place" />
@@ -105,10 +118,12 @@
         android:id="@+id/f_d_tel"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="연락처"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_time" />
@@ -117,24 +132,29 @@
         android:id="@+id/f_d_etc"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="기타"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/f_d_tel" />
 
     <TextView
-        android:id="@+id/f_d_age"
+        android:id="@+id/f_d_kind"
         android:layout_width="87dp"
         android:layout_height="30dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="68dp"
         android:layout_marginTop="2dp"
-        android:text="나이"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="품종"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_d_sex" />
+        app:layout_constraintTop_toBottomOf="@+id/f_d_color" />
 
     <TextView
         android:id="@+id/tv_f_d_sex"
@@ -144,6 +164,8 @@
         android:layout_marginTop="3dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="수컷"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_f_d_dog" />
@@ -156,6 +178,8 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="흰색"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_age" />
@@ -170,7 +194,9 @@
         android:text="치와와"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_color" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_d_color"
+        android:textColorHint="#424141"
+        android:textColor="#3A3A3A" />
 
     <TextView
         android:id="@+id/tv_f_d_weight"
@@ -180,6 +206,8 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="3"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_kind" />
@@ -192,6 +220,8 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="2021.07.28"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_weight" />
@@ -204,19 +234,23 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="광주동물보호센터"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_day" />
 
     <TextView
         android:id="@+id/tv_f_d_time"
-        android:layout_width="180dp"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_marginStart="180dp"
         android:layout_marginTop="2dp"
         android:breakStrategy="high_quality"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="오전 8시"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_place" />
@@ -229,18 +263,22 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="01012341234"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_time" />
 
     <TextView
         android:id="@+id/tv_f_d_etc"
-        android:layout_width="wrap_content"
-        android:layout_height="30dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:layout_marginStart="180dp"
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="임시보호중입니다."
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_tel" />
@@ -253,6 +291,8 @@
         android:layout_marginTop="2dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="5살"
+        android:textColor="#3A3A3A"
+        android:textColorHint="#424141"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_sex" />
@@ -261,15 +301,27 @@
         android:id="@+id/btn_comment_go"
         android:layout_width="250dp"
         android:layout_height="45dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/btn_round_pink"
         android:fontFamily="@font/nanumbarunpenb"
-        android:text="댓글보기"
+        android:text="댓글달기"
         android:textColor="#5E5C5C"
-        android:textSize="18sp"
+        android:textColorHint="#424141"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_d_etc" />
+
+    <ImageButton
+        android:id="@+id/imgbtn_f_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

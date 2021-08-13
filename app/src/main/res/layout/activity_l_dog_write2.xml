@@ -148,7 +148,7 @@
         android:fontFamily="@font/nanumbarunpenb"
         android:text="등록하기"
         android:textColor="#5E5C5C"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_l_vital" />
@@ -217,7 +217,7 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="150dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_l_color" />

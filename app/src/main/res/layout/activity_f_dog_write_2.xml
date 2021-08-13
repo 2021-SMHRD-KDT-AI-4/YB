@@ -15,6 +15,7 @@
         android:fontFamily="@font/nanumbarunpenb"
         android:text="등록하기"
         android:textColor="#5E5C5C"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"

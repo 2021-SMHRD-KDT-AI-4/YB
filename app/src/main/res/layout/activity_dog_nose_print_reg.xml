@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Dog_Nose_Print_Reg">
 
-    <ImageView
-        android:id="@+id/img_menu"
-        android:layout_width="48dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/menu" />
-
     <Button
         android:id="@+id/btn_1"
         android:layout_width="84dp"
