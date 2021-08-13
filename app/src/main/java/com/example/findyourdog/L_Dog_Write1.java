@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -75,9 +76,11 @@ public class L_Dog_Write1 extends AppCompatActivity {
                 intent.putExtra("l_place",edt_l_place.getText().toString());
                 intent.putExtra("l_time",edt_l_time.getText().toString());
                 intent.putExtra("l_tel",edt_l_tel.getText().toString());
+                Log.v("info",edt_l_day.getText().toString());
                 String l_city = spinner.getSelectedItem().toString();
                 int cityNum = Arrays.asList(items).indexOf(l_city);
-                intent.putExtra("l_city",cityNum+"");
+                intent.putExtra("cityNum",cityNum+"");
+                intent.putExtra("l_city",l_city);
 
                 startActivity(intent);
             }

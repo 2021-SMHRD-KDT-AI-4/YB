@@ -3,6 +3,7 @@ package com.example.findyourdog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -50,6 +51,8 @@ public class L_Dog_Write2 extends AppCompatActivity {
     private Spinner spn_type;
     private StringRequest stringRequest;
     private RequestQueue queue;
+    private StringRequest stringRequest2;
+    private RequestQueue queue2;
 
 
     Random r = new Random();
@@ -69,6 +72,9 @@ public class L_Dog_Write2 extends AppCompatActivity {
     String l_place = "";
     String l_time = "";
     String l_tel = "";
+    String l_kind = "";
+    String l_city = "";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,7 +98,8 @@ public class L_Dog_Write2 extends AppCompatActivity {
         l_place = intent3.getStringExtra("l_place");
         l_time = intent3.getStringExtra("l_time");
         l_tel = intent3.getStringExtra("l_tel");
-        String l_city = intent3.getStringExtra("l_city");
+        String l_citynum = intent3.getStringExtra("cityNum");
+        l_city = intent3.getStringExtra("l_city");
 
         Spinner spinner = findViewById(R.id.spn_l_type);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -124,26 +131,24 @@ public class L_Dog_Write2 extends AppCompatActivity {
                 String l_sex = edt_l_sex.getText().toString();
                 String l_age = edt_l_birth.getText().toString();
                 String l_color = edt_l_color.getText().toString();
-                String l_kind = spinner.getSelectedItem().toString();
+                l_kind = spinner.getSelectedItem().toString();
                 String l_kg = edt_l_kg.getText().toString();
                 String l_feature = edt_l_feature.getText().toString();
                 id = PreferenceManager.getString(getApplicationContext(),"id");
-
+                l_place = l_city+" "+l_place;
                 rand = r.nextInt(1000);
-                f_filename = id+rand+".jpg";
+                f_filename = id+"_"+rand+".jpg";
                 l_type = "1";
 
-                F_Dog_DTO l_dog_dto = new F_Dog_DTO(id,l_type,l_day,l_time,l_city,l_place,l_tel,f_filename,
+                F_Dog_DTO l_dog_dto = new F_Dog_DTO(id,l_type,l_day,l_time,l_citynum,l_place,l_tel,f_filename,
                         l_kind,l_feature,l_sex,l_age,l_color,l_kg);
                 Gson gson = new Gson();
                 l_dog_json = gson.toJson(l_dog_dto);
                 Log.v("test1","test1");
+
                 sendRequest();
-                Log.v("test111",matchresult);
-//                sendRequest2();
+
                 Log.v("test2","test2");
-
-
 
             }
         });
@@ -175,7 +180,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
     public void sendRequest() {
         // Voolley Lib 새로운 요청객체 생성
         queue = Volley.newRequestQueue(this);
-        String url = "http://59.0.147.251:8082/YB/F_Dog_Upload"; // 병주 주소
+        String url = "http://211.63.240.26:8081/YB/F_Dog_Upload";
 
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
@@ -183,6 +188,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
             public void onResponse(String response) {
                 Log.v("test4", response);
                 matchresult = response;
+                sendRequest2();
 
                 try {
                     JSONArray jsonArray = new JSONArray(response);
@@ -197,8 +203,9 @@ public class L_Dog_Write2 extends AppCompatActivity {
 
                     }
                     Intent intent1 = new Intent(getApplicationContext(),L_Dog_Write_Result.class);
-                    intent1.putExtra("l_type",l_type);
+                    intent1.putExtra("l_kind",l_kind);
                     intent1.putExtra("l_day",l_day);
+                    intent1.putExtra("l_city",l_city);
                     intent1.putExtra("l_place",l_place);
                     intent1.putExtra("l_time",l_time);
                     intent1.putExtra("l_tel",l_tel);
@@ -246,7 +253,59 @@ public class L_Dog_Write2 extends AppCompatActivity {
         queue.add(stringRequest);
 
     }
+    public void sendRequest2() {
+        // Voolley Lib 새로운 요청객체 생성
+        queue2 = Volley.newRequestQueue(this);
+        String url = "http://59.0.147.251:5001/matchresult"; // 병주 주소
 
+        stringRequest2 = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            // 응답데이터를 받아오는 곳
+            @Override
+            public void onResponse(String response) {
+                Log.v("resultValue2", response);
+            }
+        }, new Response.ErrorListener() {
+            // 서버와의 연동 에러시 출력
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+            }
+        }) {
+            @Override //response를 UTF8로 변경해주는 소스코드
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                try {
+                    String utf8String = new String(response.data, "UTF-8");
+                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
+                } catch (UnsupportedEncodingException e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                } catch (Exception e) {
+                    // log error
+                    return Response.error(new ParseError(e));
+                }
+            }
+
+            // 보낼 데이터를 저장하는 곳
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                String id = PreferenceManager.getString(getApplicationContext(),"id");
+                params.put("id",id);
+
+                BitmapDrawable drawable = (BitmapDrawable) img_l_dog_picture.getDrawable();
+                Bitmap bitmap = drawable.getBitmap();
+                String imgStr = BitmapToBase64(bitmap);
+
+                params.put("bitmap",imgStr);
+                params.put("matchresult",matchresult);
+                params.put("f_filename",f_filename);
+
+
+                return params;
+            }
+        };
+        queue2.add(stringRequest2);
+    }
     // Bitmap -> Base64 변환
     public String BitmapToBase64(Bitmap bitmap){
         ByteArrayOutputStream baos = new ByteArrayOutputStream();

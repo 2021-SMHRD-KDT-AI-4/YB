@@ -104,19 +104,6 @@
         app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
 
     <TextView
-        android:id="@+id/tv_l_d_result_kind2"
-        android:layout_width="wrap_content"
-        android:layout_height="27dp"
-        android:layout_marginStart="204dp"
-        android:layout_marginTop="20dp"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:text="푸들"
-        android:textColor="#7C7C7C"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_l_dog_picture2" />
-
-    <TextView
         android:id="@+id/tv_l_d_result_tel"
         android:layout_width="wrap_content"
         android:layout_height="27dp"

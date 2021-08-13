@@ -33,12 +33,10 @@ import java.util.Map;
 
 public class L_Dog_Write_Result extends AppCompatActivity {
 
-    private TextView tv_l_type,tv_l_day,tv_l_place,tv_l_time,tv_l_tel;
+    private TextView tv_l_day,tv_l_place,tv_l_time,tv_l_tel,l_dog_kind;
     private ImageView l_dog_picture2;
     private ImageButton imgbtn_l_s_tel, imgbtn_l_s_info,imgbtn_l_home;
 
-    private StringRequest stringRequest;
-    private RequestQueue queue;
     String matchresult="";
     String f_filename = "";
 
@@ -47,21 +45,23 @@ public class L_Dog_Write_Result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_l_dog_write_result);
 
-
+        l_dog_kind = findViewById(R.id.tv_l_d_result_kind);
         l_dog_picture2 = findViewById(R.id.img_l_dog_picture2);
         imgbtn_l_s_tel =(ImageButton) findViewById(R.id.imgbtn_l_s_tel);
         imgbtn_l_s_info =(ImageButton) findViewById(R.id.imgbtn_l_s_info);
         imgbtn_l_home = (ImageButton) findViewById(R.id.imgbtn_l_home);
-        tv_l_type =findViewById(R.id.tv_l_d_result_kind2);
+
         tv_l_day =findViewById(R.id.tv_l_d_result_day);
         tv_l_place =findViewById(R.id.tv_l_d_result_place);
         tv_l_time =findViewById(R.id.tv_l_d_result_time);
         tv_l_tel =findViewById(R.id.tv_l_d_result_tel);
 
         Intent intent = getIntent();
-        tv_l_type.setText(intent.getStringExtra("l_type"));
+        l_dog_kind.setText(intent.getStringExtra("l_kind"));
         tv_l_day.setText(intent.getStringExtra("l_day"));
-        tv_l_place.setText(intent.getStringExtra("l_place"));
+        String city = intent.getStringExtra("l_city");
+        String place = intent.getStringExtra("l_place");
+        tv_l_place.setText(place);
         tv_l_time.setText(intent.getStringExtra("l_time"));
         tv_l_tel.setText(intent.getStringExtra("l_tel"));
         byte[] bitarr =intent.getByteArrayExtra("bitarr");
@@ -70,8 +70,6 @@ public class L_Dog_Write_Result extends AppCompatActivity {
         Log.v("123123123",matchresult);
         Bitmap bitmap = ArrayToBitmap(bitarr);
         l_dog_picture2.setImageBitmap(bitmap);
-
-        sendRequest2();
 
         imgbtn_l_s_tel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,8 +106,8 @@ public class L_Dog_Write_Result extends AppCompatActivity {
     void showDialog(){
         AlertDialog.Builder msgBuilder = new AlertDialog.Builder(L_Dog_Write_Result.this)
 
-                .setTitle("보호소 위치")
-                .setMessage("")
+                .setTitle("광주 동물보호소")
+                .setMessage("광주광역시 북구 본촌마을길 25 (본촌동, 건국동사무소)")
                 .setPositiveButton("닫기", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -123,7 +121,7 @@ public class L_Dog_Write_Result extends AppCompatActivity {
 
     public void calling(View view){
         Log.v("callresult","gogo");
-        Uri uri = Uri.parse("tel:010010101");
+        Uri uri = Uri.parse("tel:0625712808");
         Intent it = new Intent(Intent.ACTION_DIAL,uri);
         startActivity(it);
 //        Intent intent = new Intent((Intent.ACTION_CALL));
@@ -157,58 +155,6 @@ public class L_Dog_Write_Result extends AppCompatActivity {
         Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
             return bitmap;
         }
-    public void sendRequest2() {
-        // Voolley Lib 새로운 요청객체 생성
-        queue = Volley.newRequestQueue(this);
-        String url = "http://59.0.147.251:5001/matchresult"; // 병주 주소
 
-        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            // 응답데이터를 받아오는 곳
-            @Override
-            public void onResponse(String response) {
-                Log.v("resultValue2", response);
-
-//                try {
-//                    JSONArray jsonArray = new JSONArray(response);
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-            }
-        }, new Response.ErrorListener() {
-            // 서버와의 연동 에러시 출력
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        }) {
-            @Override //response를 UTF8로 변경해주는 소스코드
-            protected Response<String> parseNetworkResponse(NetworkResponse response) {
-                try {
-                    String utf8String = new String(response.data, "UTF-8");
-                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
-                } catch (UnsupportedEncodingException e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                } catch (Exception e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                }
-            }
-
-            // 보낼 데이터를 저장하는 곳
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("matchresult",matchresult);
-                params.put("f_filename",f_filename);
-
-
-                return params;
-            }
-        };
-        queue.add(stringRequest);
-    }
 
 }
