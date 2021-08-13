@@ -76,9 +76,9 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         String f_type = intent.getStringExtra("f_type");
         String f_day= intent.getStringExtra("f_Day");
         String f_time= intent.getStringExtra("f_time");
-        String f_city= intent.getStringExtra("f_city");
+        String f_city= intent.getStringExtra("citynum");
         Log.v("f_city",f_city);
-        String f_place= intent.getStringExtra("f_place");
+        String f_place= intent.getStringExtra("f_city");
         String f_tel= intent.getStringExtra("f_tel");
         f_filename= intent.getStringExtra("f_filename");
         String f_breed= intent.getStringExtra("f_breed");
@@ -143,7 +143,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         // Voolley Lib 새로운 요청객체 생성
 
         queue = Volley.newRequestQueue(this);
-        String url = "http://59.0.147.251:8082/YB/F_Dog_Upload"; // 병주 주소
+        String url = "http://211.63.240.26:8081/YB/F_Dog_Upload";
 
         RequestFuture<String> future = RequestFuture.newFuture();
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {

@@ -262,7 +262,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                         Log.v("citynum",cityNum+"");
                         String e_f_place = edt_f_place.getText().toString();
                         String e_f_time = edt_f_time.getText().toString();
-
+                        f_city = f_city + " "+ e_f_place;
                         intent1.putExtra("bitarr",bitarr);
 
                         intent1.putExtra("f_id",id);
@@ -270,7 +270,8 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                         intent1.putExtra("f_filename",f_filename);
                         intent1.putExtra("f_Day",e_f_day);
                         intent1.putExtra("f_tel",e_f_tel);
-                        intent1.putExtra("f_city",cityNum+"");
+                        intent1.putExtra("f_city",f_city);
+                        intent1.putExtra("citynum",cityNum+"");
                         intent1.putExtra("f_place",e_f_place);
                         intent1.putExtra("f_time",e_f_time);
                         intent1.putExtra("f_breed",dogBreed);
