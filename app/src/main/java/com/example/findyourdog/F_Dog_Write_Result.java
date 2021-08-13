@@ -3,6 +3,7 @@ package com.example.findyourdog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
@@ -38,7 +39,7 @@ import java.util.Map;
 public class F_Dog_Write_Result extends AppCompatActivity {
 
 
-    private ImageButton imgbtn_f_s_info, imgbtn_f_s_tel;
+    private ImageButton imgbtn_f_s_info, imgbtn_f_s_tel,imgbtn_f_home;
     private ImageView img_f_dog_picture;
     private TextView tv_f_d_result_day,tv_f_d_result_place,tv_f_d_result_time,tv_f_d_result_tel,tv_f_d_result_kind;
     private StringRequest stringRequest;
@@ -51,6 +52,7 @@ public class F_Dog_Write_Result extends AppCompatActivity {
 
         imgbtn_f_s_info = (ImageButton) findViewById(R.id.imgbtn_f_s_info);
         imgbtn_f_s_tel = (ImageButton) findViewById(R.id.imgbtn_f_s_tel);
+        imgbtn_f_home = (ImageButton) findViewById(R.id.imgbtn_f_home);
         img_f_dog_picture = findViewById(R.id.img_f_dog_picture);
         tv_f_d_result_day = findViewById(R.id.tv_f_d_result_day);
         tv_f_d_result_place = findViewById(R.id.tv_f_d_result_place);
@@ -61,16 +63,17 @@ public class F_Dog_Write_Result extends AppCompatActivity {
 
         Intent intent = getIntent();
         F_Dog_DTO dto = (F_Dog_DTO) intent.getSerializableExtra("f_dog_dto");
-        String[] pictures = intent.getStringArrayExtra("pictures");
+
         Log.v("f_dog_dto",dto.getDate().toString());
-        Bitmap imgbit = intent.getParcelableExtra("imgbit");
+        byte[] imgbit = intent.getByteArrayExtra("imgbit");
+        Bitmap bitmap = ArrayToBitmap(imgbit);
         if (dto != null) {
             tv_f_d_result_day.setText(dto.getDate().toString());
             tv_f_d_result_kind.setText(dto.getKind().toString());
             tv_f_d_result_place.setText(dto.getPlace().toString());
             tv_f_d_result_tel.setText(dto.getTel().toString());
             tv_f_d_result_time.setText(dto.getTime().toString());
-            img_f_dog_picture.setImageBitmap(imgbit);
+            img_f_dog_picture.setImageBitmap(bitmap);
         }
 
         imgbtn_f_s_tel.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +87,15 @@ public class F_Dog_Write_Result extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 showDialog();
+            }
+        });
+
+        imgbtn_f_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent home = new Intent(getApplicationContext(),Main.class);
+                startActivity(home);
+                finish();
             }
         });
     }
@@ -131,6 +143,10 @@ public class F_Dog_Write_Result extends AppCompatActivity {
                 break;
         }
 
+    }
+    public Bitmap ArrayToBitmap(byte[] byteArray) {
+        Bitmap bitmap = BitmapFactory.decodeByteArray(byteArray,0,byteArray.length);
+        return bitmap;
     }
 
 

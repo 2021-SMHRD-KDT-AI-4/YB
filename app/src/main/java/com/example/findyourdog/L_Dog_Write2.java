@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -31,6 +32,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -51,7 +53,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
 
 
     Random r = new Random();
-    Bitmap imgbit;
+    byte[] bitarr;
     String id = "";
     int rand = 0;
     String matchresult="";
@@ -62,7 +64,11 @@ public class L_Dog_Write2 extends AppCompatActivity {
     String[] dogs = {"품종","골든 리트리버","닥스훈트","말티즈","믹스견","보더 콜리","비숑","시바",
             "시츄","요크셔 테리어","웰시 코기","진도견","차우차우","치와와","포메라니안","푸들","허스키","알수없음"};
 
-
+    String l_day = "";
+    String l_type = "";
+    String l_place = "";
+    String l_time = "";
+    String l_tel = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,12 +87,12 @@ public class L_Dog_Write2 extends AppCompatActivity {
         img_l_dog_picture = findViewById(R.id.img_l_dog_picture2);
 
 
-        Intent intent = getIntent();
-        String l_day = intent.getStringExtra("l_day");
-        String l_place = intent.getStringExtra("l_place");
-        String l_time = intent.getStringExtra("l_time");
-        String l_tel = intent.getStringExtra("l_tel");
-        String l_city = intent.getStringExtra("l_city");
+        Intent intent3 = getIntent();
+        l_day = intent3.getStringExtra("l_day");
+        l_place = intent3.getStringExtra("l_place");
+        l_time = intent3.getStringExtra("l_time");
+        l_tel = intent3.getStringExtra("l_tel");
+        String l_city = intent3.getStringExtra("l_city");
 
         Spinner spinner = findViewById(R.id.spn_l_type);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
@@ -114,7 +120,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent intent1 = new Intent(getApplicationContext(),L_Dog_Write_Result.class);
+
                 String l_sex = edt_l_sex.getText().toString();
                 String l_age = edt_l_birth.getText().toString();
                 String l_color = edt_l_color.getText().toString();
@@ -125,24 +131,19 @@ public class L_Dog_Write2 extends AppCompatActivity {
 
                 rand = r.nextInt(1000);
                 f_filename = id+rand+".jpg";
-                String l_type = "1";
+                l_type = "1";
 
                 F_Dog_DTO l_dog_dto = new F_Dog_DTO(id,l_type,l_day,l_time,l_city,l_place,l_tel,f_filename,
                         l_kind,l_feature,l_sex,l_age,l_color,l_kg);
                 Gson gson = new Gson();
                 l_dog_json = gson.toJson(l_dog_dto);
-
-                intent1.putExtra("l_type",l_type);
-                intent1.putExtra("l_day",l_day);
-                intent1.putExtra("l_place",l_place);
-                intent1.putExtra("l_time",l_time);
-                intent1.putExtra("l_tel",l_tel);
-                intent1.putExtra("imgbit",imgbit);
-
-
+                Log.v("test1","test1");
                 sendRequest();
-                sendRequest2();
-                startActivity(intent1);
+                Log.v("test111",matchresult);
+//                sendRequest2();
+                Log.v("test2","test2");
+
+
 
             }
         });
@@ -157,9 +158,9 @@ public class L_Dog_Write2 extends AppCompatActivity {
             try {
                 InputStream in = getContentResolver().openInputStream(data.getData());
                 Bitmap img = BitmapFactory.decodeStream(in);
-                imgbit = img;
-                in.close();
+                bitarr = BitmaptoArray(img);
                 img_l_dog_picture.setImageBitmap(img);
+                in.close();
 
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
@@ -180,7 +181,8 @@ public class L_Dog_Write2 extends AppCompatActivity {
             // 응답데이터를 받아오는 곳
             @Override
             public void onResponse(String response) {
-                Log.v("resultValue", response);
+                Log.v("test4", response);
+                matchresult = response;
 
                 try {
                     JSONArray jsonArray = new JSONArray(response);
@@ -190,15 +192,20 @@ public class L_Dog_Write2 extends AppCompatActivity {
 
                         String board_num = jsonObject.getString("board_num");
                         String picture = jsonObject.getString("picture");
-                        f_dto = new F_Dog_DTO(board_num,picture);
-
-                        pictures.add(f_dto);
-
                         Log.v("board_num", board_num);
                         Log.v("picture", picture);
 
-
                     }
+                    Intent intent1 = new Intent(getApplicationContext(),L_Dog_Write_Result.class);
+                    intent1.putExtra("l_type",l_type);
+                    intent1.putExtra("l_day",l_day);
+                    intent1.putExtra("l_place",l_place);
+                    intent1.putExtra("l_time",l_time);
+                    intent1.putExtra("l_tel",l_tel);
+                    intent1.putExtra("bitarr",bitarr);
+                    intent1.putExtra("matchresult",matchresult);
+                    intent1.putExtra("f_filename",f_filename);
+                    startActivity(intent1);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -232,66 +239,29 @@ public class L_Dog_Write2 extends AppCompatActivity {
 
                 params.put("dog_json",l_dog_json);
                 params.put("testdata","test!");
-
+                Log.v("test3","test3");
                 return params;
             }
         };
         queue.add(stringRequest);
 
     }
-    public void sendRequest2() {
-        // Voolley Lib 새로운 요청객체 생성
-        queue = Volley.newRequestQueue(this);
-        String url = "http://59.0.147.251:5000/matchresult"; // 병주 주소
 
-        stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            // 응답데이터를 받아오는 곳
-            @Override
-            public void onResponse(String response) {
-                Log.v("resultValue2", response);
-
-//                try {
-//                    JSONArray jsonArray = new JSONArray(response);
-//
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-            }
-        }, new Response.ErrorListener() {
-            // 서버와의 연동 에러시 출력
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-            }
-        }) {
-            @Override //response를 UTF8로 변경해주는 소스코드
-            protected Response<String> parseNetworkResponse(NetworkResponse response) {
-                try {
-                    String utf8String = new String(response.data, "UTF-8");
-                    return Response.success(utf8String, HttpHeaderParser.parseCacheHeaders(response));
-                } catch (UnsupportedEncodingException e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                } catch (Exception e) {
-                    // log error
-                    return Response.error(new ParseError(e));
-                }
-            }
-
-            // 보낼 데이터를 저장하는 곳
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-
-                Log.v("matchresult",matchresult);
-
-                params.put("matchresult",matchresult);
-                params.put("f_filename",f_filename);
-
-                return params;
-            }
-        };
-        queue.add(stringRequest);
+    // Bitmap -> Base64 변환
+    public String BitmapToBase64(Bitmap bitmap){
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] bImage = baos.toByteArray();
+        String base64 = Base64.encodeToString(bImage, Base64.DEFAULT);
+        return base64;
     }
+    //  bitmap -> array
+    public byte[] BitmaptoArray(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] bImage = baos.toByteArray();
+        return bImage;
+        }
+
+
 }

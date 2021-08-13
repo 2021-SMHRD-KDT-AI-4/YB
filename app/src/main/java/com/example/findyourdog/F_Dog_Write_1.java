@@ -71,7 +71,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
     String id = "";
     int rand = 0;
     String f_filename="";
-    Bitmap imgbit;
+    byte[] bitarr;
     String[] items = new String[]{"시/도","서울","부산","대구","인천","광주","세종","대전","울산",
             "경기","강원","충남","충북","전남","전북","경남","경북","제주"};
 
@@ -157,7 +157,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
 
                 id = PreferenceManager.getString(getApplicationContext(),"id");
                 rand = r.nextInt(1000);
-                f_filename = id+rand+".jpg";
+                f_filename = id+"_"+rand+".jpg";
                 Log.v("f_filename1", f_filename);
                 sendRequest();
 
@@ -209,7 +209,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                 try {
                     InputStream in = getContentResolver().openInputStream(data.getData());
                     Bitmap img = BitmapFactory.decodeStream(in);
-                    imgbit = img;
+                    bitarr = BitmaptoArray(img);
                     in.close();
                     img_f_picture.setImageBitmap(img);
                 } catch (FileNotFoundException e) {
@@ -223,7 +223,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         } else if(requestCode == 1111 && resultCode == RESULT_OK){
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
-            imgbit = imageBitmap;
+            bitarr = BitmaptoArray(imageBitmap);
             img_f_picture.setImageBitmap(imageBitmap);
         }
 
@@ -263,7 +263,8 @@ public class F_Dog_Write_1 extends AppCompatActivity {
                         String e_f_place = edt_f_place.getText().toString();
                         String e_f_time = edt_f_time.getText().toString();
 
-                        intent1.putExtra("imgbit",imgbit);
+                        intent1.putExtra("bitarr",bitarr);
+
                         intent1.putExtra("f_id",id);
                         intent1.putExtra("f_type","2");
                         intent1.putExtra("f_filename",f_filename);
@@ -316,8 +317,6 @@ public class F_Dog_Write_1 extends AppCompatActivity {
 
                 params.put("f_filename",f_filename);
                 params.put("bitmap", imgStr);
-                Log.v("Find", imgStr);
-                Log.v("f_filename2", f_filename);
 
                 return params;
             }
@@ -332,5 +331,12 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         byte[] bImage = baos.toByteArray();
         String base64 = Base64.encodeToString(bImage, Base64.DEFAULT);
         return base64;
+    }
+    //  bitmap -> array
+    public byte[] BitmaptoArray(Bitmap bitmap) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
+        byte[] bImage = baos.toByteArray();
+        return bImage;
     }
 }
