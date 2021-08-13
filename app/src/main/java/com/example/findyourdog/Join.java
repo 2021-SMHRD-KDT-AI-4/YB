@@ -3,6 +3,8 @@ package com.example.findyourdog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -30,6 +32,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,6 +42,7 @@ public class Join extends AppCompatActivity {
     private EditText edt_join_id, edt_join_pw, edt_join_name, edt_join_tel, edt_join_addr;
     private Button  btn_join, btn_id_check;
     private CheckBox shelter_check;
+    private TextView tv_add1;
 
     private RequestQueue queue;
     private StringRequest stringRequest;
@@ -50,7 +54,7 @@ public class Join extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_join);
 
-
+        tv_add1 = findViewById(R.id.tv_add1);
         edt_join_id = findViewById(R.id.edt_join_id);
         edt_join_pw = findViewById(R.id.edt_join_pw);
         edt_join_name = findViewById(R.id.edt_join_name);
@@ -59,6 +63,20 @@ public class Join extends AppCompatActivity {
         shelter_check = findViewById(R.id.shelter_check);
         btn_join = findViewById(R.id.btn_join);
         btn_id_check = findViewById(R.id.btn_id_check);
+
+
+        shelter_check.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                MyTherad myTherad = new MyTherad();
+                myTherad.start();
+
+            }
+        });
+
+
+
 
         btn_id_check.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +93,47 @@ public class Join extends AppCompatActivity {
 
 
     }
+    public class MyTherad extends Thread{
+
+        @Override
+        public void run() {
+            Log.v("쓰레드","쉘터체크확인");
+            Message message = myHandler.obtainMessage();
+            if (shelter_check.isChecked()){
+                Bundle bundle = new Bundle();
+                bundle.putString("sheltername","보호소이름");
+                message.setData(bundle);
+//            message.obj = "보호소이름";
+                Log.v("쓰레드",message+"");
+                myHandler.sendMessage(message);
+            }else {
+                Bundle bundle = new Bundle();
+                bundle.putString("sheltername","주소");
+                message.setData(bundle);
+//            message.obj = "보호소이름";
+                Log.v("쓰레드",message+"");
+                myHandler.sendMessage(message);
+            }
+
+
+
+
+
+
+        }
+    }
+    private Handler myHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            // 스레드에서 메세지를 전달하였을 때 호출됨
+            Bundle bundle = msg.getData();
+
+            String sheltername =bundle.getString("sheltername");
+            Log.v("쓰레드","메시지 확인 : "+sheltername);
+            tv_add1.setText(sheltername);
+
+        }
+    };
     public void sendRequest(View v) {
         // Voolley Lib 새료운 요청객체 생성
 
