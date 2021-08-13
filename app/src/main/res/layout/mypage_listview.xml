@@ -27,6 +27,7 @@
         android:layout_weight="3"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="TextView"
+        android:textColor="#CD8842"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

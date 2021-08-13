@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="37dp">
+    android:layout_height="52dp">
 
     <TextView
         android:id="@+id/tv_shelter_name"
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
         android:layout_weight="1"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="보호소이름"
@@ -22,11 +22,11 @@
 
     <TextView
         android:id="@+id/tv_shelter_addr"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="14dp"
         android:layout_weight="3"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="보호소주소"
