@@ -1,6 +1,8 @@
 package com.example.findyourdog;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -24,6 +26,7 @@ public class Picture_Search_Result extends AppCompatActivity {
         app_name4 = findViewById(R.id.tv_appname);
         tv_picture = findViewById(R.id.tv_p_result);
         tv_fail2 = findViewById(R.id.tv_p_fail);
-        btn_p_retry = findViewById(R.id.btn_p_retry);
+
+
     }
 }

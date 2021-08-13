@@ -20,30 +20,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btn_find"
-        android:layout_width="180dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="50dp"
-        android:background="@drawable/btn_round_pink"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:text="찾았어요!"
-        android:textColor="#7E7C7C"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <ListView
         android:id="@+id/picture_listview"
         android:layout_width="409dp"
         android:layout_height="500dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/btn_find"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_picture_result"
-        app:layout_constraintVertical_bias="0.323">
+        app:layout_constraintTop_toBottomOf="@+id/tv_picture_result">
 
     </ListView>
+
+    <TextView
+        android:id="@+id/tv_guidetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="잃어버린 강아지와 비슷한 게시물들입니다. \n 길게 터치시 해당 게시물을 확인 할 수 있습니다. \n 짧은 터치시 내역을 삭제 할 수 있습니다."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

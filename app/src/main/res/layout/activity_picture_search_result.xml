@@ -21,25 +21,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_p_fail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:gravity="center"
-        android:text="아쉽게도 아직 찾지 못했어요\n다시 조회해주세요.."
-        android:textColor="#5E5C5C"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="156dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:textColor="#5E5C5C"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,19 +34,19 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_p_result"
         app:srcCompat="@drawable/sad" />
 
-    <Button
-        android:id="@+id/btn_p_retry"
-        android:layout_width="180dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/btn_round_pink"
-        android:backgroundTint="#F4CBBF"
+    <TextView
+        android:id="@+id/tv_p_fail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:fontFamily="@font/nanumbarunpenb"
-        android:text="다시 조회하기"
+        android:gravity="center"
+        android:text="아쉽게도 아직 찾지 못했어요\n다시 조회해주세요.."
         android:textColor="#5E5C5C"
-        android:textSize="16sp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_p_fail" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
