@@ -105,15 +105,23 @@ public class Login extends AppCompatActivity {
 
 
                     if (id.equals(edt_login_id.getText().toString())){
-
+                        Toast.makeText(getApplicationContext(), "찾아줄개에 오신 걸 환영합니다!", Toast.LENGTH_SHORT).show();
                         PreferenceManager.setString(getApplicationContext(),"id",dto.getId());
                         Log.v("test",id);
+
                         Intent intent = new Intent(getApplicationContext(),Main.class);
+                        finish();
                         startActivity(intent);
 
+
+
                         Log.v("resultValue","로그인성공");
+
+
+
+
                     }else{
-                        Toast.makeText(getApplicationContext(),"로그인 실패",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Login.this,"로그인 실패",Toast.LENGTH_SHORT).show();
                         Log.v("resultValue","로그인실패");
                     }
                 } catch (JSONException e) {

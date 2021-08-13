@@ -101,8 +101,8 @@ public class F_Dog_Write_Result extends AppCompatActivity {
     }
     void showDialog(){
         AlertDialog.Builder msgBuilder = new AlertDialog.Builder(F_Dog_Write_Result.this)
-                .setTitle("보호소 위치")
-                .setMessage("")
+                .setTitle("광주 동물보호소")
+                .setMessage("광주광역시 북구 본촌마을길 25 (본촌동, 건국동사무소)")
                 .setPositiveButton("닫기", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -115,7 +115,7 @@ public class F_Dog_Write_Result extends AppCompatActivity {
 
     public void calling(View view){
         Log.v("callresult","gogo");
-        Uri uri = Uri.parse("tel:010010101");
+        Uri uri = Uri.parse("tel:0625712808");
         Intent it = new Intent(Intent.ACTION_DIAL,uri);
         startActivity(it);
 //        Intent intent = new Intent((Intent.ACTION_CALL));

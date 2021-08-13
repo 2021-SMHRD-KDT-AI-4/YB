@@ -147,7 +147,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
 
         RequestFuture<String> future = RequestFuture.newFuture();
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-        //stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            //stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
 
             // 응답데이터를 받아오는 곳
 
