@@ -279,7 +279,8 @@ public class L_Dog_Write2 extends AppCompatActivity {
     public void sendRequest2() {
         // Voolley Lib 새로운 요청객체 생성
         queue2 = Volley.newRequestQueue(this);
-        String url = "http://59.0.147.251:5001/matchresult"; // 병주 주소
+        String url = "http://211.63.240.26:5001/matchresult"; // 연지 주소
+        //String url = "http://59.0.147.251:5001/matchresult"; // 병주 주소
 
         stringRequest2 = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
