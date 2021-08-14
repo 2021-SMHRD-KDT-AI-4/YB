@@ -220,10 +220,10 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
 
                     Log.v("ResultValue shelter ", code +" "+ name +" "+ info+" "+picture);
 
-                    if(name.equals("없음")){ // 실패시
-                        Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
-                        startActivity(intent);
-                    }else{
+
+                    String picture_id = picture.split("_")[0];
+
+                    if(!name.equals("없음")){ // 성공시
                         if(code.equals("1")) { // 보호소 직원
                             Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Success_Shelter.class);
                             intent.putExtra("dog_name", dog_Name);
@@ -240,6 +240,13 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
                             intent.putExtra("picture", picture);
                             startActivity(intent);
                         }
+
+                    }else if(picture_id.equals(n_id)){
+                        Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+                        startActivity(intent);
+                    }else{
+                        Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+                        startActivity(intent);
                     }
 
                 } catch (JSONException e) {
