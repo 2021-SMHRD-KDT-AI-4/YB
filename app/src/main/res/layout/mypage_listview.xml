@@ -22,7 +22,7 @@
         android:id="@+id/tv_my_dog_noseprint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="130dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="20dp"
         android:layout_weight="3"
         android:fontFamily="@font/nanumbarunpenb"

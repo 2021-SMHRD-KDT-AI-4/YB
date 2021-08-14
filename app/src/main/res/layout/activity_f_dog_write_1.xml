@@ -7,6 +7,31 @@
     android:orientation="vertical"
     tools:context=".F_Dog_Write_1">
 
+    <ImageButton
+        android:id="@+id/imgbtn_f_back2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <TextView
+        android:id="@+id/appname4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="'찾아줄개'"
+        android:textColor="#EFB29F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_f_next"
         android:layout_width="300dp"
@@ -163,7 +188,7 @@
 
     <EditText
         android:id="@+id/edt_f_place"
-        android:layout_width="100dp"
+        android:layout_width="125dp"
         android:layout_height="45dp"
         android:layout_marginStart="240dp"
         android:layout_marginTop="13dp"
@@ -195,9 +220,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
-        android:text="기본정보"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="기본정보"
         android:textColor="#0B0B0B"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"

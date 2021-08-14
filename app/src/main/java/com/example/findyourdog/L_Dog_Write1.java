@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
@@ -24,6 +25,7 @@ public class L_Dog_Write1 extends AppCompatActivity {
 
   private EditText edt_l_day, edt_l_time,edt_l_tel,edt_l_place;
   private Button btn_l_next;
+  private ImageButton imgbtn_f_back4;
 
   private Spinner spn_l_sido;
   Calendar myCalendar = Calendar.getInstance();
@@ -54,6 +56,15 @@ public class L_Dog_Write1 extends AppCompatActivity {
         edt_l_tel =findViewById(R.id.edt_l_tel);
         btn_l_next = findViewById(R.id.btn_l_enroll);
         spn_l_sido = findViewById(R.id.spnl_sido);
+        imgbtn_f_back4 = findViewById(R.id.imgbtn_f_back4);
+        imgbtn_f_back4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main.class);
+                finish();
+                startActivity(intent);
+            }
+        });
 
         Spinner spinner = (Spinner) findViewById(R.id.spnl_sido);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(

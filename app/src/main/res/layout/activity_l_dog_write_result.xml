@@ -9,6 +9,20 @@
     tools:context=".L_Dog_Write_Result">
 
     <TextView
+        android:id="@+id/appname15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="'찾아줄개'"
+        android:textColor="#EFB29F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tv_l_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

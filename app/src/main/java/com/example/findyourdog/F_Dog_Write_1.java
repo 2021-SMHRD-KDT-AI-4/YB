@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -61,6 +62,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
     private EditText edt_f_day, edt_f_tel, edt_f_place, edt_f_time;
     private ImageView img_f_picture;
     private Spinner spn_f_sido;
+    private ImageButton imgbtn_f_back2;
 
     private StringRequest stringRequest;
     private RequestQueue queue;
@@ -101,6 +103,16 @@ public class F_Dog_Write_1 extends AppCompatActivity {
         btn_f_picture_plus = findViewById(R.id.btn_f_picture_plus);
         btn_f_camera = findViewById(R.id.btn_f_camera);
         spn_f_sido = findViewById(R.id.spn_f_sido);
+        imgbtn_f_back2 = findViewById(R.id.imgbtn_f_back2);
+
+        imgbtn_f_back2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),Main.class);
+                finish();
+                startActivity(intent);
+            }
+        });
 
 
         Spinner spinner = (Spinner) findViewById(R.id.spn_f_sido);

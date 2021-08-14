@@ -8,10 +8,38 @@
     tools:context=".Picture_Choice">
 
     <TextView
+        android:id="@+id/appname17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="'찾아줄개'"
+        android:textColor="#EFB29F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_bar5"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="130dp"
+        android:text="─────────────────────────────────────────────────────────────────"
+        android:textColor="#B6B6B6"
+        android:textSize="7sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/tv_picture_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="사진결과 조회"
         android:textColor="#7E7C7C"
@@ -24,8 +52,8 @@
 
     <ListView
         android:id="@+id/picture_listview"
-        android:layout_width="409dp"
-        android:layout_height="500dp"
+        android:layout_width="320dp"
+        android:layout_height="470dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,18 +64,76 @@
 
     <TextView
         android:id="@+id/tv_guidetext"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="32dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
         android:fontFamily="@font/nanumbarunpenb"
-        android:text=" 잃어버린 강아지와 비슷한 게시물들입니다. \n 길게 터치시 해당 게시물을 확인 할 수 있습니다. \n 짧은 터치시 내역을 삭제 할 수 있습니다."
+        android:text="잃어버린 강아지와 유사한 강아지 게시물입니다."
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.172"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/picture_listview" />
+
+    <TextView
+        android:id="@+id/tv_guidetext2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="길게 터치"
+        android:textColor="#C3D85D5D"
+        android:textSize="15sp"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guidetext" />
+
+    <TextView
+        android:id="@+id/tv_guidetext4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="짧게 터치"
+        android:textColor="#C3D85D5D"
+
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guidetext2" />
+
+    <TextView
+        android:id="@+id/tv_guidetext3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="하면 해당 게시물을 확인할 수 있습니다. "
+        android:textSize="15sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guidetext" />
+
+    <TextView
+        android:id="@+id/tv_guidetext5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="하면 내역을 삭제할 수 있습니다."
+
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.008"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guidetext3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

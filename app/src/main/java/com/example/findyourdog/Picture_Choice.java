@@ -75,12 +75,13 @@ public class Picture_Choice extends AppCompatActivity {
             @Override
             public void onResponse(String response) {
                 if (response.equals("[]")) {
-                    setContentView(R.layout.activity_picture_search_result);
-//                    Intent intent = new Intent(getApplicationContext(),Picture_Search_Result.class);
+
+                    Intent intent = new Intent(getApplicationContext(),Picture_Search_Result.class);
 //                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
 //                    startActivity(intent);
 //                    overridePendingTransition(0, 0); //인텐트 애니메이션 없애기
-//                    finish();
+                    finish();
+                    startActivity(intent);
                 }
 
                 Log.v("마이페이지", response);

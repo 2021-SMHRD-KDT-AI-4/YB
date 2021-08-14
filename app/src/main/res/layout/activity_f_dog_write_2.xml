@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".L_Dog_List">
 
+    <TextView
+        android:id="@+id/appname5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        android:text="'찾아줄개'"
+        android:textColor="#EFB29F"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/btn_f_next2"
         android:layout_width="300dp"
@@ -26,9 +40,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
-        android:text="목격견정보"
+        android:layout_marginTop="90dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="목격견정보"
         android:textColor="#0B0B0B"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -64,101 +78,101 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="42dp"
-        android:layout_marginTop="252dp"
-        android:text="출생연도"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="출생연도"
         android:textColor="#5E5D5D"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_sex" />
 
     <TextView
         android:id="@+id/tv_f_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="302dp"
-        android:text="색"
+        android:layout_marginTop="38dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="색"
         android:textColor="#5A5858"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_birth" />
 
     <TextView
         android:id="@+id/tv_star3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="302dp"
+        android:layout_marginTop="35dp"
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_birth" />
 
     <TextView
         android:id="@+id/tv_star1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="35dp"
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
 
     <TextView
         android:id="@+id/tv_f_type"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="130dp"
-        android:text="품종"
+        android:layout_marginTop="35dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="품종"
         android:textColor="#616060"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
 
     <TextView
         android:id="@+id/tv_f_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="42dp"
-        android:layout_marginTop="352dp"
-        android:text="무게(kg)"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="무게(kg)"
         android:textColor="#676666"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_color" />
 
     <TextView
         android:id="@+id/tv_f_sex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="192dp"
-        android:text="성별"
+        android:layout_marginTop="67dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="성별"
         android:textColor="#5A5858"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_type" />
 
     <TextView
         android:id="@+id/tv_star2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="67dp"
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_type" />
 
     <EditText
         android:id="@+id/edt_f_birth"
@@ -177,7 +191,7 @@
         android:id="@+id/edt_f_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
@@ -190,63 +204,63 @@
         android:id="@+id/tv_f_feature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="402dp"
-        android:text="특징"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:text="특징"
         android:textColor="#535252"
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_kg" />
 
     <TextView
         android:id="@+id/tv_star4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="402dp"
+        android:layout_marginTop="43dp"
         android:text="*"
         android:textColor="#FD0000"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_color" />
 
     <Spinner
         android:id="@+id/edt_f_sex"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toEndOf="@+id/tv_f_sex"
-        app:layout_constraintTop_toBottomOf="@+id/spn_f_breed" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <EditText
         android:id="@+id/edt_f_feature"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.449"
-        app:layout_constraintStart_toEndOf="@+id/tv_f_feature"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_f_kg" />
 
     <EditText
         android:id="@+id/edt_f_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:fontFamily="@font/nanumbarunpenb"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintHorizontal_bias="0.236"
         app:layout_constraintStart_toEndOf="@+id/tv_f_kg"
         app:layout_constraintTop_toBottomOf="@+id/edt_f_color" />
 
@@ -255,9 +269,19 @@
         android:layout_width="200dp"
         android:layout_height="40dp"
         android:layout_marginStart="136dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/nanumbarunpenb"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:text='"AI로 분석한 견종입니다"'
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spn_f_breed" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

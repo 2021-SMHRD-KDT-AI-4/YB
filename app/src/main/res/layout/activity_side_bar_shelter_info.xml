@@ -10,7 +10,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_marginStart="55dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="보호소주소"
@@ -22,7 +22,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="25dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="보호소이름"
@@ -110,7 +110,7 @@
 
     <ListView
         android:id="@+id/shelter_listview"
-        android:layout_width="409dp"
+        android:layout_width="380dp"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
         app:layout_constraintBottom_toBottomOf="parent"

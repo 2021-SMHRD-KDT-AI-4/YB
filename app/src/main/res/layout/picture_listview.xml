@@ -8,8 +8,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
 
         <ImageView
             android:id="@+id/img_picture"
@@ -22,22 +23,27 @@
         <TextView
             android:id="@+id/tv_kind"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="25dp"
             android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="TextView" />
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_gender"
             android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_height="25dp"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:gravity="center"
             android:fontFamily="@font/nanumbarunpenb"
-            android:text="TextView" />
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 </LinearLayout>

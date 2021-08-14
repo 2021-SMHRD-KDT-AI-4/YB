@@ -10,8 +10,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Picture_Search_Result extends AppCompatActivity {
 
-    private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_p_retry;
+    private Button btn_1, btn_2, btn_3, btn_4, btn_5, btn_p_again;
     private TextView app_name4, tv_picture, tv_fail2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,16 @@ public class Picture_Search_Result extends AppCompatActivity {
         app_name4 = findViewById(R.id.tv_appname);
         tv_picture = findViewById(R.id.tv_p_result);
         tv_fail2 = findViewById(R.id.tv_p_fail);
+        btn_p_again = findViewById(R.id.btn_p_again);
+
+        btn_p_again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), Picture_Choice.class);
+                finish();
+                startActivity(intent);
+            }
+        });
 
 
     }

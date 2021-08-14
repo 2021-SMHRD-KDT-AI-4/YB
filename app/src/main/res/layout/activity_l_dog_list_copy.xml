@@ -23,6 +23,7 @@
         android:layout_width="400dp"
         android:layout_height="525dp"
         android:numColumns="2"
+        android:horizontalSpacing="5dp"
         android:verticalSpacing="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"

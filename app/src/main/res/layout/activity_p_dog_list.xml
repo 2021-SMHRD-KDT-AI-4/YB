@@ -9,9 +9,9 @@
     <GridView
         android:id="@+id/gv_lost"
         android:layout_width="400dp"
-        android:layout_height="530dp"
-        android:numColumns="2"
+        android:layout_height="585dp"
         android:fontFamily="@font/nanumbarunpenb"
+        android:numColumns="2"
         android:verticalSpacing="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

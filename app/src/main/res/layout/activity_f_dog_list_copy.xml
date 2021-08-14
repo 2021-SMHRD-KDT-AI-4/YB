@@ -19,8 +19,8 @@
     <GridView
         android:id="@+id/gv_find"
         android:layout_width="400dp"
-        android:layout_height="525dp"
-        android:horizontalSpacing="20dp"
+        android:layout_height="530dp"
+        android:horizontalSpacing="5dp"
         android:numColumns="2"
         android:verticalSpacing="5dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -47,7 +47,7 @@
         android:id="@+id/tv_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="반려견 비문등록 "
         android:textColor="#5E5C5C"
@@ -61,6 +61,7 @@
         android:id="@+id/btn_profile_ok"
         android:layout_width="180dp"
         android:layout_height="45dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/btn_round_pink"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="다음으로"
@@ -68,7 +69,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="474dp" />
+        app:layout_constraintTop_toBottomOf="@+id/sp_i_kind" />
 
     <TextView
         android:id="@+id/tv_info_sex"
@@ -130,7 +131,7 @@
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_info_name" />
 
@@ -139,7 +140,7 @@
         android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="14dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_i_gender" />
 

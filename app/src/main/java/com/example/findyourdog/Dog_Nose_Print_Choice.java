@@ -230,6 +230,7 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
                             intent.putExtra("name", name);
                             intent.putExtra("info", info);
                             intent.putExtra("picture", picture);
+                            finish();
                             startActivity(intent);
 
                         } else { // 일반 회원
@@ -238,14 +239,17 @@ public class Dog_Nose_Print_Choice extends AppCompatActivity {
                             intent.putExtra("name", name);
                             intent.putExtra("info", info);
                             intent.putExtra("picture", picture);
+                            finish();
                             startActivity(intent);
                         }
 
                     }else if(picture_id.equals(n_id)){
                         Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+                        finish();
                         startActivity(intent);
                     }else{
                         Intent intent = new Intent(Dog_Nose_Print_Choice.this, Dog_Nose_print_Search_list_Fail.class);
+                        finish();
                         startActivity(intent);
                     }
 
