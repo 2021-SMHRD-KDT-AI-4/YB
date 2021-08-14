@@ -63,7 +63,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_dog_write_2);
-        genderspinner();
+
         spn_f_breed = findViewById(R.id.spn_f_breed);
         edt_f_birth = findViewById(R.id.edt_f_birth);
         edt_f_color = findViewById(R.id.edt_f_color);
@@ -102,6 +102,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             int dogs_index = Arrays.asList(dogs).indexOf(f_breed);
             spinner.setSelection(dogs_index);
         }
+        genderspinner();
 
         btn_f_next2.setOnClickListener(new View.OnClickListener() {
             @Override

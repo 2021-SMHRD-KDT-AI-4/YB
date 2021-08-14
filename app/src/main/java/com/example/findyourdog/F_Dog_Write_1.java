@@ -240,7 +240,7 @@ public class F_Dog_Write_1 extends AppCompatActivity {
     public void sendRequest() {
         // Voolley Lib 새로운 요청객체 생성
         queue = Volley.newRequestQueue(this);
-        String url = "http://211.63.240.26:5000/testimg";
+        String url = "http://211.63.240.26:5002/testimg";
         stringRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             // 응답데이터를 받아오는 곳
             @Override
