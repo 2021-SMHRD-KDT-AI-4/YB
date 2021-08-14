@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -45,10 +46,10 @@ import java.util.Random;
 
 public class L_Dog_Write2 extends AppCompatActivity {
 
-    private EditText edt_l_sex, edt_l_birth, edt_l_color, edt_l_type, edt_l_kg, edt_l_feature;
+    private EditText  edt_l_birth, edt_l_color, edt_l_type, edt_l_kg, edt_l_feature;
     private Button btn_l_picture_plus,btn_l_enroll;
     private ImageView img_l_dog_picture;
-    private Spinner spn_type;
+    private Spinner spn_type,edt_l_sex;
     private StringRequest stringRequest;
     private RequestQueue queue;
     private StringRequest stringRequest2;
@@ -82,6 +83,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
         setContentView(R.layout.activity_l_dog_write2);
         Log.v("L_Write2","O");
 
+
         edt_l_sex = findViewById(R.id.edt_l_sex);
         edt_l_birth = findViewById(R.id.edt_l_birth);
         edt_l_color = findViewById(R.id.edt_l_color);
@@ -100,7 +102,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
         l_tel = intent3.getStringExtra("l_tel");
         String l_citynum = intent3.getStringExtra("cityNum");
         l_city = intent3.getStringExtra("l_city");
-
+        genderspinner();
         Spinner spinner = findViewById(R.id.spn_l_type);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(
                 this, android.R.layout.simple_spinner_item, dogs
@@ -128,7 +130,7 @@ public class L_Dog_Write2 extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                String l_sex = edt_l_sex.getText().toString();
+                String l_sex = edt_l_sex.getSelectedItem().toString();
                 String l_age = edt_l_birth.getText().toString();
                 String l_color = edt_l_color.getText().toString();
                 l_kind = spinner.getSelectedItem().toString();
@@ -153,6 +155,27 @@ public class L_Dog_Write2 extends AppCompatActivity {
             }
         });
 
+
+    }
+    private void genderspinner( ){
+        String[] gender_items = new String[]{
+                "수컷","암컷"
+        };
+        ArrayAdapter <String> genderAdapter = new ArrayAdapter<String>(
+                getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,gender_items);
+        genderAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        edt_l_sex.setAdapter(genderAdapter);
+        edt_l_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                edt_info_sex.setText(gender_items[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
     }
 

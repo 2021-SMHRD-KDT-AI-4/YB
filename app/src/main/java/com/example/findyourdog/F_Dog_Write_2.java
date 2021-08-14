@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,8 +44,8 @@ public class F_Dog_Write_2 extends AppCompatActivity {
     private TextView tv_f_dog_info,tv_vital,tv_f_birth,tv_f_color,tv_f_type,tv_f_sex,tv_f_feature,
             tv_star1,tv_star2,tv_star3,tv_star4,tv_star5;
     private Button btn_f_next2;
-    private EditText edt_f_birth, edt_f_color, edt_f_sex, edt_f_feature, edt_f_kg;
-    private Spinner spn_f_breed;
+    private EditText edt_f_birth, edt_f_color, edt_f_feature, edt_f_kg;
+    private Spinner spn_f_breed, edt_f_sex;
 
     private StringRequest stringRequest;
     private RequestQueue queue;
@@ -62,7 +63,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_f_dog_write_2);
-
+        genderspinner();
         spn_f_breed = findViewById(R.id.spn_f_breed);
         edt_f_birth = findViewById(R.id.edt_f_birth);
         edt_f_color = findViewById(R.id.edt_f_color);
@@ -106,7 +107,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String f_feature = edt_f_feature.getText().toString();
-                String f_sex = edt_f_sex.getText().toString();
+                String f_sex = edt_f_sex.getSelectedItem().toString();
                 String f_age = edt_f_birth.getText().toString();
                 String f_color = edt_f_color.getText().toString();
                 String f_kg = edt_f_kg.getText().toString();
@@ -138,6 +139,28 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         });
 
     }
+    private void genderspinner( ){
+        String[] gender_items = new String[]{
+                "수컷","암컷"
+        };
+        ArrayAdapter <String> genderAdapter = new ArrayAdapter<String>(
+                getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,gender_items);
+        genderAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        edt_f_sex.setAdapter(genderAdapter);
+        edt_f_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                edt_info_sex.setText(gender_items[position]);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
 
     public void sendRequest() {
         // Voolley Lib 새로운 요청객체 생성

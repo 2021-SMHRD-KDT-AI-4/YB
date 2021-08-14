@@ -78,8 +78,8 @@ public class Dog_Info extends Fragment {
         btn_nose_print_camera = fragment.findViewById(R.id.btn_nose_print_camera);
         btn_profile_ok = fragment.findViewById(R.id.btn_profile_ok);
         edt_info_name = fragment.findViewById(R.id.edt_info_name);
-        edt_info_sex = fragment.findViewById(R.id.edt_info_sex);
-        edt_info_type = fragment.findViewById(R.id.edt_info_type);
+//        edt_info_sex = fragment.findViewById(R.id.edt_info_sex);
+//        edt_info_type = fragment.findViewById(R.id.edt_info_type);
         sp_i_gender = fragment.findViewById(R.id.sp_i_gender);
         sp_i_kind = fragment.findViewById(R.id.sp_i_kind);
 
@@ -121,7 +121,7 @@ public class Dog_Info extends Fragment {
         sp_i_gender.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                edt_info_sex.setText(gender_items[position]);
+//                edt_info_sex.setText(gender_items[position]);
             }
 
             @Override
@@ -146,7 +146,7 @@ public class Dog_Info extends Fragment {
         sp_i_kind.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                edt_info_type.setText(dogkind[position]);
+//                edt_info_type.setText(dogkind[position]);
             }
 
             @Override
@@ -277,10 +277,11 @@ public class Dog_Info extends Fragment {
                 Bitmap bitmap = drawable.getBitmap();
                 String filename = BitmapToBase64(bitmap);
                 Log.v("bitmapp",filename);
+                Log.v("바보야",sp_i_gender.getSelectedItem().toString());
 
                 params.put("dog_name", edt_info_name.getText().toString());
-                params.put("dog_gender", edt_info_sex.getText().toString());
-                params.put("dog_kind", edt_info_type.getText().toString());
+                params.put("dog_gender",sp_i_gender.getSelectedItem().toString());
+                params.put("dog_kind", sp_i_kind.getSelectedItem().toString());
                 params.put("id", id);
                 params.put("dog_picture", filename);
 

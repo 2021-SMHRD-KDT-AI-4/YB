@@ -61,7 +61,6 @@
         android:id="@+id/btn_profile_ok"
         android:layout_width="180dp"
         android:layout_height="45dp"
-        android:layout_marginTop="50dp"
         android:background="@drawable/btn_round_pink"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="다음으로"
@@ -69,7 +68,7 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_type" />
+        tools:layout_editor_absoluteY="474dp" />
 
     <TextView
         android:id="@+id/tv_info_sex"
@@ -85,26 +84,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_info_name" />
 
     <TextView
-        android:id="@+id/edt_info_sex"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:textColor="#555252"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_name" />
-
-    <TextView
         android:id="@+id/tv_info_type"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="13dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:gravity="center_vertical"
         android:text="품종"
@@ -127,21 +111,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_nose_print_picture_plus" />
 
-    <EditText
-        android:id="@+id/edt_info_type"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginTop="10dp"
-        android:ems="10"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:textColor="#555252"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_sex" />
-
     <Button
         android:id="@+id/btn_nose_print_camera"
         android:layout_width="wrap_content"
@@ -158,20 +127,22 @@
 
     <Spinner
         android:id="@+id/sp_i_gender"
-        android:layout_width="30dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="15dp"
-        app:layout_constraintStart_toEndOf="@+id/edt_info_sex"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edt_info_name" />
 
     <Spinner
         android:id="@+id/sp_i_kind"
-        android:layout_width="30dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="130dp"
         android:layout_marginTop="15dp"
-        app:layout_constraintStart_toEndOf="@+id/edt_info_type"
-        app:layout_constraintTop_toBottomOf="@+id/edt_info_sex" />
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sp_i_gender" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
