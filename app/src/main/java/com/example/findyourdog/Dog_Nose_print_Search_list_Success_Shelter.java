@@ -34,7 +34,7 @@ public class Dog_Nose_print_Search_list_Success_Shelter extends AppCompatActivit
         setPic(picture, img_success_shelter);
         tv_find_shelter.setText("'"+dog_name+"'를 찾았어요!");
         tv_owner_name1.setText(name);
-        tv_owner_tel.setText(info);
+        tv_owner_tel.setText("0"+info);
 
     }
 
