@@ -58,6 +58,7 @@ public class F_Dog_Write_2 extends AppCompatActivity {
 
     String[] dogs = {"품종","골든 리트리버","닥스훈트","말티즈","믹스견","보더 콜리","비숑","시바",
             "시츄","요크셔 테리어","웰시 코기","진도견","차우차우","치와와","포메라니안","푸들","허스키","알수없음"};
+    String[] gender = {"수컷","암컷","알수없음"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +103,17 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             int dogs_index = Arrays.asList(dogs).indexOf(f_breed);
             spinner.setSelection(dogs_index);
         }
-        genderspinner();
+//        genderspinner();
+        Spinner genderspinner = findViewById(R.id.edt_f_sex);
+        ArrayAdapter<String> genderadapter = new ArrayAdapter<String>(
+                this, android.R.layout.simple_spinner_item, gender
+        );
+
+        // 드롭다운 클릭 시 선택 창
+        genderadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        // 스피너에 어댑터 설정
+        genderspinner.setAdapter(genderadapter);
+        // 스피너에서 선택 했을 경우 이벤트 처리
 
         btn_f_next2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,27 +151,27 @@ public class F_Dog_Write_2 extends AppCompatActivity {
         });
 
     }
-    private void genderspinner( ){
-        String[] gender_items = new String[]{
-                "수컷","암컷"
-        };
-        ArrayAdapter <String> genderAdapter = new ArrayAdapter<String>(
-                getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,gender_items);
-        genderAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
-        edt_f_sex.setAdapter(genderAdapter);
-        edt_f_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                edt_info_sex.setText(gender_items[position]);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-    }
+//    private void genderspinner( ){
+//        String[] gender_items = new String[]{
+//                "수컷","암컷"
+//        };
+//        ArrayAdapter <String> genderAdapter = new ArrayAdapter<String>(
+//                getApplicationContext(),R.layout.support_simple_spinner_dropdown_item,gender_items);
+//        genderAdapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+//        edt_f_sex.setAdapter(genderAdapter);
+//        edt_f_sex.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+////                edt_info_sex.setText(gender_items[position]);
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
+//
+//    }
 
 
     public void sendRequest() {

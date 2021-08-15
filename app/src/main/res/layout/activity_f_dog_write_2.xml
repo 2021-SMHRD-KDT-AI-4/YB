@@ -238,6 +238,16 @@
         app:layout_constraintStart_toEndOf="@+id/tv_f_sex"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
+    <Spinner
+        android:id="@+id/spn_f_breed"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nanumbarunpenb"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
+
     <EditText
         android:id="@+id/edt_f_feature"
         android:layout_width="wrap_content"
@@ -264,15 +274,7 @@
         app:layout_constraintStart_toEndOf="@+id/tv_f_kg"
         app:layout_constraintTop_toBottomOf="@+id/edt_f_color" />
 
-    <Spinner
-        android:id="@+id/spn_f_breed"
-        android:layout_width="200dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/nanumbarunpenb"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_dog_info" />
+
 
     <TextView
         android:id="@+id/textView5"
