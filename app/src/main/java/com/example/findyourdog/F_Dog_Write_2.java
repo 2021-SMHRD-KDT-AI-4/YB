@@ -276,16 +276,17 @@ public class F_Dog_Write_2 extends AppCompatActivity {
             // 보낼 데이터를 저장하는 곳
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params2 = new HashMap<>();
+                Map<String, String> params = new HashMap<>();
 
                 Log.v("4444444","44444444");
-                Log.v("matchresult",result);
+                Log.v("matchresult",result); // 리스트
                 String id = PreferenceManager.getString(getApplicationContext(),"id");
-                params2.put("id",id);
-                params2.put("matchresult",result);
-                params2.put("f_filename",f_filename);
+                params.put("id",id); // 아이디
+                params.put("bitmap","f_dog_2");
+                params.put("matchresult",result);
+                params.put("f_filename",f_filename); // 파일네임
 
-                return params2;
+                return params;
             }
         };
         queue2.add(stringRequest2);
