@@ -140,7 +140,7 @@
         android:id="@+id/tv_f_kg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
+        android:layout_marginStart="42dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/nanumbarunpenb"
         android:text="무게(kg)"
@@ -212,18 +212,6 @@
         android:textSize="17sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_f_kg" />
-
-    <TextView
-        android:id="@+id/tv_star4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="43dp"
-        android:text="*"
-        android:textColor="#FD0000"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_f_color" />
 
     <Spinner
         android:id="@+id/edt_f_sex"
