@@ -6,19 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Dog_Nose_print_Search_list_Fail">
 
-    <TextView
-        android:id="@+id/appname10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/nanumbarunpenb"
-        android:text="'찾아줄개'"
-        android:textColor="#EFB29F"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="120dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="3dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo11" />
 
     <TextView
         android:id="@+id/tv_search_fail"
