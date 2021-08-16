@@ -214,15 +214,18 @@ public class F_Dog_List_copy extends Fragment implements View.OnClickListener {
             TextView f_time = (TextView) convertView.findViewById(R.id.f_time);
 
             setPic(findItem.getPicture(),img_f_dog_picture);
-            tv_f_date.setText(findItem.getNotice());
+            tv_f_date.setText(findItem.getMissing_date());
             tv_f_kind.setText(findItem.getKind());
-            tv_f_place.setText(findItem.getShelter());
-            tv_f_time.setText(findItem.getTel());
+            tv_f_place.setText(findItem.getPlace());
+            tv_f_time.setText(findItem.getMissing_time());
 
             if(findItem.getBoard_type().equals("3")) { // 보호소api 게시글일 경우
                 f_date.setText("공고기간");
+                tv_f_date.setText(findItem.getNotice());
                 f_place.setText("관할보호센터");
+                tv_f_place.setText(findItem.getShelter());
                 f_time.setText("연락처");
+                tv_f_time.setText(findItem.getTel());
 
             }
 
