@@ -139,8 +139,13 @@ public class F_Dog_Detail extends AppCompatActivity {
             f_d_time.setText("보호장소");
 
         } else {
-            f_d_day.setVisibility(View.GONE);
-
+//            if(place == null){
+//                f_d_place.setVisibility(View.INVISIBLE);
+//            }
+//            f_d_day.setVisibility(View.GONE);
+            f_d_day.setText("목격날짜");
+            f_d_place.setText("목격위치");
+            tv_f_d_place.setText(place);
             f_d_time.setText("목격시간");
             tv_f_d_day.setText(missing_date);
             tv_f_d_time.setText(missing_time);

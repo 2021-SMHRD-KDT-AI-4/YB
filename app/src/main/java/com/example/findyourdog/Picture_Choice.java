@@ -401,6 +401,7 @@ public class Picture_Choice extends AppCompatActivity {
                     String color = jsonObject.getString("color");
                     String kind = jsonObject.getString("kind");
                     String weight = jsonObject.getString("weight");
+                    String place = jsonObject.getString("place");
                     String missing_date = "";
                     if (jsonObject.isNull("missing_date")){
                         missing_date = "";
@@ -431,7 +432,6 @@ public class Picture_Choice extends AppCompatActivity {
 
 
                     String city = jsonObject.getString("city");
-                    String place = jsonObject.getString("place");
                     String tel = jsonObject.getString("tel");
                     String content = jsonObject.getString("content");
 
