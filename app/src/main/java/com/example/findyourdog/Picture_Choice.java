@@ -403,22 +403,33 @@ public class Picture_Choice extends AppCompatActivity {
                     String weight = jsonObject.getString("weight");
                     String missing_date = "";
                     if (jsonObject.isNull("missing_date")){
-                        missing_date = "null";
+                        missing_date = "";
                     }else {
                         missing_date = jsonObject.getString("missing_date");
 
                     }
                     String missing_time = "";
                     if (jsonObject.isNull("missing_time")){
-                        missing_time = "null";
+                        missing_time = "";
                     }else {
                         missing_time = jsonObject.getString("missing_time");
 
                     }
 
+                    String notice = "";
+                    if(jsonObject.isNull("notice")){
+                        notice = "";
+                    }else {
+                        notice = jsonObject.getString("notice");
+                    }
+                    String shelter = "";
+                    if(jsonObject.isNull("shelter")){
+                        shelter = "";
+                    }else {
+                        shelter = jsonObject.getString("shelter");
+                    }
 
-                    String notice = jsonObject.getString("notice");
-                    String shelter = jsonObject.getString("shelter");
+
                     String city = jsonObject.getString("city");
                     String place = jsonObject.getString("place");
                     String tel = jsonObject.getString("tel");
