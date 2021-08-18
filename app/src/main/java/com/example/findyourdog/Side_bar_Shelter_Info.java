@@ -53,8 +53,8 @@ public class Side_bar_Shelter_Info extends AppCompatActivity {
 
     public ArrayList<String[]> shelter_list = new ArrayList<String[]>();
 
-    String[] items = {"제주","강원","서울","경기","충북","충남","경북","경남",
-            "전북","전남","인천","대전","대구","울산","부산","광주","세종"};
+    String[] items = {"시/도","서울","부산","대구","인천","광주","세종","대전","울산",
+            "경기","강원","충남","충북","전남","전북","경남","경북","제주"};
 
     String[] jeju = {"제주시", "서귀포시"};
 
